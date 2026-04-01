@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Platform - Published Successfully</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+.sidebar { position: fixed; left: 0; top: 0; width: 240px; height: 100vh; background: #1a1a2e; border-right: 1px solid #2a2a4a; padding: 20px 0; }
+.sidebar .logo { padding: 0 20px 20px; border-bottom: 1px solid #2a2a4a; margin-bottom: 20px; }
+.sidebar .logo h1 { font-size: 22px; color: #00f2ea; }
+.sidebar .logo span { font-size: 12px; color: #888; }
+.sidebar nav a { display: flex; align-items: center; padding: 12px 20px; color: #aaa; text-decoration: none; font-size: 14px; }
+.sidebar nav a:hover { background: #2a2a4a; color: #fff; }
+.main { margin-left: 240px; padding: 30px; }
+
+.success-banner { background: linear-gradient(135deg, #22c55e15, #00f2ea15); border: 1px solid #22c55e40; border-radius: 12px; padding: 28px; text-align: center; margin-bottom: 30px; }
+.success-banner .check { font-size: 48px; margin-bottom: 12px; }
+.success-banner h2 { color: #22c55e; margin-bottom: 8px; }
+.success-banner p { color: #888; }
+
+.results-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.result-card { background: #1a1a2e; border-radius: 12px; padding: 24px; border: 1px solid #2a2a4a; }
+.result-card .platform-header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.platform-badge { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; }
+.platform-badge.tiktok { background: linear-gradient(135deg, #00f2ea, #ff0050); color: #fff; }
+.platform-badge.youtube { background: #ff0000; color: #fff; }
+.platform-badge.instagram { background: linear-gradient(135deg, #f09433, #dc2743, #bc1888); color: #fff; }
+.platform-badge.facebook { background: #1877f2; color: #fff; }
+
+.result-card .status { display: flex; align-items: center; gap: 6px; color: #22c55e; font-size: 14px; font-weight: 600; margin-bottom: 12px; }
+.result-card .details { background: #0f0f1a; border-radius: 8px; padding: 12px; }
+.result-card .detail-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 13px; }
+.result-card .detail-row .k { color: #666; }
+.result-card .detail-row .v { color: #ccc; font-family: monospace; font-size: 12px; }
+.result-card .detail-row .v.scope { color: #00f2ea; }
+
+.api-log { background: #1a1a2e; border-radius: 12px; padding: 24px; border: 1px solid #2a2a4a; margin-top: 24px; }
+.api-log h3 { color: #fff; margin-bottom: 16px; }
+.log-entry { font-family: monospace; font-size: 12px; padding: 6px 0; border-bottom: 1px solid #1a1a2e; }
+.log-entry .timestamp { color: #666; }
+.log-entry .method { color: #22c55e; font-weight: 600; }
+.log-entry .url { color: #00f2ea; }
+.log-entry .status-code { color: #22c55e; }
+.log-entry .scope-used { color: #eab308; font-size: 11px; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">
+    <h1>Gold</h1>
+    <span>Content Platform</span>
+  </div>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="accounts.html">Connected Accounts</a>
+    <a href="upload.html">Upload Content</a>
+    <a href="#">Schedule</a>
+    <a href="#">Analytics</a>
+    <a href="#">Settings</a>
+  </nav>
+</div>
+
+<div class="main">
+  <div class="success-banner">
+    <div class="check">✅</div>
+    <h2>Video Published to All Platforms!</h2>
+    <p>Your content has been successfully uploaded and published across 4 platforms.</p>
+  </div>
+
+  <div class="results-grid">
+    <!-- TikTok Result -->
+    <div class="result-card">
+      <div class="platform-header">
+        <div class="platform-badge tiktok">TT</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:16px">TikTok</div>
+          <div style="color:#888;font-size:12px">@storyvault8_official</div>
+        </div>
+      </div>
+      <div class="status">✓ Published Successfully</div>
+      <div class="details">
+        <div class="detail-row"><span class="k">Post ID</span><span class="v">7484921038571</span></div>
+        <div class="detail-row"><span class="k">API</span><span class="v">Content Posting API v2</span></div>
+        <div class="detail-row"><span class="k">Scopes Used</span><span class="v scope">video.publish, video.upload</span></div>
+        <div class="detail-row"><span class="k">AI Disclosure</span><span class="v">is_aigc: true ✓</span></div>
+        <div class="detail-row"><span class="k">Privacy</span><span class="v">SELF_ONLY (sandbox)</span></div>
+      </div>
+    </div>
+
+    <!-- YouTube Result -->
+    <div class="result-card">
+      <div class="platform-header">
+        <div class="platform-badge youtube">YT</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:16px">YouTube</div>
+          <div style="color:#888;font-size:12px">StoryVault</div>
+        </div>
+      </div>
+      <div class="status">✓ Published Successfully</div>
+      <div class="details">
+        <div class="detail-row"><span class="k">Video ID</span><span class="v">yXZXwcUlP5s</span></div>
+        <div class="detail-row"><span class="k">API</span><span class="v">YouTube Data API v3</span></div>
+        <div class="detail-row"><span class="k">Type</span><span class="v">YouTube Short</span></div>
+        <div class="detail-row"><span class="k">Privacy</span><span class="v">Public</span></div>
+      </div>
+    </div>
+
+    <!-- Instagram Result -->
+    <div class="result-card">
+      <div class="platform-header">
+        <div class="platform-badge instagram">IG</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:16px">Instagram</div>
+          <div style="color:#888;font-size:12px">@storyvault8.official</div>
+        </div>
+      </div>
+      <div class="status">✓ Published Successfully</div>
+      <div class="details">
+        <div class="detail-row"><span class="k">Media ID</span><span class="v">17895638204</span></div>
+        <div class="detail-row"><span class="k">API</span><span class="v">Instagram Graph API</span></div>
+        <div class="detail-row"><span class="k">Type</span><span class="v">Reel</span></div>
+        <div class="detail-row"><span class="k">Privacy</span><span class="v">Public</span></div>
+      </div>
+    </div>
+
+    <!-- Facebook Result -->
+    <div class="result-card">
+      <div class="platform-header">
+        <div class="platform-badge facebook">FB</div>
+        <div>
+          <div style="color:#fff;font-weight:700;font-size:16px">Facebook</div>
+          <div style="color:#888;font-size:12px">StoryVault Page</div>
+        </div>
+      </div>
+      <div class="status">✓ Published Successfully</div>
+      <div class="details">
+        <div class="detail-row"><span class="k">Post ID</span><span class="v">994748643726124_1082</span></div>
+        <div class="detail-row"><span class="k">API</span><span class="v">Facebook Graph API</span></div>
+        <div class="detail-row"><span class="k">Type</span><span class="v">Reel</span></div>
+        <div class="detail-row"><span class="k">Privacy</span><span class="v">Public</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Log -->
+  <div class="api-log">
+    <h3>API Request Log — TikTok Content Posting API</h3>
+    <div class="log-entry">
+      <span class="timestamp">15:42:01</span>
+      <span class="method">POST</span>
+      <span class="url">/v2/post/publish/video/init/</span>
+      <span class="status-code">200 OK</span>
+      <span class="scope-used">[video.publish]</span>
+    </div>
+    <div class="log-entry">
+      <span class="timestamp">15:42:01</span>
+      <span class="method">PUT</span>
+      <span class="url">/v2/post/publish/video/upload/ (chunk 1/3)</span>
+      <span class="status-code">200 OK</span>
+      <span class="scope-used">[video.upload]</span>
+    </div>
+    <div class="log-entry">
+      <span class="timestamp">15:42:03</span>
+      <span class="method">PUT</span>
+      <span class="url">/v2/post/publish/video/upload/ (chunk 2/3)</span>
+      <span class="status-code">200 OK</span>
+      <span class="scope-used">[video.upload]</span>
+    </div>
+    <div class="log-entry">
+      <span class="timestamp">15:42:04</span>
+      <span class="method">PUT</span>
+      <span class="url">/v2/post/publish/video/upload/ (chunk 3/3)</span>
+      <span class="status-code">200 OK</span>
+      <span class="scope-used">[video.upload]</span>
+    </div>
+    <div class="log-entry">
+      <span class="timestamp">15:42:05</span>
+      <span class="method">POST</span>
+      <span class="url">/v2/post/publish/video/init/ (publish_info)</span>
+      <span class="status-code">200 OK</span>
+      <span class="scope-used">[video.publish] is_aigc=true</span>
+    </div>
+    <div class="log-entry">
+      <span class="timestamp">15:42:06</span>
+      <span class="method">GET</span>
+      <span class="url">/v2/post/publish/status/fetch/</span>
+      <span class="status-code">200 OK — PUBLISH_COMPLETE</span>
+      <span class="scope-used">[video.publish]</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

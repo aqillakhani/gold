@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Platform - Dashboard</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+
+/* Sidebar */
+.sidebar { position: fixed; left: 0; top: 0; width: 240px; height: 100vh; background: #1a1a2e; border-right: 1px solid #2a2a4a; padding: 20px 0; }
+.sidebar .logo { padding: 0 20px 20px; border-bottom: 1px solid #2a2a4a; margin-bottom: 20px; }
+.sidebar .logo h1 { font-size: 22px; color: #00f2ea; }
+.sidebar .logo span { font-size: 12px; color: #888; }
+.sidebar nav a { display: flex; align-items: center; padding: 12px 20px; color: #aaa; text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.sidebar nav a:hover, .sidebar nav a.active { background: #2a2a4a; color: #fff; }
+.sidebar nav a.active { border-left: 3px solid #00f2ea; }
+
+/* Main */
+.main { margin-left: 240px; padding: 30px; }
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.header h2 { font-size: 24px; color: #fff; }
+
+/* Stats cards */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 30px; }
+.stat-card { background: #1a1a2e; border-radius: 12px; padding: 20px; border: 1px solid #2a2a4a; }
+.stat-card .label { font-size: 12px; color: #888; text-transform: uppercase; margin-bottom: 8px; }
+.stat-card .value { font-size: 28px; font-weight: 700; color: #fff; }
+.stat-card .change { font-size: 12px; color: #22c55e; margin-top: 4px; }
+
+/* Connected accounts */
+.accounts { background: #1a1a2e; border-radius: 12px; padding: 24px; border: 1px solid #2a2a4a; margin-bottom: 30px; }
+.accounts h3 { margin-bottom: 16px; color: #fff; }
+.account-row { display: flex; align-items: center; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid #2a2a4a; }
+.account-row:last-child { border-bottom: none; }
+.account-info { display: flex; align-items: center; gap: 12px; }
+.platform-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; }
+.platform-icon.tiktok { background: #00f2ea20; color: #00f2ea; }
+.platform-icon.youtube { background: #ff000020; color: #ff0000; }
+.platform-icon.instagram { background: #e1306c20; color: #e1306c; }
+.platform-icon.facebook { background: #1877f220; color: #1877f2; }
+.status-badge { padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+.status-badge.connected { background: #22c55e20; color: #22c55e; }
+.status-badge.pending { background: #eab30820; color: #eab308; }
+
+/* Content table */
+.content-section { background: #1a1a2e; border-radius: 12px; padding: 24px; border: 1px solid #2a2a4a; }
+.content-section h3 { margin-bottom: 16px; color: #fff; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; padding: 10px 12px; font-size: 12px; color: #888; text-transform: uppercase; border-bottom: 1px solid #2a2a4a; }
+td { padding: 14px 12px; border-bottom: 1px solid #1a1a2e; font-size: 14px; }
+.niche-tag { padding: 3px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+.niche-tag.crypto { background: #22c55e20; color: #22c55e; }
+.niche-tag.reddit { background: #ff450020; color: #ff6b35; }
+.niche-tag.ai { background: #3b82f620; color: #3b82f6; }
+.niche-tag.crime { background: #ef444420; color: #ef4444; }
+
+/* Buttons */
+.btn { padding: 8px 20px; border-radius: 8px; border: none; font-size: 14px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.btn-primary { background: #00f2ea; color: #000; }
+.btn-primary:hover { background: #00d4cd; }
+.btn-outline { background: transparent; border: 1px solid #2a2a4a; color: #aaa; }
+.btn-sm { padding: 6px 14px; font-size: 12px; }
+
+/* Post button */
+.btn-post { background: #00f2ea; color: #000; padding: 6px 16px; border-radius: 6px; border: none; font-weight: 600; font-size: 13px; cursor: pointer; }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">
+    <h1>Gold</h1>
+    <span>Content Platform</span>
+  </div>
+  <nav>
+    <a href="index.html" class="active">Dashboard</a>
+    <a href="accounts.html">Connected Accounts</a>
+    <a href="upload.html">Upload Content</a>
+    <a href="#">Schedule</a>
+    <a href="#">Analytics</a>
+    <a href="#">Settings</a>
+  </nav>
+</div>
+
+<div class="main">
+  <div class="header">
+    <h2>Dashboard</h2>
+    <button class="btn btn-primary" onclick="location.href='upload.html'">+ New Upload</button>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card">
+      <div class="label">Total Posts</div>
+      <div class="value">24</div>
+      <div class="change">+6 this week</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Total Views</div>
+      <div class="value">12.4K</div>
+      <div class="change">+34% vs last week</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Platforms</div>
+      <div class="value">4</div>
+      <div class="change">All connected</div>
+    </div>
+    <div class="stat-card">
+      <div class="label">Scheduled</div>
+      <div class="value">8</div>
+      <div class="change">Next: 2h 15m</div>
+    </div>
+  </div>
+
+  <div class="accounts">
+    <h3>Connected Accounts</h3>
+    <div class="account-row">
+      <div class="account-info">
+        <div class="platform-icon tiktok">TT</div>
+        <div>
+          <div style="font-weight:600;color:#fff">TikTok — @storyvault8_official</div>
+          <div style="font-size:12px;color:#888">Content Posting API • video.publish, video.upload</div>
+        </div>
+      </div>
+      <span class="status-badge connected">Connected</span>
+    </div>
+    <div class="account-row">
+      <div class="account-info">
+        <div class="platform-icon youtube">YT</div>
+        <div>
+          <div style="font-weight:600;color:#fff">YouTube — StoryVault</div>
+          <div style="font-size:12px;color:#888">Data API v3 • youtube.upload</div>
+        </div>
+      </div>
+      <span class="status-badge connected">Connected</span>
+    </div>
+    <div class="account-row">
+      <div class="account-info">
+        <div class="platform-icon instagram">IG</div>
+        <div>
+          <div style="font-weight:600;color:#fff">Instagram — @storyvault8.official</div>
+          <div style="font-size:12px;color:#888">Graph API • publish_video</div>
+        </div>
+      </div>
+      <span class="status-badge connected">Connected</span>
+    </div>
+    <div class="account-row">
+      <div class="account-info">
+        <div class="platform-icon facebook">FB</div>
+        <div>
+          <div style="font-weight:600;color:#fff">Facebook — StoryVault</div>
+          <div style="font-size:12px;color:#888">Graph API • pages_manage_posts</div>
+        </div>
+      </div>
+      <span class="status-badge connected">Connected</span>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h3>Recent Content</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Niche</th>
+          <th>Platforms</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="color:#fff;font-weight:500">The AI Tool That Replaced My Entire Workflow</td>
+          <td><span class="niche-tag ai">AI Tools</span></td>
+          <td>TikTok, YouTube, IG, FB</td>
+          <td><span class="status-badge connected">Published</span></td>
+          <td><button class="btn-post" disabled style="opacity:0.5">Posted</button></td>
+        </tr>
+        <tr>
+          <td style="color:#fff;font-weight:500">Bitcoin Just Hit a New Record — Here's Why</td>
+          <td><span class="niche-tag crypto">Crypto</span></td>
+          <td>TikTok, YouTube, IG, FB</td>
+          <td><span class="status-badge pending">Scheduled</span></td>
+          <td><button class="btn-post" onclick="location.href='upload.html'">Post Now</button></td>
+        </tr>
+        <tr>
+          <td style="color:#fff;font-weight:500">The Disappearance Nobody Talks About</td>
+          <td><span class="niche-tag crime">True Crime</span></td>
+          <td>TikTok, YouTube</td>
+          <td><span class="status-badge connected">Published</span></td>
+          <td><button class="btn-post" disabled style="opacity:0.5">Posted</button></td>
+        </tr>
+        <tr>
+          <td style="color:#fff;font-weight:500">This Reddit Story Will Haunt You</td>
+          <td><span class="niche-tag reddit">Reddit</span></td>
+          <td>TikTok, YouTube, IG, FB</td>
+          <td><span class="status-badge pending">Scheduled</span></td>
+          <td><button class="btn-post" onclick="location.href='upload.html'">Post Now</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>

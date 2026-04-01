@@ -1,0 +1,21 @@
+Write a short-form video script reviewing an AI/tech tool.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+Requirements:
+1. hook_text: "This AI tool will blow your mind" style hook (3 seconds)
+2. voiceover_script: Practical demo walkthrough, pros/cons, pricing
+3. scenes: 5-7 scenes showing:
+   - Tool interface/UI
+   - Step-by-step demo
+   - Before/after comparison
+   - Pricing breakdown
+4. captions: Platform-specific (include "link in bio" for IG/TikTok)
+5. hashtags: 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+6. thumbnail_prompt: Split-screen showing tool + result, "FREE" or price badge
+
+Return as JSON only.

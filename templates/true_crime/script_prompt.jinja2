@@ -1,0 +1,101 @@
+Write a short-form video script breaking down a true crime case.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+IMPORTANT: This video uses AI-GENERATED video clips with smooth crossfade transitions between scenes. Each scene's image_prompt drives the video generation model — QUALITY OF PROMPTS IS CRITICAL. Write prompts as if directing a cinematographer. The voiceover carries the narrative. Word-by-word subtitles are burned in automatically. Background music plays underneath.
+
+Requirements:
+1. hook_text: Gripping opening (3 seconds, max 15 words) — MUST include the VICTIM's first name, NOT the perpetrator.
+   GOOD examples: "Sarah loved hiking — on June 3rd she vanished from a trail and was never seen again", "Christine was making breakfast when someone entered through her back door"
+   BAD examples: "This SHOCKING murder will TERRIFY you!", "Serial killer John Smith terrorized a city" (never lead with perpetrator name)
+
+2. voiceover_script: Investigative narration, 250-330 words. STRICT LIMIT: Do NOT exceed 330 words. Every sentence must earn its place — no filler. THIS IS THE MOST IMPORTANT PART.
+   - FIRST SENTENCE MUST contain: victim's full name + one human detail (age, job, hobby, personality trait)
+   - Example opening: "Maria Chen was a 34-year-old librarian who loved crossword puzzles. On December 8th, 2003, she disappeared."
+   - This creates immediate emotional investment — the viewer cares about a PERSON, not just a case
+   - Present the timeline: who they were → what happened → the investigation → forensic breakthrough or open questions
+   - Be respectful and victim-centered — never glorify the perpetrator
+   - Use precise investigative language: "forensic analysis revealed", "detectives traced", "DNA evidence confirmed"
+   - NO sensationalist phrases: avoid "shocking", "terrifying", "disturbing", "you won't believe"
+   - Build tension through FACTS, not adjectives
+   - If case is unsolved: end with specific details that could help (tip line, identifying features)
+   - If case is solved: end with justice outcome and what it means for the victim's family
+   - End with "Follow for weekly case breakdowns" or a specific call for tips
+   - EVERY claim must reference real, verifiable case details — no fabrication
+   - DO NOT cut off mid-thought. Must have a COMPLETE ending.
+
+3. scenes: An array of 8-10 scene objects. Each scene has:
+   - search_keywords: 2-4 word backup Pexels search query in case AI video generation fails. Keep simple and generic.
+   - image_prompt: DETAILED cinematographic prompt for AI video generation. THIS IS CRITICAL — vague prompts produce generic AI slop. Write each prompt as a specific camera direction.
+     REQUIRED ELEMENTS (include ALL in every prompt):
+     - Shot type: macro, close-up, medium, wide, over-shoulder, overhead, tracking, dolly, aerial
+     - Subject: specific objects, textures, actions the camera sees
+     - Lighting: natural, desk lamp, monitor glow, golden hour, overcast, neon, backlit
+     - Depth of field: shallow (blurred background), deep (everything sharp), rack focus
+     - Camera motion: slight drift, slow dolly forward, gentle pan right, static, handheld
+     - Mood/atmosphere: one or two words setting the feel
+
+     UNIVERSAL RULES:
+     - NEVER include human faces or full bodies — use hands-only, over-shoulder (back of head), or silhouettes
+     - NEVER include readable text, logos, or brand names
+     - NEVER use "futuristic", "holographic", or "glowing interface"
+     - Each scene MUST have a unique visual — no two scenes should look similar
+
+     CRITICAL — WHAT THE VIDEO MODEL CANNOT DO:
+     - NEVER describe screens, interfaces, dashboards, apps, or software UI — the model renders these as garbled mess
+     - NEVER describe text being displayed on screens or monitors
+     - NEVER ask for "stick figure animation" — the model cannot render this style
+     - Instead of showing the TOOL/APP, show the PHYSICAL WORLD AROUND IT:
+       WRONG: "Phone screen showing receipt scanning app with green checkmarks"
+       RIGHT: "Close-up of hand holding crumpled grocery receipt next to smartphone lying face-down on kitchen counter, warm morning light"
+       WRONG: "Laptop displaying expense categorization dashboard"
+       RIGHT: "Over-shoulder shot of person's hands resting on laptop keyboard, screen glow reflecting on their fingers, shallow depth of field so screen is blurred"
+       WRONG: "App pricing page showing free and pro tiers"
+       RIGHT: "Macro close-up of credit card being placed on a wooden desk next to a coffee mug, warm desk lamp, slight camera drift"
+     - The rule is: CAMERA SEES THE REAL WORLD, not the digital world
+     - If the scene is about using an app: show the HANDS, the DESK, the COFFEE, the ENVIRONMENT — never the screen content
+     - Screens can appear but MUST be out of focus / blurred in background
+
+     GOOD PROMPTS FOR THIS NICHE:
+     - "Slow dolly down a rain-soaked alley at night, red neon sign reflections on wet asphalt, deep shadows, cinematic noir atmosphere, slight handheld camera shake"
+     - "Macro close-up of manila evidence folder being opened under single desk lamp, harsh shadows, dust particles visible in light beam, shallow depth of field, static camera"
+     - "Wide establishing shot of empty courtroom, overhead fluorescent lights casting cold shadows, empty jury box, ominous atmosphere, very slow zoom in"
+     - "Close-up of police evidence tape fluttering in wind, dark stormy sky blurred behind it, rain droplets, shallow depth of field, slight camera drift"
+     - "Overhead shot of scattered case files on detective desk, single warm desk lamp, coffee cup, dark room edges, slow pan across documents"
+     - "Silhouette of figure standing in doorway, backlit by cool blue street light, rain falling, deep noir shadows, static camera with slight drift"
+
+     BAD PROMPTS:
+     - "Crime scene" (too vague)
+     - "Person looking suspicious" (will generate uncanny face)
+
+     EXTRA RULES:
+     - Every prompt MUST include "noir atmosphere" or "cinematic shadows"
+     - Include red/crimson accent lighting where possible (neon signs, tail lights)
+
+   - ken_burns: Fallback camera effect. One of: "zoom_in" (for reveals), "zoom_out" (for establishing shots), "pan_left", "pan_right", "diagonal", "zoom_pan_combo".
+   - duration: 5-8 seconds per scene. Total should be ~{{ niche.target_duration }}s.
+   - text_overlay: Key date, location, or evidence detail (max 6 words). Examples: "MARCH 15, 1998", "DNA MATCH FOUND", "CASE STILL OPEN". Leave empty string for atmospheric scenes.
+
+4. captions: Serious, respectful captions per platform (youtube, tiktok, instagram, facebook) — each 100-200 characters
+
+5. hashtags: Array of 10 relevant hashtags including {{ niche.hashtags[:5] | join(', ') }}
+
+6. thumbnail_prompt: Dark investigative scene with dramatic lighting. Evidence board or case file aesthetic. Desaturated, noir style.
+
+7. music_tags: Array of 3-5 descriptive tags for searching CINEMATIC SUSPENSE background music. Think sparse piano + orchestral tension, NOT ambient drone noise. Examples: ["cinematic", "piano", "suspense", "orchestral"], ["piano", "dark", "investigation", "cinematic"], ["suspense", "strings", "minimal", "cinematic"]. AVOID tags like "ambient", "drone", "noise", "electronic" — these produce shapeless noise that doesn't support the narrative.
+
+8. music_speed: One of "verylow", "low", "medium", "high", "veryhigh" — use "verylow" or "low" for true crime. The music should be a barely-there atmospheric presence.
+
+CRITICAL CONTENT RULES:
+- Every case must be REAL and verifiable through public reporting
+- Lead with the victim — they are a person, not a plot device
+- Never fabricate details, forensic evidence, or investigation timelines
+- If referencing a real case, use the real names and dates from published reports
+- Tone: respectful investigative journalism, NOT entertainment sensationalism
+- Think Dateline or 48 Hours, not clickbait true crime TikTok
+
+Return as valid JSON only. No markdown formatting, no code blocks.

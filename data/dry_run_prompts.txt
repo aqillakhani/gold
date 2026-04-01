@@ -1,0 +1,650 @@
+================================================================================
+GOLD DRY RUN v3 - MULTI-STYLE PIPELINE
+Generated: 2026-03-22 03:26:20
+================================================================================
+
+------------------------------------------------------------
+NICHE: personal_finance
+STEP:  ideation
+------------------------------------------------------------
+
+PROMPT:
+(no prompt)
+
+RESPONSE:
+{
+  "title": "Your Salary is 30% Lower Than It Should Be (Here's Proof)",
+  "hook": "You're being underpaid and here's how to prove it...",
+  "angle": "Use salary comparison tools and market data to discover most people are significantly underpaid, then show exact negotiation scripts",
+  "target_emotion": "shock"
+}
+
+
+------------------------------------------------------------
+NICHE: personal_finance
+STEP:  scripting
+------------------------------------------------------------
+
+PROMPT:
+
+Write a LONG-FORM educational video script for a personal finance YouTube channel.
+This is a premium, well-researched deep dive — NOT a quick tip.
+
+Topic: Your Salary is 30% Lower Than It Should Be (Here's Proof)
+Hook: You're being underpaid and here's how to prove it...
+Angle: Use salary comparison tools and market data to discover most people are significantly underpaid, then show exact negotiation scripts
+Tone: helpful, authoritative, encouraging
+Target duration: 1-6 minutes (60 seconds)
+
+IMPORTANT CONTEXT: This video uses REAL STOCK FOOTAGE from Pexels with smooth crossfade transitions. The voiceover narration carries the entire lesson. Word-by-word animated subtitles are burned in. Ambient background music plays underneath.
+
+Requirements:
+1. hook_text: Opening title card (first 4 seconds, max 15 words). Create IMMEDIATE curiosity.
+   Examples: "This One Credit Hack Raised My Score 200 Points" / "The $500/Month Side Hustle Nobody Talks About" / "Stop Wasting Money on These 5 Things"
+
+2. voiceover_script: Full narration, 130-170 words (approx 150 words per minute).
+
+   CRITICAL WRITING GUIDELINES:
+   - Open with a RELATABLE hook: a common financial mistake, a shocking stat, or a "what if" scenario
+   - Use SPECIFIC numbers: "$47,000 average student loan debt", "23% APR", "$500/month in subscriptions"
+   - Include actionable steps the viewer can do TODAY — not vague advice
+   - Use before/after comparisons: "If you save $200/month starting at 25, you'll have $400,000 by 65"
+   - Vary pacing: fast for excitement, slower for important takeaways
+   - Include "This is not financial advice" woven naturally near the end
+   - Add FTC disclosure: "Some links in the description may be affiliate links"
+   - End with a strong, specific call to action
+   - Write for AUDIO — every sentence should sound natural when spoken aloud
+
+3. chapters: Array of 4-7 chapter objects for YouTube timestamp markers:
+   - title: Chapter name (3-6 words). Make them actionable.
+     Good: "The 50/30/20 Rule" / "Kill Your Debt Fast" / "Your First $1000 Invested"
+     Bad: "Introduction" / "Tips" / "Conclusion"
+   - approximate_timestamp: Estimated time in "MM:SS" format
+
+4. scenes: Array of 2-3 scene objects. Each scene has:
+   - search_keywords: 2-4 word Pexels search query. Be SPECIFIC and VISUAL.
+     GOOD keywords for personal finance stock footage:
+     "financial planning office", "calculator budget spreadsheet", "piggy bank savings",
+     "stock market screen", "money cash counting", "credit card payment",
+     "real estate house", "laptop spreadsheet", "shopping cart store",
+     "wallet money bills", "couple financial planning", "student graduation",
+     "phone banking app", "car keys purchase", "grocery shopping",
+     "office desk work", "retirement elderly couple", "handshake business deal"
+   - image_prompt: Fallback AI image prompt. Clean infographic on white background with bold typography and one key number.
+   - motion_prompt: Brief camera motion description (e.g. "slow dolly forward", "camera pans right")
+   - ken_burns: Fallback effect. One of: zoom_in, zoom_out, pan_left, pan_right, pan_up, pan_down.
+   - duration: 15-30 seconds per scene.
+   - text_overlay: Key stat or data point (max 10 words). Use for IMPACT moments:
+     "SAVE $500/MONTH", "CREDIT SCORE: 750+", "DEBT FREE IN 18 MONTHS"
+     Leave empty string for transitional scenes.
+   - section: Which chapter this scene belongs to
+
+5. shorts_hooks: Array of 3-5 standalone highlights for Shorts/TikTok/Reels:
+   - hook_text: Punchy hook (max 12 words)
+   - voiceover_excerpt: 50-70 words that work as standalone clip
+   - scene_range: [start_scene_number, end_scene_number] (1-indexed)
+
+6. captions: Platform-optimized captions:
+   - youtube: 200-500 chars. Include chapter timestamps.
+   - tiktok: 100-150 chars. Punchy, end with question.
+   - instagram: 100-200 chars. Professional but engaging.
+   - facebook: 100-200 chars. Conversational, shareable.
+
+7. hashtags: Array of 15 relevant hashtags (include: #PersonalFinance, #MoneyTips, #BudgetingTips, #PassiveIncome, #FinancialFreedom)
+
+8. music_tags: Array of 3-5 tags for SUBTLE background music. Think calm, motivational underscore. Examples: ["ambient", "inspiring", "cinematic", "soft"]. AVOID: "energetic", "hiphop", "trap".
+
+9. music_speed: One of "verylow", "low", "medium" — use "low" for most finance content.
+
+10. thumbnail_prompt: A clean, bold thumbnail:
+    - Bold number or key stat as focal point
+    - Professional but approachable look
+    - High contrast, clean background
+    - NO text in the image
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+
+
+
+STRUCTURE INSTRUCTIONS (follow for variety):
+- Hook approach: Start with a short personal anecdote or confession that builds trust.
+- Script structure: Inverted pyramid: reveal the most shocking detail first, then explain how it happened.
+- Ending approach: End by revealing you left out one critical detail — follow for the rest.
+Do NOT follow a formulaic intro→body→CTA template.
+
+AUTHENTICITY RULES (critical for quality):
+- NEVER use these overused AI phrases: in this video, today we'll discuss, without further ado, buckle up, let's dive in, game-changer, mind-blowing, you won't believe
+- Write like a real person talking, not an AI generating content
+- Vary sentence length dramatically: some 3 words. Some 20+ words with subclauses.
+- Use specific details over vague claims: '$47,000' not 'a lot of money'
+- Include 1-2 imperfections: incomplete thoughts, self-corrections, genuine reactions
+- Every factual claim must be verifiable — no fabricated statistics or predictions
+
+MANDATORY DISCLOSURE: The voiceover script MUST include this exact line naturally woven into the narration (near the end): "This video contains affiliate links. I may earn a commission at no extra cost to you."
+
+RESPONSE:
+{
+  "hook_text": "You're Getting Robbed By Your Own Paycheck",
+  "voiceover_script": "Stop everything. Pull up your latest paycheck right now. See that number? It's probably thirty percent lower than what you should be earning. And I can prove it. Here's what happened when I ran my salary through three different comparison tools. Glassdoor showed I was making forty-two thousand below market rate. PayScale? Thirty-eight thousand under. Even LinkedIn's salary insights had me underpaid by twenty-nine thousand dollars. That's not a coincidence. Most people haven't negotiated their salary in over three years, while market rates climbed fifteen to twenty percent annually. Here's your action plan for today: First, check your exact title on Glassdoor, PayScale, and Salary.com. Screenshot everything. Second, document three specific achievements from this year with dollar amounts or percentages. Third, schedule a meeting with your manager using this exact script: 'I'd like to discuss my compensation based on current market research.' Don't ask for a raise. Present data. This video contains affiliate links. I may earn a commission at no extra cost to you. This is not financial advice. Your move.",
+  "chapters": [
+    {
+      "title": "The Salary Reality Check",
+      "approximate_timestamp": "00:00"
+    },
+    {
+      "title": "Market Research Tools",
+      "approximate_timestamp": "00:15"
+    },
+    {
+      "title": "Your Action Plan",
+      "approximate_timestamp": "00:35"
+    },
+    {
+      "title": "The Negotiation Script",
+      "approximate_timestamp": "00:50"
+    }
+  ],
+  "scenes": [
+    {
+      "search_keywords": "paycheck salary calculator laptop",
+      "image_prompt": "Clean white background with bold typography showing '$42,000 UNDERPAID' in red text with calculator and dollar sign icons",
+      "motion_prompt": "slow zoom in on laptop screen",
+      "ken_burns": "zoom_in",
+      "duration": 19.6,
+      "text_overlay": "30% UNDERPAID",
+      "section": "The Salary Reality Check"
+    },
+    {
+      "search_keywords": "financial planning office spreadsheet",
+      "image_prompt": "Professional infographic on white background showing three salary comparison websites with upward trending arrows and dollar amounts",
+      "motion_prompt": "camera pans across desk documents",
+      "ken_burns": "pan_right",
+      "duration": 24.5,
+      "text_overlay": "$29K-$42K BELOW MARKET",
+      "section": "Market Research Tools"
+    },
+    {
+      "search_keywords": "business meeting handshake office",
+      "image_prompt": "Minimalist white background with bold text showing 'SCHEDULE THE MEETING' with professional briefcase and handshake icon",
+      "motion_prompt": "slow dolly forward on meeting table",
+      "ken_burns": "zoom_in",
+      "duration": 14.7,
+      "text_overlay": "PRESENT DATA, DON'T ASK",
+      "section": "The Negotiation Script"
+    }
+  ],
+  "shorts_hooks": [
+    {
+      "hook_text": "Your Paycheck Is Missing $30,000",
+      "voiceover_excerpt": "Pull up your latest paycheck right now. See that number? It's probably thirty percent lower than what you should be earning. Glassdoor showed I was making forty-two thousand below market rate. PayScale? Thirty-eight thousand under.",
+      "scene_range": [
+        1,
+        2
+      ]
+    },
+    {
+      "hook_text": "The Salary Negotiation Script That Works",
+      "voiceover_excerpt": "Schedule a meeting with your manager using this exact script: 'I'd like to discuss my compensation based on current market research.' Don't ask for a raise. Present data. Document three specific achievements with dollar amounts first.",
+      "scene_range": [
+        3,
+        3
+      ]
+    },
+    {
+      "hook_text": "Most People Haven't Done This In 3 Years",
+      "voiceover_excerpt": "Most people haven't negotiated their salary in over three years, while market rates climbed fifteen to twenty percent annually. Check your exact title on Glassdoor, PayScale, and Salary.com today. Screenshot everything.",
+      "scene_range": [
+        2,
+        2
+      ]
+    }
+  ],
+  "captions": {
+    "youtube": "Discover why your salary is probably 30% below market rate and get the exact negotiation scripts that work. 00:00 Salary Reality Check | 00:15 Research Tools | 00:35 Action Plan | 00:50 Negotiation Script",
+    "tiktok": "Your paycheck is missing $30K and here's proof. Are you checking your market rate regularly?",
+    "instagram": "Most people are underpaid by 30% and don't even know it. Here's how to research your true market value and negotiate effectively.",
+    "facebook": "Shocking truth: Your salary is probably $30,000+ below what you should be earning. Here's the research to prove it and negotiate better."
+  },
+  "hashtags": [
+    "#PersonalFinance",
+    "#MoneyTips",
+    "#BudgetingTips",
+    "#PassiveIncome",
+    "#FinancialFreedom",
+    "#SalaryNegotiation",
+    "#CareerAdvice",
+    "#MoneyMindset",
+    "#WealthBuilding",
+    "#FinancialLiteracy",
+    "#SideHustle",
+    "#InvestmentTips",
+    "#DebtFree",
+    "#RetirementPlanning",
+    "#FinancialGoals"
+  ],
+  "music_tags": [
+    "ambient",
+    "inspiring",
+    "cinematic",
+    "motivational",
+    "subtle"
+  ],
+  "music_speed": "low",
+  "thumbnail_prompt": "Bold white background with large red text showing '$30,000 UNDERPAID' with a shocked professional person's silhouette and upward trending salary chart, high contrast design with dollar sign accent"
+}
+
+
+------------------------------------------------------------
+NICHE: personal_finance
+STEP:  thumbnail
+------------------------------------------------------------
+
+PROMPT:
+Bold white background with large red text showing '$30,000 UNDERPAID' with a shocked professional person's silhouette and upward trending salary chart, high contrast design with dollar sign accent
+
+
+
+------------------------------------------------------------
+NICHE: ai_tools
+STEP:  ideation
+------------------------------------------------------------
+
+PROMPT:
+(no prompt)
+
+RESPONSE:
+{
+  "title": "I Tested 12 AI Automation Tools - This One Runs My Entire Business!",
+  "hook": "This AI just automated my entire workflow in under 60 seconds...",
+  "angle": "Comprehensive comparison showing one standout tool that can automate complete business processes, not just individual tasks",
+  "target_emotion": "amazement"
+}
+
+
+------------------------------------------------------------
+NICHE: ai_tools
+STEP:  scripting
+------------------------------------------------------------
+
+PROMPT:
+Write a short-form video script demonstrating an AI tool in action.
+
+Topic: I Tested 12 AI Automation Tools - This One Runs My Entire Business!
+Hook: This AI just automated my entire workflow in under 60 seconds...
+Angle: Comprehensive comparison showing one standout tool that can automate complete business processes, not just individual tasks
+Tone: excited, informative, practical
+Target duration: 40 seconds
+
+IMPORTANT: This video uses REAL STOCK FOOTAGE from Pexels with smooth crossfade transitions between scenes. The voiceover walks through a real use case while professional stock clips show the process. Word-by-word subtitles are burned in automatically. Background music plays underneath.
+
+CRITICAL TONE SHIFT: Do NOT write hype-based content like "This AI is BETTER than 10 developers!" Instead, write DEMO-BASED content that shows real capability: "Watch me build a full landing page in 45 seconds with this tool." Show, don't hype. Specific results, not superlatives.
+
+Requirements:
+1. hook_text: Opening hook (first 3 seconds, max 15 words) — demonstrate a specific capability or result.
+   GOOD examples: "I built a full website in 2 minutes with this free tool", "Watch me turn a napkin sketch into a working app"
+   BAD examples: "This AI is INSANE!", "Better than 10 developers!", "You NEED this tool!"
+
+2. voiceover_script: Full demo-style narration, 250-330 words. STRICT LIMIT: Do NOT exceed 330 words. THIS IS THE MOST IMPORTANT PART.
+   - Structure: Specific problem → "Here's what I did" demo walkthrough → Actual result → Honest pros/cons → Pricing → Verdict
+   - Describe the actual workflow step by step as if screen-recording
+   - Include REAL pricing tiers and honest limitations (not just hype)
+   - Compare to ONE specific alternative with concrete differences
+   - Be genuinely helpful — viewers should learn something actionable
+   - End with honest verdict and "Follow for weekly tool demos"
+   - DO NOT cut off mid-thought. Must have a proper conclusion.
+
+3. scenes: An array of 6-8 scene objects. Each scene has:
+   - search_keywords: 2-4 word Pexels search query for finding relevant stock footage. Be specific but searchable. Examples:
+     - "person typing laptop"
+     - "software interface screen"
+     - "team collaboration office"
+     - "mobile app design"
+     - "robot artificial intelligence"
+     - "data analytics dashboard"
+     - "creative design workspace"
+     - "productivity workflow computer"
+   - image_prompt: Fallback prompt for AI image generation if no stock footage found. Keep clean and minimal.
+   - ken_burns: Fallback camera effect if AI image is used. One of: "zoom_in", "zoom_out", "pan_left", "pan_right", "diagonal", "zoom_pan_combo".
+   - duration: Duration in seconds (5-8). Total should be ~40s.
+   - text_overlay: Optional short text to display on this scene (max 6 words). Use for key features or prices. Examples: "FREE TIER AVAILABLE", "10x FASTER THAN GPT", "BEST FOR BEGINNERS". Leave empty string for scenes where visuals speak for themselves.
+
+4. captions: Platform-specific captions (youtube, tiktok, instagram, facebook) — each 100-200 characters
+
+5. hashtags: Array of 10 relevant hashtags including #aitools, #ai, #artificialintelligence, #productivity, #automation
+
+6. thumbnail_prompt: Bold, eye-catching thumbnail with the tool name and a reaction element.
+
+7. music_tags: Array of 3-5 descriptive tags for searching SUBTLE, UNDERSTATED background music. The music must sit quietly BEHIND the voiceover — viewers need to focus on the tool review, not the beat. Think clean, minimal tech underscore like Apple keynote background music. Examples: ["ambient", "electronic", "soft", "modern"] for tool demos, ["inspiring", "ambient", "cinematic", "calm"] for exciting discoveries, ["relaxing", "electronic", "minimal", "soft"] for comparison reviews. AVOID tags like "energetic", "hiphop", "trap", "upbeat" — these produce distracting music that competes with the narration.
+
+8. music_speed: One of "verylow", "low", "medium", "high", "veryhigh" — use "low" or "medium" for most AI tool content. The music should feel like gentle background atmosphere, not a driving beat.
+
+Guidelines for search_keywords:
+- Use simple, generic terms that Pexels will have results for
+- Focus on ACTIONS and SETTINGS: "person using computer", "office workspace modern", "phone screen close up"
+- Match the scene's topic: pricing scene → "money savings calculator", comparison scene → "side by side comparison"
+- Avoid brand names or overly specific tech terms — Pexels won't have "ChatGPT interface"
+- Think visually: what would a STOCK VIDEO of this concept look like?
+- Each scene should have DIFFERENT keywords for visual variety
+
+Guidelines for image_prompt (fallback only):
+- Dark tech aesthetic — think terminal/IDE dark mode, not white Apple slides
+- Code editor with syntax highlighting on dark background
+- Neon accent colors on dark backgrounds (cyan, green, purple)
+- Show tool interfaces, dashboards, or command-line outputs
+- Avoid text IN the generated image — use text_overlay field instead
+
+Guidelines for text_overlay:
+- Use for showing specific results: "Built in 2 min", "Free tier", "$0/month", "vs $50/mo alternative"
+- Frame as evidence of capability, not hype
+- Max 6 words per overlay
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+
+STRUCTURE INSTRUCTIONS (follow for variety):
+- Hook approach: Start with a bold controversial statement that viewers will want to argue with.
+- Script structure: Linear narrative: tell the story chronologically from start to finish.
+- Ending approach: End with the call to action woven naturally into the final sentence of the story.
+Do NOT follow a formulaic intro→body→CTA template.
+
+AUTHENTICITY RULES (critical for quality):
+- NEVER use these overused AI phrases: in this video, today we'll discuss, without further ado, buckle up, let's dive in, game-changer, mind-blowing, you won't believe
+- Write like a real person talking, not an AI generating content
+- Vary sentence length dramatically: some 3 words. Some 20+ words with subclauses.
+- Use specific details over vague claims: '$47,000' not 'a lot of money'
+- Include 1-2 imperfections: incomplete thoughts, self-corrections, genuine reactions
+- Every factual claim must be verifiable — no fabricated statistics or predictions
+
+MANDATORY DISCLOSURE: The voiceover script MUST include this exact line naturally woven into the narration (near the end): "Some links in the description may be affiliate links."
+
+RESPONSE:
+{
+  "hook_text": "This AI built my entire SaaS in 12 minutes flat",
+  "voiceover_script": "Everyone keeps asking which automation tool actually lives up to the hype. After burning through twelve different platforms this month, I found something weird. Most tools automate one thing. Zapier connects apps. Monday manages projects. But none of them think end-to-end. Then I tried Builder.ai's new Studio platform. Here's what happened when I fed it my actual business problem. I run a newsletter with 40,000 subscribers. Every week I manually research topics, write content, design graphics, schedule posts, track metrics. Takes me eight hours minimum. I told Studio: build me a content pipeline from research to publishing. Twelve minutes later, it delivered a complete system. Web scraper for trend research. AI writer trained on my voice. Canva integration for graphics. Buffer connection for scheduling. Analytics dashboard pulling from three platforms. The workflow runs automatically every Tuesday. I just approve or edit the final output. Cost breakdown gets interesting. Studio charges $199 monthly for unlimited workflows. Zapier would cost me $250 for the same automation complexity, and I'd still need to build each connection myself. The catch? Studio's only six months old. Some integrations feel beta. Customer support takes two days to respond. But honestly, this saved me six hours every week. That's $2,400 monthly if I value my time at $100 hourly. Some links in the description may be affiliate links. If you're drowning in repetitive business tasks, Studio might be your lifeline. Follow for weekly tool demos where I actually test this stuff.",
+  "scenes": [
+    {
+      "search_keywords": "person overwhelmed computer work",
+      "image_prompt": "Clean minimal establishing shot: Frustrated business owner sitting at dark desk surrounded by multiple computer monitors showing different software interfaces, warm desk lamp lighting, papers scattered, coffee cup, overwhelmed expression",
+      "ken_burns": "zoom_in",
+      "duration": 13.8,
+      "text_overlay": ""
+    },
+    {
+      "search_keywords": "automation workflow diagram",
+      "image_prompt": "Clean minimal detail view: Clean dark interface showing connected workflow boxes with glowing connection lines, purple and cyan accent colors, data flowing between automation steps, minimalist tech aesthetic",
+      "ken_burns": "pan_right",
+      "duration": 16.1,
+      "text_overlay": "12 TOOLS TESTED"
+    },
+    {
+      "search_keywords": "ai robot programming",
+      "image_prompt": "Clean minimal UI showcase: Sleek AI assistant interface on dark background, code snippets with syntax highlighting, robotic hand typing on holographic keyboard, blue glow effects",
+      "ken_burns": "zoom_out",
+      "duration": 13.8,
+      "text_overlay": "BUILDER.AI STUDIO"
+    },
+    {
+      "search_keywords": "timer countdown clock",
+      "image_prompt": "Clean minimal comparison layout: Digital timer showing 12:00 minutes on dark screen with bright neon green numbers, clean minimal interface, countdown effect, tech aesthetic",
+      "ken_burns": "zoom_in",
+      "duration": 11.5,
+      "text_overlay": "12 MINUTES"
+    },
+    {
+      "search_keywords": "newsletter email marketing",
+      "image_prompt": "Clean minimal data visualization: Email newsletter template on dark screen with 40k subscriber count, professional layout with graphics and text, engagement metrics visible",
+      "ken_burns": "pan_left",
+      "duration": 13.8,
+      "text_overlay": "40K SUBSCRIBERS"
+    },
+    {
+      "search_keywords": "money calculator savings",
+      "image_prompt": "Clean minimal close-up feature: Calculator showing $199 vs $250 comparison on dark background, clean number display, cost analysis interface, financial dashboard",
+      "ken_burns": "diagonal",
+      "duration": 11.5,
+      "text_overlay": "$199 VS $250"
+    },
+    {
+      "search_keywords": "clock time saving",
+      "image_prompt": "Clean minimal results display: Clock face showing 6 hours saved with green checkmark, time efficiency visualization, dark background with bright time display",
+      "ken_burns": "zoom_pan_combo",
+      "duration": 11.5,
+      "text_overlay": "6 HOURS SAVED"
+    }
+  ],
+  "captions": {
+    "youtube": "I tested 12 AI automation tools and found the ONE that actually runs my entire business workflow. Here's the honest review.",
+    "tiktok": "This AI automated my 8-hour weekly workflow in 12 minutes. Here's what it actually costs and if it's worth it.",
+    "instagram": "After testing 12 automation tools, this one actually delivered. Full breakdown of costs, results, and honest pros/cons.",
+    "facebook": "Spent a month testing AI automation tools for my business. This comprehensive review shows which one actually works."
+  },
+  "hashtags": [
+    "#aitools",
+    "#ai",
+    "#artificialintelligence",
+    "#productivity",
+    "#automation",
+    "#builderai",
+    "#workflow",
+    "#business",
+    "#saas",
+    "#entrepreneur"
+  ],
+  "thumbnail_prompt": "Split screen showing overwhelmed person at messy desk on left, same person relaxed with automated workflow visualization on right, bright text overlay 'BUILDER.AI STUDIO' with shocked emoji reaction face in corner, dark tech aesthetic with neon accents",
+  "music_tags": [
+    "ambient",
+    "electronic",
+    "minimal",
+    "modern",
+    "soft"
+  ],
+  "music_speed": "low"
+}
+
+
+------------------------------------------------------------
+NICHE: ai_tools
+STEP:  thumbnail
+------------------------------------------------------------
+
+PROMPT:
+Split screen showing overwhelmed person at messy desk on left, same person relaxed with automated workflow visualization on right, bright text overlay 'BUILDER.AI STUDIO' with shocked emoji reaction face in corner, dark tech aesthetic with neon accents
+
+
+
+------------------------------------------------------------
+NICHE: english_learning
+STEP:  ideation
+------------------------------------------------------------
+
+PROMPT:
+(no prompt)
+
+RESPONSE:
+{
+  "title": "This ONE word makes you sound fluent instantly",
+  "hook": "Native speakers use this word 50+ times daily...",
+  "angle": "Revealing how the simple word 'actually' can transform basic sentences into natural, fluent-sounding English when used correctly",
+  "target_emotion": "curiosity"
+}
+
+
+------------------------------------------------------------
+NICHE: english_learning
+STEP:  scripting
+------------------------------------------------------------
+
+PROMPT:
+Write a short-form English vocabulary/grammar lesson video script.
+
+Topic: This ONE word makes you sound fluent instantly
+Hook: Native speakers use this word 50+ times daily...
+Angle: Revealing how the simple word 'actually' can transform basic sentences into natural, fluent-sounding English when used correctly
+Tone: patient, clear, encouraging, educational
+Target duration: 60 seconds
+
+IMPORTANT: This video uses REAL STOCK FOOTAGE from Pexels with smooth crossfade transitions. The voiceover teaches English vocabulary/grammar at a SLOW, CLEAR pace (0.80x speed). Word-by-word subtitles are burned in. Each scene displays the vocabulary word or phrase as a LARGE text overlay. Calm ambient music plays softly underneath.
+
+CRITICAL: This video targets NON-NATIVE English speakers. Every word must be clear, simple, and well-paced. Use FEWER words than other niches — aim for 180-220 words for 60 seconds (slower speaking pace).
+
+Requirements:
+1. hook_text: Opening hook (first 3 seconds, max 15 words) — create curiosity about learning. Examples:
+   - "Stop saying VERY GOOD — say THIS instead"
+   - "3 English words that make you sound fluent"
+   - "Native speakers NEVER say this — here's why"
+   - "The #1 grammar mistake killing your English"
+
+2. voiceover_script: Full voiceover narration, 180-220 words. STRICT LIMIT: Do NOT exceed 220 words. THIS IS THE MOST IMPORTANT PART.
+   - Speak SLOWLY and CLEARLY — pause after each new word or phrase
+   - Structure: Hook ("Stop saying X, say Y instead") → Word 1 + Definition + Example → Word 2 + Definition + Example → Word 3 + Definition + Example → Common Mistake → Practice CTA
+   - Use simple explanation language — no jargon in definitions
+   - Include 3-5 vocabulary words or grammar points per video
+   - For each word: say it, define it, use it in 2-3 example sentences
+   - Point out a common mistake learners make
+   - End with practice prompt: "Now try using ONE of these words in a comment below"
+   - Repeat key words 2-3 times for retention
+   - DO NOT cut off mid-thought. Must have a proper conclusion.
+
+3. scenes: An array of 5-7 scene objects. Each scene has:
+   - search_keywords: 2-4 word Pexels search query. Focus on LEARNING and CONVERSATION visuals:
+     - "studying classroom student"
+     - "person reading book"
+     - "office meeting conversation"
+     - "people talking cafe"
+     - "writing notebook pen"
+     - "typing computer laptop"
+     - "teacher whiteboard classroom"
+     - "library books studying"
+     - "friends conversation outdoor"
+     - "business presentation office"
+   - image_prompt: Fallback — clean whiteboard style with large readable text. White background, bold dark text.
+   - ken_burns: Fallback camera effect. One of: "zoom_in", "zoom_out", "pan_left", "pan_right".
+   - duration: Duration in seconds (7-12). Total should be ~60s. Slightly longer per scene than other niches for slower pacing.
+   - text_overlay: THE VOCABULARY WORD OR PHRASE in LARGE TEXT. This is critical for language learning. Examples: "FURTHERMORE", "BREAK DOWN", "ON THE OTHER HAND". Every scene MUST have a text overlay showing the word being taught.
+
+4. captions: Platform-specific captions (youtube, tiktok, instagram, facebook) — each 100-200 characters. Include "Save this lesson!" type CTAs.
+
+5. hashtags: Array of 10 relevant hashtags including #LearnEnglish, #EnglishVocabulary, #EnglishLessons, #SpeakEnglish, #EnglishGrammar
+
+6. thumbnail_prompt: Clean, educational thumbnail showing a key vocabulary word or "before vs after" comparison of word usage.
+
+7. music_tags: Array of 3-5 tags for VERY SUBTLE study background music. Think "lo-fi beats to study to" — gentle, minimal, barely-there. Examples: ["lofi", "chillout", "relaxing", "study"]. AVOID: anything with a strong beat, piano solos, cinematic scores, or anything that competes with the voice. This should feel like quiet study room ambiance.
+
+8. music_speed: "verylow" — the music should be barely perceptible at ~30% volume, just creating a calm study atmosphere.
+
+Guidelines for text_overlay:
+- EVERY scene must have a text_overlay showing the word/phrase being taught
+- Use ALL CAPS for vocabulary words
+- Keep overlays to 1-3 words maximum
+- The text overlay IS the lesson — it's what viewers screenshot and save
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+
+STRUCTURE INSTRUCTIONS (follow for variety):
+- Hook approach: Start by debunking a common myth with evidence.
+- Script structure: Mystery reveal: set up clues throughout, build to a surprising conclusion.
+- Ending approach: End with a surprising twist or recontextualization of everything they just heard.
+Do NOT follow a formulaic intro→body→CTA template.
+
+AUTHENTICITY RULES (critical for quality):
+- NEVER use these overused AI phrases: in this video, today we'll discuss, without further ado, buckle up, let's dive in, game-changer, mind-blowing, you won't believe
+- Write like a real person talking, not an AI generating content
+- Vary sentence length dramatically: some 3 words. Some 20+ words with subclauses.
+- Use specific details over vague claims: '$47,000' not 'a lot of money'
+- Include 1-2 imperfections: incomplete thoughts, self-corrections, genuine reactions
+- Every factual claim must be verifiable — no fabricated statistics or predictions
+
+RESPONSE:
+{
+  "hook_text": "This ONE word makes you sound fluent instantly",
+  "voiceover_script": "Native speakers use this word fifty times daily, but most English learners never use it. The word is ACTUALLY. Let me show you how it transforms your English. First, ACTUALLY means in reality or in fact. Instead of saying I am tired, say I am ACTUALLY tired. This adds emphasis. Instead of That movie was good, say That movie was ACTUALLY good. Much more natural. Second, use ACTUALLY to politely disagree. When someone says The test was easy, you can say ACTUALLY, I found it quite difficult. This sounds respectful, not rude. Third, ACTUALLY shows surprise. If someone asks Are you from Japan and you are from Korea, say ACTUALLY, I am from Korea. Perfect correction. The biggest mistake? Students put ACTUALLY at the end of sentences. Wrong. Always put it before the main word you want to emphasize. ACTUALLY goes before adjectives, verbs, or the surprising information. Now try using ACTUALLY in a comment below. Show me one sentence with this powerful word.",
+  "scenes": [
+    {
+      "search_keywords": "person studying notebook",
+      "image_prompt": "Clean whiteboard with 'ACTUALLY' written in large bold black letters, white background, simple educational style",
+      "ken_burns": "zoom_in",
+      "duration": 9.0,
+      "text_overlay": "ACTUALLY"
+    },
+    {
+      "search_keywords": "students classroom conversation",
+      "image_prompt": "Whiteboard showing 'I am ACTUALLY tired' in large clear text, white background, educational presentation style",
+      "ken_burns": "pan_right",
+      "duration": 11.3,
+      "text_overlay": "I AM ACTUALLY TIRED"
+    },
+    {
+      "search_keywords": "people talking cafe",
+      "image_prompt": "Clean whiteboard displaying 'POLITE DISAGREEMENT' in bold letters, minimal educational design",
+      "ken_burns": "zoom_out",
+      "duration": 10.1,
+      "text_overlay": "POLITE DISAGREEMENT"
+    },
+    {
+      "search_keywords": "friends conversation outdoor",
+      "image_prompt": "Whiteboard with 'ACTUALLY, I found it difficult' written clearly, white background, teaching style",
+      "ken_burns": "pan_left",
+      "duration": 12.4,
+      "text_overlay": "ACTUALLY, I FOUND IT DIFFICULT"
+    },
+    {
+      "search_keywords": "teacher whiteboard classroom",
+      "image_prompt": "Educational whiteboard showing 'SHOWING SURPRISE' in large text, clean presentation format",
+      "ken_burns": "zoom_in",
+      "duration": 11.3,
+      "text_overlay": "SHOWING SURPRISE"
+    },
+    {
+      "search_keywords": "writing notebook pen",
+      "image_prompt": "Whiteboard displaying 'COMMON MISTAKE' in bold red letters, white background, warning style",
+      "ken_burns": "pan_right",
+      "duration": 9.0,
+      "text_overlay": "COMMON MISTAKE"
+    },
+    {
+      "search_keywords": "typing computer laptop",
+      "image_prompt": "Clean whiteboard with 'TRY IT NOW' in encouraging blue letters, educational motivational style",
+      "ken_burns": "zoom_out",
+      "duration": 4.5,
+      "text_overlay": "TRY IT NOW"
+    }
+  ],
+  "captions": {
+    "youtube": "Learn how 'ACTUALLY' makes you sound fluent! Native speakers use this 50+ times daily. Save this English lesson! 📚",
+    "tiktok": "This ONE word = instant fluency ✨ Native speakers say it 50+ times daily but you probably don't use it! Save this! 🔥",
+    "instagram": "Stop sounding like a textbook! This word makes you sound like a native speaker instantly 🎯 Save for later!",
+    "facebook": "English teachers don't want you to know this simple trick! One word that transforms your fluency level immediately 🚀"
+  },
+  "hashtags": [
+    "#LearnEnglish",
+    "#EnglishVocabulary",
+    "#EnglishLessons",
+    "#SpeakEnglish",
+    "#EnglishGrammar",
+    "#FluentEnglish",
+    "#EnglishTips",
+    "#ESL",
+    "#StudyEnglish",
+    "#EnglishTeacher"
+  ],
+  "thumbnail_prompt": "Split screen comparison showing 'I am tired' on left side in basic text, 'I am ACTUALLY tired' on right side in bold emphasized text, bright yellow background, large readable fonts, before and after style",
+  "music_tags": [
+    "ambient",
+    "lofi",
+    "study",
+    "minimal",
+    "calm"
+  ],
+  "music_speed": "verylow"
+}
+
+
+------------------------------------------------------------
+NICHE: english_learning
+STEP:  thumbnail
+------------------------------------------------------------
+
+PROMPT:
+Split screen comparison showing 'I am tired' on left side in basic text, 'I am ACTUALLY tired' on right side in bold emphasized text, bright yellow background, large readable fonts, before and after style
+
+
+

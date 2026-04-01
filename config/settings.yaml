@@ -1,0 +1,111 @@
+app:
+  name: gold
+  version: 0.2.0
+  dry_run: false
+  data_dir: data
+  log_level: INFO
+  log_file: data/logs/gold.log
+  active_niches:
+    - reddit_stories
+    - personal_finance
+    - ai_tools
+    - true_crime
+    - betrayal_revenge
+    - english_learning
+
+scheduling:
+  posts_per_day_per_account: 1  # 1/day while channels < 50 subs, ramp up later
+  stagger_minutes: 144
+  jitter_minutes: 15
+  batch_generation_hour: 2  # 2 AM
+  buffer_days: 3
+  # Production batch sizes (videos per run)
+  # 1 video/day = need 3-day buffer = 3 videos per run
+  # reddit/betrayal = 1 story (3 parts = 3 days of content)
+  batch_size:
+    reddit_stories: 1      # 1 story × 3 parts = 3 days
+    betrayal_revenge: 1    # 1 story × 3 parts = 3 days
+    ai_tools: 3            # 3 single videos = 3 days
+    true_crime: 3           # 3 single videos = 3 days
+    personal_finance: 3     # 3 single videos = 3 days
+    english_learning: 3     # 3 single videos = 3 days
+  # Per-niche posting frequency (posts per week)
+  # StoryVault (reddit+betrayal) gets 6/day = 2 stories/day × 3 parts
+  niche_frequency:
+    reddit_stories: 21  # 3 parts/day = 21 parts/week (StoryVault)
+    betrayal_revenge: 21 # 3 parts/day = 21 parts/week (StoryVault, staggered)
+    ai_tools: 21         # 3 videos/day
+    true_crime: 21       # 3 videos/day
+    personal_finance: 21 # 3 videos/day
+    english_learning: 21 # 3 videos/day
+  # Platforms to automate posting for
+  automated_platforms:
+    - youtube
+    - instagram
+    - tiktok
+  # Platform-specific posting times (EST) — research-backed
+  # YouTube Shorts: 6PM, 8PM, 10PM (3x) — peak evening engagement
+  # TikTok: 10AM, 3PM, 8PM (3x) — spread across day
+  # Instagram Reels: 9AM, 8PM (2x max) — overposting hurts algorithm
+  # See scheduler.py PLATFORM_SLOTS for implementation
+
+pipeline:
+  max_retries: 3
+  retry_base_delay: 5
+  retry_max_delay: 300
+
+api:
+  anthropic:
+    model: claude-sonnet-4-20250514
+    max_tokens: 4096
+  fal:
+    image_model: fal-ai/flux-pro/v1.1
+    # i2v_model: fal-ai/minimax/video-01-live/image-to-video  # MiniMax (~$0.01/sec, 65% cheaper than Kling)
+    i2v_model: fal-ai/kling-video/v2/master/image-to-video     # Kling v2 ($0.029/sec, higher quality)
+  comfyui:
+    host: ""  # Set to Vast.ai instance IP:port when running (e.g. "123.45.67.89:8188")
+    video_model: ltx-2.3
+    timeout: 600
+  video_backend: fal  # "fal" or "comfyui" — comfyui uses LTX-2.3 via Vast.ai
+  elevenlabs:
+    model: eleven_multilingual_v2
+  openai:
+    tts_model: tts-1
+    moderation_model: omni-moderation-latest
+
+video:
+  resolution:
+    width: 1080
+    height: 1920
+  fps: 30
+  min_duration: 30
+  max_duration: 90
+  format: mp4
+  codec: libx264
+
+quality_gate:
+  min_duration: 25
+  max_duration: 120
+  min_resolution: [1080, 1920]
+  max_file_size_mb: 100
+  require_audio: true
+  moderation_enabled: true
+
+monitoring:
+  dashboard_port: 8420
+  metrics_poll_hours: 6
+  daily_summary_hour: 8
+
+platforms:
+  facebook:
+    api_version: v19.0
+    rate_limit_per_hour: 200
+  instagram:
+    api_version: v19.0
+    max_posts_per_day: 100
+  youtube:
+    quota_per_day: 10000
+    upload_cost: 1600
+  tiktok:
+    max_posts_per_day: 15
+    rate_limit_per_minute: 6

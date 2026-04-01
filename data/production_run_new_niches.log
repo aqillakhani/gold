@@ -1,0 +1,392 @@
+2026-03-20 02:12:19,309 [INFO] Starting dry run v6 — STOCK FOOTAGE PIPELINE
+2026-03-20 02:12:19,309 [INFO] Niches:
+2026-03-20 02:12:19,310 [INFO]   reddit_stories:    gameplay bg + voiceover + Whisper subtitles (~$0.12)
+2026-03-20 02:12:19,310 [INFO]   personal_finance:  Pexels stock footage + crossfade + voiceover + subs (~$0.10)
+2026-03-20 02:12:19,310 [INFO]   ai_tools:          Pexels stock footage + crossfade + voiceover + subs (~$0.10)
+2026-03-20 02:12:19,310 [INFO]   true_crime:        Pexels stock footage + crossfade + voiceover + subs (~$0.10)
+2026-03-20 02:12:19,310 [INFO]   betrayal_revenge:  gameplay bg + voiceover + Whisper subtitles (~$0.12)
+2026-03-20 02:12:19,310 [INFO]   english_learning:  Pexels stock footage + crossfade + voiceover + subs (~$0.10)
+2026-03-20 02:12:19,311 [INFO] This will call Anthropic, ElevenLabs, Pexels, and optionally fal.ai APIs.
+2026-03-20 02:12:19,320 [INFO] Found 34 total background videos, building montage...
+2026-03-20 02:12:21,636 [INFO] Building background montage: 2 clips, 191.3s total
+2026-03-20 02:13:41,122 [INFO] Background montage ready: dry_run_montage.mp4
+2026-03-20 02:13:41,122 [INFO] ============================================================
+2026-03-20 02:13:41,123 [INFO] [personal_finance] STEP 1: Generating ideas... (style: stock_footage)
+2026-03-20 02:13:50,508 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 02:13:50,671 [INFO] Generated 3 ideas for personal_finance
+2026-03-20 02:13:50,671 [INFO] [personal_finance] Idea: I Raised My Credit Score 200 Points in 60 Days (Here's How)
+2026-03-20 02:13:50,671 [INFO] [personal_finance] STEP 2: Writing script...
+2026-03-20 02:14:19,671 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 02:14:19,674 [INFO] Script written for: I Raised My Credit Score 200 Points in 60 Days (Here's How)
+2026-03-20 02:14:19,674 [INFO] [personal_finance] Script: voiceover=True (256 words), slides=False, clips=False
+2026-03-20 02:14:19,706 [INFO] Loaded niche engine: ai_tools -> gold.niches.ai_tools.AIToolsEngine
+2026-03-20 02:14:19,711 [INFO] Loaded niche engine: asmr_satisfying -> gold.niches.asmr_satisfying.ASMRSatisfyingEngine
+2026-03-20 02:14:19,715 [INFO] Loaded niche engine: betrayal_revenge -> gold.niches.betrayal_revenge.BetrayalRevengeEngine
+2026-03-20 02:14:19,719 [INFO] Loaded niche engine: crypto_finance -> gold.niches.crypto_finance.CryptoFinanceEngine
+2026-03-20 02:14:19,722 [INFO] Loaded niche engine: english_learning -> gold.niches.english_learning.EnglishLearningEngine
+2026-03-20 02:14:19,727 [INFO] Loaded niche engine: horror_stories -> gold.niches.horror_stories.HorrorStoriesEngine
+2026-03-20 02:14:19,731 [INFO] Loaded niche engine: personal_finance -> gold.niches.personal_finance.PersonalFinanceEngine
+2026-03-20 02:14:19,735 [INFO] Loaded niche engine: psychology_facts -> gold.niches.psychology_facts.PsychologyFactsEngine
+2026-03-20 02:14:19,739 [INFO] Loaded niche engine: reaction_videos -> gold.niches.reaction_videos.ReactionVideosEngine
+2026-03-20 02:14:19,743 [INFO] Loaded niche engine: reddit_stories -> gold.niches.reddit_stories.RedditStoriesEngine
+2026-03-20 02:14:19,747 [INFO] Loaded niche engine: tech_ai -> gold.niches.tech_ai.TechAIEngine
+2026-03-20 02:14:19,751 [INFO] Loaded niche engine: true_crime -> gold.niches.true_crime.TrueCrimeEngine
+2026-03-20 02:14:19,751 [INFO] [personal_finance] STEP 3: Generating thumbnail...
+2026-03-20 02:14:20,948 [INFO] HTTP Request: POST https://queue.fal.run/fal-ai/flux-pro/v1.1 "HTTP/1.1 200 OK"
+2026-03-20 02:14:20,981 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a18-5886-7ff1-8bab-c2121f132b9e/status "HTTP/1.1 202 Accepted"
+2026-03-20 02:14:20,982 [INFO] fal.ai job status: IN_QUEUE (waited 0s)
+2026-03-20 02:14:26,085 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a18-5886-7ff1-8bab-c2121f132b9e/status "HTTP/1.1 202 Accepted"
+2026-03-20 02:14:31,215 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a18-5886-7ff1-8bab-c2121f132b9e/status "HTTP/1.1 200 OK"
+2026-03-20 02:14:33,259 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a18-5886-7ff1-8bab-c2121f132b9e "HTTP/1.1 200 OK"
+2026-03-20 02:14:33,534 [INFO] HTTP Request: GET https://v3b.fal.media/files/b/0a92e52e/y1pZfJbae0xyHkO2nFXlX_47f79cfbb5e94e1eb3bc0bbaf0de7113.jpg "HTTP/1.1 200 OK"
+2026-03-20 02:14:33,669 [INFO] Generated thumbnail: C:\Users\claws\OneDrive\Desktop\gold\data\media\images\test_personal_finance_thumb_1773990821.png
+2026-03-20 02:14:33,670 [INFO] [personal_finance] Thumbnail: test_personal_finance_thumb_1773990821.png
+2026-03-20 02:14:33,670 [INFO] [personal_finance] STEP 3a: Generating voiceover FIRST...
+2026-03-20 02:14:35,252 [INFO] HTTP Request: POST https://api.fish.audio/v1/tts "HTTP/1.1 200 OK"
+2026-03-20 02:14:58,521 [INFO] Generated voiceover: C:\Users\claws\OneDrive\Desktop\gold\data\media\audio\test_personal_finance_vo_1773990821.mp3
+2026-03-20 02:14:58,797 [INFO] [personal_finance] Voiceover: 86.8s
+2026-03-20 02:14:58,797 [INFO] [personal_finance] Scaled scene durations: 65.0s -> 87.9s (voiceover: 86.8s)
+2026-03-20 02:14:58,798 [INFO] [personal_finance] STEP 3b: Fetching 8 stock clips from Pexels...
+2026-03-20 02:15:00,569 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=credit+score+phone&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:15:00,574 [INFO] Pexels search 'credit score phone': 7/10 results passed min_duration=10s filter
+2026-03-20 02:15:00,575 [INFO] Trying Pexels clip id=7568746 duration=11s (target=10.8s) for query 'credit score phone'
+2026-03-20 02:15:00,576 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/7568746/7568746-hd_1080_1920_25fps.mp4 -> pexels_7568746_1080x1920.download.tmp
+2026-03-20 02:15:02,084 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/7568746/7568746-hd_1080_1920_25fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:15:25,040 [INFO] Trimmed stock clip: pexels_7568746_1080x1920.mp4 (10.8s, 1080x1920 @ 30fps)
+2026-03-20 02:15:26,699 [INFO] Stock clip ready: test_personal_finance_stock_0_1773990821.mp4 (YAVG=120.4)
+2026-03-20 02:15:26,699 [INFO] [personal_finance] Scene 1/8: Pexels clip OK (credit score phone)
+2026-03-20 02:15:29,220 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=family+dinner+table&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:15:29,227 [INFO] Pexels search 'family dinner table': 8/10 results passed min_duration=9s filter
+2026-03-20 02:15:29,228 [INFO] Trying Pexels clip id=5727553 duration=10s (target=9.5s) for query 'family dinner table'
+2026-03-20 02:15:29,229 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/5727553/5727553-uhd_2160_3840_24fps.mp4 -> pexels_5727553_1080x1920.download.tmp
+2026-03-20 02:15:30,758 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/5727553/5727553-uhd_2160_3840_24fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:15:56,424 [INFO] Trimmed stock clip: pexels_5727553_1080x1920.mp4 (9.5s, 1080x1920 @ 30fps)
+2026-03-20 02:15:57,943 [INFO] Stock clip ready: test_personal_finance_stock_1_1773990821.mp4 (YAVG=84.9)
+2026-03-20 02:15:57,943 [INFO] [personal_finance] Scene 2/8: Pexels clip OK (family dinner table)
+2026-03-20 02:16:00,352 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=credit+card+payment&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:16:00,358 [INFO] Pexels search 'credit card payment': 8/10 results passed min_duration=12s filter
+2026-03-20 02:16:00,360 [INFO] Trying Pexels clip id=7669652 duration=12s (target=12.2s) for query 'credit card payment'
+2026-03-20 02:16:00,362 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/7669652/7669652-hd_1080_1920_25fps.mp4 -> pexels_7669652_1080x1920.download.tmp
+2026-03-20 02:16:01,630 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/7669652/7669652-hd_1080_1920_25fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:16:27,188 [INFO] Trimmed stock clip: pexels_7669652_1080x1920.mp4 (12.2s, 1080x1920 @ 30fps)
+2026-03-20 02:16:28,889 [INFO] Stock clip ready: test_personal_finance_stock_2_1773990821.mp4 (YAVG=81.8)
+2026-03-20 02:16:28,889 [INFO] [personal_finance] Scene 3/8: Pexels clip OK (credit card payment)
+2026-03-20 02:16:31,068 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=calendar+smartphone+app&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:16:31,073 [INFO] Pexels search 'calendar smartphone app': 10/10 results passed min_duration=10s filter
+2026-03-20 02:16:31,074 [INFO] Trying Pexels clip id=6823847 duration=10s (target=10.8s) for query 'calendar smartphone app'
+2026-03-20 02:16:31,075 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/6823847/6823847-uhd_2160_3840_30fps.mp4 -> pexels_6823847_1080x1920.download.tmp
+2026-03-20 02:16:32,117 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/6823847/6823847-uhd_2160_3840_30fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:16:55,132 [INFO] Trimmed stock clip: pexels_6823847_1080x1920.mp4 (10.8s, 1080x1920 @ 30fps)
+2026-03-20 02:16:56,431 [INFO] Stock clip ready: test_personal_finance_stock_3_1773990821.mp4 (YAVG=194.3)
+2026-03-20 02:16:56,432 [INFO] [personal_finance] Scene 4/8: Pexels clip OK (calendar smartphone app)
+2026-03-20 02:16:57,839 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=credit+score+improvement&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:16:57,844 [INFO] Pexels search 'credit score improvement': 3/10 results passed min_duration=13s filter
+2026-03-20 02:16:57,845 [INFO] Trying Pexels clip id=7801556 duration=28s (target=13.5s) for query 'credit score improvement'
+2026-03-20 02:16:57,847 [INFO] Stock clip ID cache hit: pexels_7801556_1080x1920.mp4
+2026-03-20 02:16:59,573 [INFO] Stock clip ready: test_personal_finance_stock_4_1773990821.mp4 (YAVG=132.7)
+2026-03-20 02:16:59,573 [INFO] [personal_finance] Scene 5/8: Pexels clip OK (credit score improvement)
+2026-03-20 02:17:01,501 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=laptop+spreadsheet+finance&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:17:01,509 [INFO] Pexels search 'laptop spreadsheet finance': 7/10 results passed min_duration=12s filter
+2026-03-20 02:17:01,511 [INFO] Trying Pexels clip id=6799744 duration=12s (target=12.2s) for query 'laptop spreadsheet finance'
+2026-03-20 02:17:01,513 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/6799744/6799744-uhd_2160_3840_30fps.mp4 -> pexels_6799744_1080x1920.download.tmp
+2026-03-20 02:17:02,905 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/6799744/6799744-uhd_2160_3840_30fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:17:28,326 [INFO] Trimmed stock clip: pexels_6799744_1080x1920.mp4 (12.2s, 1080x1920 @ 30fps)
+2026-03-20 02:17:29,763 [INFO] Stock clip ready: test_personal_finance_stock_5_1773990821.mp4 (YAVG=180.9)
+2026-03-20 02:17:29,763 [INFO] [personal_finance] Scene 6/8: Pexels clip OK (laptop spreadsheet finance)
+2026-03-20 02:17:31,381 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=premium+credit+cards&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:17:31,384 [INFO] Pexels search 'premium credit cards': 7/10 results passed min_duration=10s filter
+2026-03-20 02:17:31,385 [INFO] Trying Pexels clip id=5924998 duration=11s (target=10.8s) for query 'premium credit cards'
+2026-03-20 02:17:31,386 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/5924998/5924998-uhd_2160_3840_24fps.mp4 -> pexels_5924998_1080x1920.download.tmp
+2026-03-20 02:17:32,816 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/5924998/5924998-uhd_2160_3840_24fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:17:52,652 [INFO] Trimmed stock clip: pexels_5924998_1080x1920.mp4 (10.8s, 1080x1920 @ 30fps)
+2026-03-20 02:17:53,849 [INFO] Stock clip ready: test_personal_finance_stock_6_1773990821.mp4 (YAVG=169.4)
+2026-03-20 02:17:53,849 [INFO] [personal_finance] Scene 7/8: Pexels clip OK (premium credit cards)
+2026-03-20 02:17:55,958 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=smartphone+follow+button&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 02:17:55,964 [INFO] Pexels search 'smartphone follow button': 9/10 results passed min_duration=8s filter
+2026-03-20 02:17:55,966 [INFO] Trying Pexels clip id=8819437 duration=8s (target=8.1s) for query 'smartphone follow button'
+2026-03-20 02:17:55,968 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/8819437/8819437-hd_1080_1920_25fps.mp4 -> pexels_8819437_1080x1920.download.tmp
+2026-03-20 02:17:57,904 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/8819437/8819437-hd_1080_1920_25fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 02:18:04,938 [INFO] Trimmed stock clip: pexels_8819437_1080x1920.mp4 (8.1s, 1080x1920 @ 30fps)
+2026-03-20 02:18:05,689 [INFO] Stock clip ready: test_personal_finance_stock_7_1773990821.mp4 (YAVG=50.0)
+2026-03-20 02:18:05,689 [INFO] [personal_finance] Scene 8/8: Pexels clip OK (smartphone follow button)
+2026-03-20 02:18:05,690 [INFO] [personal_finance] Prepared 8 clips for composition
+2026-03-20 02:18:05,690 [INFO] [personal_finance] STEP 4: Extracting word timestamps via Whisper...
+2026-03-20 02:18:24,304 [INFO] Loading Whisper 'base' model (first call — will be cached)…
+2026-03-20 02:18:27,456 [INFO] Whisper model loaded.
+C:\Users\claws\AppData\Roaming\Python\Python314\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+2026-03-20 02:19:08,123 [INFO] Extracted 258 word timestamps from test_personal_finance_vo_1773990821.mp3
+2026-03-20 02:19:08,123 [INFO] [personal_finance] Got 258 word timestamps
+2026-03-20 02:19:08,123 [INFO] Speed override for personal_finance: low
+2026-03-20 02:19:08,124 [INFO] Jamendo search: tags=['ambient', 'inspiring', 'chillout', 'cinematic'], speed=low, duration=60-300s
+2026-03-20 02:19:09,687 [INFO] HTTP Request: GET https://api.jamendo.com/v3.0/tracks/?client_id=c00fc402&format=json&limit=10&vocalinstrumental=instrumental&audioformat=mp32&order=relevance&fuzzytags=ambient%2Binspiring%2Bchillout%2Bcinematic&include=musicinfo&speed=low&durationbetween=60_300 "HTTP/1.1 200 OK"
+2026-03-20 02:19:09,694 [INFO] Jamendo: found 10 tracks for tags=['ambient', 'inspiring', 'chillout', 'cinematic']
+2026-03-20 02:19:09,695 [INFO] Selected: 'The Stars Above' by Tonepoet (tags: ['ambient', 'inspiring', 'chillout', 'cinematic'])
+2026-03-20 02:19:09,696 [INFO] Downloading Jamendo track: The Stars Above by Tonepoet (241s) → jamendo_1993485_ambient_inspiring_chillout.mp3
+2026-03-20 02:19:11,347 [INFO] HTTP Request: GET https://prod-1.storage.jamendo.com/download/track/1993485/mp32/ "HTTP/1.1 200 OK"
+2026-03-20 02:19:17,220 [INFO] Downloaded: jamendo_1993485_ambient_inspiring_chillout.mp3 (5695 KB)
+2026-03-20 02:19:17,221 [INFO] [personal_finance] STEP 5: Rendering via Remotion (animated captions + transitions)...
+2026-03-20 02:19:17,224 [INFO] [personal_finance] Hook card: My credit score jumped from 480 to 680 in just 60 days
+2026-03-20 02:19:17,228 [WARNING] Clip durations too short (87.9s) for 86.8s video + 3.5s crossfade overhead. Scaled to 90.3s (factor 1.03x).
+2026-03-20 02:19:17,393 [INFO] Remotion render: 8 scenes, 86.8s total, niche=personal_finance, output=test_personal_finance_final_1773990821.mp4, timeout=3036s, heap=4096MB
+2026-03-20 02:19:17,396 [INFO] Running: npx remotion render C:\Users\claws\OneDrive\Desktop\gold\remotion\src\index.ts StockFootageVideo C:/Users/claws/OneDrive/Desktop/gold/data/media/videos/test_personal_finance_final_1773990821.mp4 --pro ...
+2026-03-20 02:19:36,258 [INFO] Remotion stdout: [90mRemotion root directory:[39m [90mC:\Users\claws\OneDrive\Desktop\gold\remotion[39m
+2026-03-20 02:20:40,211 [INFO] Remotion stdout: [40m compositor [49m [90mStarting Rust process. Max video cache size: 1107MB, max threads = 2[39m
+2026-03-20 02:21:41,072 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/022141.064:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading root component - See https://remotion.dev/docs/troubleshoot
+2026-03-20 02:22:41,231 [INFO] Remotion stdout: [40m Tab 0, delayRender() [49m [90m[90m"Loading <Img> with src=blob:http://localhost:3000/aa0527c6-2082-4e9c-b1c2-29640d3e8b7c" handle was cleared after 1125ms[39m[90m[39m
+2026-03-20 02:23:41,253 [INFO] Remotion stdout: [40m Tab 3, delayRender() [49m [90m[90m"Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3000%2Fpublic%2Fmedia%2Fclip_0.mp4&time=2.6333333333333333&transparent=false&toneMapped=tr
+2026-03-20 02:24:41,752 [INFO] Remotion stdout: Rendered 134/2603, time remaining: 59m 27s
+2026-03-20 02:25:42,426 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/022542.422:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Setting the current frame to 198" handle was cleared after 1029ms",
+2026-03-20 02:26:42,756 [INFO] Remotion stdout: [40m Tab 0, delayRender() [49m [90m[90m"Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3000%2Fpublic%2Fmedia%2Fclip_0.mp4&time=8.633333333333333&transparent=false&toneMapped=tru
+2026-03-20 02:27:42,762 [INFO] Remotion stdout: [40m compositor [49m [90mPruned 93 on thread 0 to save memory, keeping 93. Cache size on thread: 552MB, total cache: 552MB, max cache on thread: 553MB[39m
+2026-03-20 02:28:42,807 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/022842.765:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/b8dc8fb6-348e-4a6
+2026-03-20 02:29:43,463 [INFO] Remotion stdout: Rendered 427/2603, time remaining: 38m 56s
+2026-03-20 02:30:43,511 [INFO] Remotion stdout: [40m compositor [49m [90mReusing thread 1 for stream http://localhost:3000/public/media/clip_1.mp4 at time 5.866666666666666[39m
+2026-03-20 02:31:43,533 [INFO] Remotion stdout: [40m compositor [49m [90mThread 1, stream 0 - received frame, tone_mapped = true[39m
+2026-03-20 02:32:43,633 [INFO] Remotion stdout: Rendered 605/2603, time remaining: 34m 8s
+2026-03-20 02:33:43,668 [INFO] Remotion stdout: [40m Tab 0, delayRender() [49m [90m[90m"Loading <Img> with src=blob:http://localhost:3000/5a948633-8eb3-43b3-851e-b55a492d7e16" handle was cleared after 185ms[39m[90m[39m
+2026-03-20 02:34:43,756 [INFO] Remotion stdout: [40m Tab 0, delayRender() [49m [90m[90m"Setting the current frame to 726" handle was cleared after 85ms[39m[90m[39m
+2026-03-20 02:35:43,812 [INFO] Remotion stdout: Rendered 786/2603, time remaining: 28m 50s
+2026-03-20 02:36:44,125 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/023644.107:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/2737ca7f-5e4b-427
+2026-03-20 02:37:44,204 [INFO] Remotion stdout: [40m compositor [49m [90m[FFmpeg] w:1080 h:1920 pixfmt:yuv420p tb:1/15360 fr:0/1 sar:1/1 csp:unknown range:unknown[39m
+2026-03-20 02:38:44,529 [INFO] Remotion stdout: [40m compositor [49m [90m[FFmpeg] w:1080 h:1920 pixfmt:yuv420p tb:1/15360 fr:0/1 sar:1/1 csp:unknown range:unknown[39m
+2026-03-20 02:39:44,809 [INFO] Remotion stdout: Rendered 1015/2603, time remaining: 29m 33s
+2026-03-20 02:40:44,903 [INFO] Remotion stdout: [40m compositor [49m [90mNothing to prune on thread 1, frames in cache: 92, cache on thread: 547MB, total cache size: 1099MB, max cache on thread: 553MB[39m
+2026-03-20 02:41:45,197 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/024145.193:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/c35ae365-f138-4ce
+2026-03-20 02:42:45,339 [INFO] Remotion stdout: [40m Tab 3, delayRender() [49m [90m[90m"Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3000%2Fpublic%2Fmedia%2Fclip_3.mp4&time=8.6&transparent=false&toneMapped=true from server"
+2026-03-20 02:43:45,352 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/024345.350:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3
+2026-03-20 02:44:45,618 [INFO] Remotion stdout: Rendered 1333/2603, time remaining: 21m 1s
+2026-03-20 02:45:45,868 [INFO] Remotion stdout: [40m compositor [49m [90m[FFmpeg] w:1080 h:1920 pixfmt:yuv420p tb:1/15360 fr:0/1 sar:1/1 csp:unknown range:unknown[39m
+2026-03-20 02:46:46,136 [INFO] Remotion stdout: Rendered 1501/2603, time remaining: 13m 15s
+2026-03-20 02:47:46,181 [INFO] Remotion stdout: [40m compositor [49m [90mThread 0, stream 0 - received frame, tone_mapped = true[39m
+2026-03-20 02:48:46,221 [INFO] Remotion stdout: [40m Tab 1, delayRender() [49m [90m[90m"Loading <Img> with src=blob:http://localhost:3000/7318b091-980e-49f6-a4c6-57b22a4f683f" handle was cleared after 445ms[39m[90m[39m
+2026-03-20 02:49:46,385 [INFO] Remotion stdout: [40m compositor [49m [90mPruned 4 on thread 1 to save memory, keeping 93. Cache size on thread: 552MB, total cache: 1104MB, max cache on thread: 553MB[39m
+2026-03-20 02:50:47,768 [INFO] Remotion stdout: Rendered 1781/2603, time remaining: 13m 40s
+2026-03-20 02:51:47,887 [INFO] Remotion stdout: [90mSeeking to frame 1850 took 1486ms[39m
+2026-03-20 02:52:48,070 [INFO] Remotion stdout: [90mTook 1337ms to extract frame from http://localhost:3000/public/media/clip_5.mp4 at 8.066666666666666[39m
+2026-03-20 02:53:48,097 [INFO] Remotion stdout: [90mSeeking to frame 1982 took 1708ms[39m
+2026-03-20 02:54:48,285 [INFO] Remotion stdout: [90mTook 2890ms to extract frame from http://localhost:3000/public/media/clip_6.mp4 at 0.16666666666666666[39m
+2026-03-20 02:55:48,511 [INFO] Remotion stdout: [40m compositor [49m [90mNothing to prune on thread 0, frames in cache: 93, cache on thread: 551MB, total cache size: 1103MB, max cache on thread: 553MB[39m
+2026-03-20 02:56:48,521 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/025648.519:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3
+2026-03-20 02:57:48,739 [INFO] Remotion stdout: Rendered 2223/2603, time remaining: 5m 52s
+2026-03-20 02:58:48,753 [INFO] Remotion stdout: [40m compositor [49m [90mNothing to prune on thread 0, frames in cache: 93, cache on thread: 551MB, total cache size: 1103MB, max cache on thread: 553MB[39m
+2026-03-20 02:59:48,903 [INFO] Remotion stdout: [40m compositor [49m [90mNothing to prune on thread 0, frames in cache: 93, cache on thread: 552MB, total cache size: 1103MB, max cache on thread: 553MB[39m
+2026-03-20 03:00:48,983 [INFO] Remotion stdout: [40m compositor [49m [90m[FFmpeg] w:1080 h:1920 pixfmt:yuv420p tb:1/15360 fr:0/1 sar:1/1 csp:unknown range:unknown[39m
+2026-03-20 03:01:49,000 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/030148.998:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3
+2026-03-20 03:02:49,132 [INFO] Remotion stdout: Rendered 2521/2603, time remaining: 1m 16s
+2026-03-20 03:03:49,143 [INFO] Remotion stdout: Rendered 2583/2603, time remaining: 19s
+2026-03-20 03:04:49,164 [INFO] Remotion stdout: Encoded 321/2603
+2026-03-20 03:05:49,666 [INFO] Remotion stdout: Encoded 1028/2603
+2026-03-20 03:06:50,105 [INFO] Remotion stdout: Encoded 1931/2603
+2026-03-20 03:07:21,444 [INFO] Remotion render complete: test_personal_finance_final_1773990821.mp4 (58.5 MB)
+2026-03-20 03:07:23,366 [INFO] [personal_finance] Final video: test_personal_finance_final_1773990821.mp4 (58.46 MB, 86.8s)
+2026-03-20 03:07:23,367 [INFO] [personal_finance] SUCCESS!
+2026-03-20 03:07:23,378 [INFO] 
+2026-03-20 03:07:23,379 [INFO] ============================================================
+2026-03-20 03:07:23,379 [INFO] [betrayal_revenge] STEP 1: Generating ideas... (style: gameplay)
+2026-03-20 03:07:31,415 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 03:07:31,443 [INFO] Generated 3 ideas for betrayal_revenge
+2026-03-20 03:07:31,443 [INFO] [betrayal_revenge] Idea: Best Friend Stole My Business Idea... So I Destroyed Her Wedding
+2026-03-20 03:07:31,444 [INFO] [betrayal_revenge] STEP 2: Writing script...
+2026-03-20 03:07:54,953 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 03:07:54,969 [INFO] Script written for: Best Friend Stole My Business Idea... So I Destroyed Her Wedding
+2026-03-20 03:07:54,969 [INFO] [betrayal_revenge] Script: voiceover=True (315 words), slides=False, clips=False
+2026-03-20 03:07:54,971 [INFO] Loaded niche engine: ai_tools -> gold.niches.ai_tools.AIToolsEngine
+2026-03-20 03:07:54,972 [INFO] Loaded niche engine: asmr_satisfying -> gold.niches.asmr_satisfying.ASMRSatisfyingEngine
+2026-03-20 03:07:54,972 [INFO] Loaded niche engine: betrayal_revenge -> gold.niches.betrayal_revenge.BetrayalRevengeEngine
+2026-03-20 03:07:54,972 [INFO] Loaded niche engine: crypto_finance -> gold.niches.crypto_finance.CryptoFinanceEngine
+2026-03-20 03:07:54,973 [INFO] Loaded niche engine: english_learning -> gold.niches.english_learning.EnglishLearningEngine
+2026-03-20 03:07:54,974 [INFO] Loaded niche engine: horror_stories -> gold.niches.horror_stories.HorrorStoriesEngine
+2026-03-20 03:07:54,975 [INFO] Loaded niche engine: personal_finance -> gold.niches.personal_finance.PersonalFinanceEngine
+2026-03-20 03:07:54,975 [INFO] Loaded niche engine: psychology_facts -> gold.niches.psychology_facts.PsychologyFactsEngine
+2026-03-20 03:07:54,976 [INFO] Loaded niche engine: reaction_videos -> gold.niches.reaction_videos.ReactionVideosEngine
+2026-03-20 03:07:54,976 [INFO] Loaded niche engine: reddit_stories -> gold.niches.reddit_stories.RedditStoriesEngine
+2026-03-20 03:07:54,977 [INFO] Loaded niche engine: tech_ai -> gold.niches.tech_ai.TechAIEngine
+2026-03-20 03:07:54,977 [INFO] Loaded niche engine: true_crime -> gold.niches.true_crime.TrueCrimeEngine
+2026-03-20 03:07:54,977 [INFO] Female narrator detected — using female voice: 933563129e564b19a115bedd57b7406a
+2026-03-20 03:07:54,978 [INFO] [betrayal_revenge] Voice override: 933563129e564b19a115bedd57b7406a
+2026-03-20 03:07:54,978 [INFO] [betrayal_revenge] STEP 3: Generating thumbnail...
+2026-03-20 03:07:56,218 [INFO] HTTP Request: POST https://queue.fal.run/fal-ai/flux-pro/v1.1 "HTTP/1.1 200 OK"
+2026-03-20 03:07:56,252 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a49-6837-72f1-ae7d-362312c8486a/status "HTTP/1.1 202 Accepted"
+2026-03-20 03:07:56,253 [INFO] fal.ai job status: IN_QUEUE (waited 0s)
+2026-03-20 03:08:01,401 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a49-6837-72f1-ae7d-362312c8486a/status "HTTP/1.1 200 OK"
+2026-03-20 03:08:03,446 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a49-6837-72f1-ae7d-362312c8486a "HTTP/1.1 200 OK"
+2026-03-20 03:08:03,960 [INFO] HTTP Request: GET https://v3b.fal.media/files/b/0a92e670/FIMWu8z39_N2S-fAMp908_b6f763738f6e4140bbc371f4701af0ad.jpg "HTTP/1.1 200 OK"
+2026-03-20 03:08:04,089 [INFO] Generated thumbnail: C:\Users\claws\OneDrive\Desktop\gold\data\media\images\test_betrayal_revenge_thumb_1773994043.png
+2026-03-20 03:08:04,091 [INFO] [betrayal_revenge] Thumbnail: test_betrayal_revenge_thumb_1773994043.png
+2026-03-20 03:08:04,091 [INFO] [betrayal_revenge] STEP 4a: Generating voiceover...
+2026-03-20 03:08:05,612 [INFO] HTTP Request: POST https://api.fish.audio/v1/tts "HTTP/1.1 200 OK"
+2026-03-20 03:08:30,776 [INFO] Generated voiceover: C:\Users\claws\OneDrive\Desktop\gold\data\media\audio\test_betrayal_revenge_vo_1773994043.mp3
+2026-03-20 03:08:30,962 [INFO] [betrayal_revenge] Voiceover: 95.3s
+2026-03-20 03:08:30,962 [INFO] [betrayal_revenge] STEP 4b: Generating Whisper-timed subtitles...
+C:\Users\claws\AppData\Roaming\Python\Python314\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+2026-03-20 03:09:07,698 [INFO] Generated Whisper-timed subtitles: test_betrayal_revenge_subs_1773994043.ass (316 words)
+2026-03-20 03:09:07,699 [INFO] [betrayal_revenge] Subtitles: test_betrayal_revenge_subs_1773994043.ass
+2026-03-20 03:09:07,699 [INFO] Speed override for betrayal_revenge: low
+2026-03-20 03:09:07,700 [INFO] Jamendo search: tags=['lofi', 'ambient', 'chillout', 'contemplative'], speed=low, duration=60-300s
+2026-03-20 03:09:09,376 [INFO] HTTP Request: GET https://api.jamendo.com/v3.0/tracks/?client_id=c00fc402&format=json&limit=10&vocalinstrumental=instrumental&audioformat=mp32&order=relevance&fuzzytags=lofi%2Bambient%2Bchillout%2Bcontemplative&include=musicinfo&speed=low&durationbetween=60_300 "HTTP/1.1 200 OK"
+2026-03-20 03:09:09,381 [INFO] Jamendo: found 10 tracks for tags=['lofi', 'ambient', 'chillout', 'contemplative']
+2026-03-20 03:09:09,381 [INFO] Selected: 'blue avenue' by Mélodie en sous-sol (tags: ['lofi', 'ambient', 'chillout', 'contemplative'])
+2026-03-20 03:09:09,383 [INFO] Downloading Jamendo track: blue avenue by Mélodie en sous-sol (229s) → jamendo_1031458_lofi_ambient_chillout.mp3
+2026-03-20 03:09:11,198 [INFO] HTTP Request: GET https://prod-1.storage.jamendo.com/download/track/1031458/mp32/ "HTTP/1.1 200 OK"
+2026-03-20 03:09:16,369 [INFO] Downloaded: jamendo_1031458_lofi_ambient_chillout.mp3 (5552 KB)
+2026-03-20 03:09:16,369 [INFO] [betrayal_revenge] STEP 5: Composing gameplay video...
+2026-03-20 03:13:06,522 [INFO] Composed gameplay video: test_betrayal_revenge_final_1773994043.mp4
+2026-03-20 03:13:08,012 [INFO] [betrayal_revenge] Final video: test_betrayal_revenge_final_1773994043.mp4 (103.96 MB, 95.3s)
+2026-03-20 03:13:08,012 [INFO] [betrayal_revenge] SUCCESS!
+2026-03-20 03:13:08,012 [INFO] 
+2026-03-20 03:13:08,012 [INFO] ============================================================
+2026-03-20 03:13:08,012 [INFO] [english_learning] STEP 1: Generating ideas... (style: stock_footage)
+2026-03-20 03:13:15,692 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 03:13:15,695 [INFO] Generated 3 ideas for english_learning
+2026-03-20 03:13:15,695 [INFO] [english_learning] Idea: 3 Words Americans Say Wrong That Brits Always Notice
+2026-03-20 03:13:15,695 [INFO] [english_learning] STEP 2: Writing script...
+2026-03-20 03:13:36,145 [INFO] HTTP Request: POST https://api.anthropic.com/v1/messages "HTTP/1.1 200 OK"
+2026-03-20 03:13:36,149 [INFO] Script written for: 3 Words Americans Say Wrong That Brits Always Notice
+2026-03-20 03:13:36,149 [INFO] [english_learning] Script: voiceover=True (153 words), slides=False, clips=False
+2026-03-20 03:13:36,149 [INFO] Loaded niche engine: ai_tools -> gold.niches.ai_tools.AIToolsEngine
+2026-03-20 03:13:36,150 [INFO] Loaded niche engine: asmr_satisfying -> gold.niches.asmr_satisfying.ASMRSatisfyingEngine
+2026-03-20 03:13:36,150 [INFO] Loaded niche engine: betrayal_revenge -> gold.niches.betrayal_revenge.BetrayalRevengeEngine
+2026-03-20 03:13:36,150 [INFO] Loaded niche engine: crypto_finance -> gold.niches.crypto_finance.CryptoFinanceEngine
+2026-03-20 03:13:36,150 [INFO] Loaded niche engine: english_learning -> gold.niches.english_learning.EnglishLearningEngine
+2026-03-20 03:13:36,150 [INFO] Loaded niche engine: horror_stories -> gold.niches.horror_stories.HorrorStoriesEngine
+2026-03-20 03:13:36,150 [INFO] Loaded niche engine: personal_finance -> gold.niches.personal_finance.PersonalFinanceEngine
+2026-03-20 03:13:36,151 [INFO] Loaded niche engine: psychology_facts -> gold.niches.psychology_facts.PsychologyFactsEngine
+2026-03-20 03:13:36,151 [INFO] Loaded niche engine: reaction_videos -> gold.niches.reaction_videos.ReactionVideosEngine
+2026-03-20 03:13:36,151 [INFO] Loaded niche engine: reddit_stories -> gold.niches.reddit_stories.RedditStoriesEngine
+2026-03-20 03:13:36,151 [INFO] Loaded niche engine: tech_ai -> gold.niches.tech_ai.TechAIEngine
+2026-03-20 03:13:36,151 [INFO] Loaded niche engine: true_crime -> gold.niches.true_crime.TrueCrimeEngine
+2026-03-20 03:13:36,151 [INFO] [english_learning] STEP 3: Generating thumbnail...
+2026-03-20 03:13:37,535 [INFO] HTTP Request: POST https://queue.fal.run/fal-ai/flux-pro/v1.1 "HTTP/1.1 200 OK"
+2026-03-20 03:13:37,570 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a4e-9d7f-7c11-b1b9-383486d82ea6/status "HTTP/1.1 202 Accepted"
+2026-03-20 03:13:37,571 [INFO] fal.ai job status: IN_QUEUE (waited 0s)
+2026-03-20 03:13:42,680 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a4e-9d7f-7c11-b1b9-383486d82ea6/status "HTTP/1.1 202 Accepted"
+2026-03-20 03:13:47,801 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a4e-9d7f-7c11-b1b9-383486d82ea6/status "HTTP/1.1 200 OK"
+2026-03-20 03:13:49,843 [INFO] HTTP Request: GET https://queue.fal.run/fal-ai/flux-pro/requests/019d0a4e-9d7f-7c11-b1b9-383486d82ea6 "HTTP/1.1 200 OK"
+2026-03-20 03:13:50,085 [INFO] HTTP Request: GET https://v3b.fal.media/files/b/0a92e692/avKEqrhlgNmBsWN2Ruzet_7b0178bc3c1e4301b2ef30ac8594fb4b.jpg "HTTP/1.1 200 OK"
+2026-03-20 03:13:50,181 [INFO] Generated thumbnail: C:\Users\claws\OneDrive\Desktop\gold\data\media\images\test_english_learning_thumb_1773994388.png
+2026-03-20 03:13:50,181 [INFO] [english_learning] Thumbnail: test_english_learning_thumb_1773994388.png
+2026-03-20 03:13:50,182 [INFO] [english_learning] STEP 3a: Generating voiceover FIRST...
+2026-03-20 03:13:51,732 [INFO] HTTP Request: POST https://api.fish.audio/v1/tts "HTTP/1.1 200 OK"
+2026-03-20 03:14:10,381 [INFO] Generated voiceover: C:\Users\claws\OneDrive\Desktop\gold\data\media\audio\test_english_learning_vo_1773994388.mp3
+2026-03-20 03:14:10,479 [INFO] [english_learning] Voiceover: 65.3s
+2026-03-20 03:14:10,479 [INFO] [english_learning] Scaled scene durations: 60.0s -> 66.4s (voiceover: 65.3s)
+2026-03-20 03:14:10,479 [INFO] [english_learning] STEP 3b: Fetching 6 stock clips from Pexels...
+2026-03-20 03:14:11,452 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=people+talking+conversation&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 03:14:11,454 [INFO] Pexels search 'people talking conversation': 8/10 results passed min_duration=9s filter
+2026-03-20 03:14:11,455 [INFO] Trying Pexels clip id=7263179 duration=10s (target=9.9s) for query 'people talking conversation'
+2026-03-20 03:14:11,456 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/7263179/7263179-uhd_2160_3840_24fps.mp4 -> pexels_7263179_1080x1920.download.tmp
+2026-03-20 03:14:12,085 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/7263179/7263179-uhd_2160_3840_24fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 03:14:31,436 [INFO] Trimmed stock clip: pexels_7263179_1080x1920.mp4 (9.9s, 1080x1920 @ 30fps)
+2026-03-20 03:14:32,788 [INFO] Stock clip ready: test_english_learning_stock_0_1773994388.mp4 (YAVG=116.9)
+2026-03-20 03:14:32,788 [INFO] [english_learning] Scene 1/6: Pexels clip OK (people talking conversation)
+2026-03-20 03:14:33,478 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=office+meeting+discussion&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 03:14:33,481 [INFO] Pexels search 'office meeting discussion': 8/10 results passed min_duration=11s filter
+2026-03-20 03:14:33,482 [INFO] Trying Pexels clip id=8479285 duration=18s (target=11.1s) for query 'office meeting discussion'
+2026-03-20 03:14:33,483 [INFO] Stock clip ID cache hit: pexels_8479285_1080x1920.mp4
+2026-03-20 03:14:34,671 [INFO] Stock clip ready: test_english_learning_stock_1_1773994388.mp4 (YAVG=132.1)
+2026-03-20 03:14:34,671 [INFO] [english_learning] Scene 2/6: Pexels clip OK (office meeting discussion)
+2026-03-20 03:14:35,888 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=business+conversation+professional&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 03:14:35,891 [INFO] Pexels search 'business conversation professional': 8/10 results passed min_duration=9s filter
+2026-03-20 03:14:35,891 [INFO] Trying Pexels clip id=7983985 duration=10s (target=9.9s) for query 'business conversation professional'
+2026-03-20 03:14:35,892 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/7983985/7983985-hd_1080_1920_25fps.mp4 -> pexels_7983985_1080x1920.download.tmp
+2026-03-20 03:14:36,889 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/7983985/7983985-hd_1080_1920_25fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 03:14:50,526 [INFO] Trimmed stock clip: pexels_7983985_1080x1920.mp4 (9.9s, 1080x1920 @ 30fps)
+2026-03-20 03:14:51,548 [INFO] Stock clip ready: test_english_learning_stock_2_1773994388.mp4 (YAVG=138.4)
+2026-03-20 03:14:51,548 [INFO] [english_learning] Scene 3/6: Pexels clip OK (business conversation professional)
+2026-03-20 03:14:52,972 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=friends+talking+outdoor&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 03:14:52,975 [INFO] Pexels search 'friends talking outdoor': 4/10 results passed min_duration=12s filter
+2026-03-20 03:14:52,976 [INFO] Trying Pexels clip id=8484864 duration=13s (target=12.2s) for query 'friends talking outdoor'
+2026-03-20 03:14:52,977 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/8484864/8484864-uhd_2160_3840_24fps.mp4 -> pexels_8484864_1080x1920.download.tmp
+2026-03-20 03:14:53,828 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/8484864/8484864-uhd_2160_3840_24fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 03:15:19,102 [INFO] Trimmed stock clip: pexels_8484864_1080x1920.mp4 (12.2s, 1080x1920 @ 30fps)
+2026-03-20 03:15:20,417 [INFO] Stock clip ready: test_english_learning_stock_3_1773994388.mp4 (YAVG=118.0)
+2026-03-20 03:15:20,417 [INFO] [english_learning] Scene 4/6: Pexels clip OK (friends talking outdoor)
+2026-03-20 03:15:22,079 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=studying+notebook+writing&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 03:15:22,081 [INFO] Pexels search 'studying notebook writing': 5/10 results passed min_duration=11s filter
+2026-03-20 03:15:22,082 [INFO] Trying Pexels clip id=8873342 duration=20s (target=11.1s) for query 'studying notebook writing'
+2026-03-20 03:15:22,083 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/8873342/8873342-hd_1080_1920_25fps.mp4 -> pexels_8873342_1080x1920.download.tmp
+2026-03-20 03:15:23,197 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/8873342/8873342-hd_1080_1920_25fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 03:15:40,096 [INFO] Trimmed stock clip: pexels_8873342_1080x1920.mp4 (11.1s, 1080x1920 @ 30fps)
+2026-03-20 03:15:41,017 [INFO] Stock clip ready: test_english_learning_stock_4_1773994388.mp4 (YAVG=158.8)
+2026-03-20 03:15:41,018 [INFO] [english_learning] Scene 5/6: Pexels clip OK (studying notebook writing)
+2026-03-20 03:15:42,123 [INFO] HTTP Request: GET https://api.pexels.com/videos/search?query=person+reading+book&orientation=portrait&per_page=10&size=medium "HTTP/1.1 200 OK"
+2026-03-20 03:15:42,125 [INFO] Pexels search 'person reading book': 7/10 results passed min_duration=12s filter
+2026-03-20 03:15:42,126 [INFO] Trying Pexels clip id=34214293 duration=14s (target=12.2s) for query 'person reading book'
+2026-03-20 03:15:42,126 [INFO] Downloading stock clip: https://videos.pexels.com/video-files/34214293/14501524_1080_1920_60fps.mp4 -> pexels_34214293_1080x1920.download.tmp
+2026-03-20 03:15:42,805 [INFO] HTTP Request: GET https://videos.pexels.com/video-files/34214293/14501524_1080_1920_60fps.mp4 "HTTP/1.1 200 OK"
+2026-03-20 03:16:00,661 [INFO] Trimmed stock clip: pexels_34214293_1080x1920.mp4 (12.2s, 1080x1920 @ 30fps)
+2026-03-20 03:16:01,685 [INFO] Stock clip ready: test_english_learning_stock_5_1773994388.mp4 (YAVG=72.9)
+2026-03-20 03:16:01,685 [INFO] [english_learning] Scene 6/6: Pexels clip OK (person reading book)
+2026-03-20 03:16:01,685 [INFO] [english_learning] Prepared 6 clips for composition
+2026-03-20 03:16:01,686 [INFO] [english_learning] STEP 4: Extracting word timestamps via Whisper...
+2026-03-20 03:16:18,245 [INFO] Extracted 155 word timestamps from test_english_learning_vo_1773994388.mp3
+2026-03-20 03:16:18,245 [INFO] [english_learning] Got 155 word timestamps
+2026-03-20 03:16:18,245 [INFO] Speed override for english_learning: verylow
+2026-03-20 03:16:18,246 [INFO] Jamendo search: tags=['lofi', 'ambient', 'study', 'chillout'], speed=verylow, duration=60-300s
+2026-03-20 03:16:19,929 [INFO] HTTP Request: GET https://api.jamendo.com/v3.0/tracks/?client_id=c00fc402&format=json&limit=10&vocalinstrumental=instrumental&audioformat=mp32&order=relevance&fuzzytags=lofi%2Bambient%2Bstudy%2Bchillout&include=musicinfo&speed=verylow&durationbetween=60_300 "HTTP/1.1 200 OK"
+2026-03-20 03:16:19,932 [INFO] Jamendo: found 10 tracks for tags=['lofi', 'ambient', 'study', 'chillout']
+2026-03-20 03:16:19,933 [INFO] Selected: 'Chilled Afternoon' by Danco (tags: ['lofi', 'ambient', 'study', 'chillout'])
+2026-03-20 03:16:19,933 [INFO] Downloading Jamendo track: Chilled Afternoon by Danco (288s) → jamendo_1915655_lofi_ambient_study.mp3
+2026-03-20 03:16:21,098 [INFO] HTTP Request: GET https://prod-1.storage.jamendo.com/?trackid=1915655&format=mp32&from=IOOIEZ6fcFF04kLcYytkRw%3D%3D%7CTtH509whYytgXG9uHv2yjw%3D%3D "HTTP/1.1 200 OK"
+2026-03-20 03:16:27,197 [INFO] Downloaded: jamendo_1915655_lofi_ambient_study.mp3 (6856 KB)
+2026-03-20 03:16:27,197 [INFO] [english_learning] STEP 5: Rendering via Remotion (animated captions + transitions)...
+2026-03-20 03:16:27,198 [INFO] [english_learning] Hook card: Americans, you've been saying these words wrong your whole l
+2026-03-20 03:16:27,199 [WARNING] Clip durations too short (66.4s) for 65.3s video + 2.5s crossfade overhead. Scaled to 67.8s (factor 1.02x).
+2026-03-20 03:16:27,255 [INFO] Remotion render: 6 scenes, 65.3s total, niche=english_learning, output=test_english_learning_final_1773994388.mp4, timeout=2286s, heap=4096MB
+2026-03-20 03:16:27,256 [INFO] Running: npx remotion render C:\Users\claws\OneDrive\Desktop\gold\remotion\src\index.ts StockFootageVideo C:/Users/claws/OneDrive/Desktop/gold/data/media/videos/test_english_learning_final_1773994388.mp4 --pro ...
+2026-03-20 03:16:31,518 [INFO] Remotion stdout: [90mRemotion root directory:[39m [90mC:\Users\claws\OneDrive\Desktop\gold\remotion[39m
+2026-03-20 03:17:36,443 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/031736.441:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading root component - See https://remotion.dev/docs/troubleshoot
+2026-03-20 03:18:36,517 [INFO] Remotion stdout: Rendered 74/1960, time remaining: 38m 45s
+2026-03-20 03:19:36,644 [INFO] Remotion stdout: [40m compositor [49m [90m[FFmpeg] w:1080 h:1920 pixfmt:yuv420p tb:1/15360 fr:0/1 sar:1/1 csp:unknown range:unknown[39m
+2026-03-20 03:20:37,117 [INFO] Remotion stdout: [40m compositor [49m [90mNothing to prune on thread 0, frames in cache: 169, cache on thread: 1003MB, total cache size: 1003MB, max cache on thread: 1639MB[39m
+2026-03-20 03:21:37,133 [INFO] Remotion stdout: [40m compositor [49m [90mThread 1, stream 0 - got packet, dts = Some(6144) pts = Some(6656) key = false[39m
+2026-03-20 03:22:37,136 [INFO] Remotion stdout: [40m compositor [49m [90m[FFmpeg] w:1080 h:1920 pixfmt:yuv420p tb:1/15360 fr:0/1 sar:1/1 csp:unknown range:unknown[39m
+2026-03-20 03:23:37,302 [INFO] Remotion stdout: [40m compositor [49m [90mNeed to free 18MB, Selected 4 frames (23MB) for removal[39m
+2026-03-20 03:24:37,322 [INFO] Remotion stdout: [40m compositor [49m [90mNothing to prune on thread 1, frames in cache: 137, cache on thread: 812MB, total cache size: 1631MB, max cache on thread: 819MB[39m
+2026-03-20 03:25:37,642 [INFO] Remotion stdout: Rendered 604/1960, time remaining: 17m 11s
+2026-03-20 03:26:37,738 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/032637.735:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/64f21eaa-6ab1-47c
+2026-03-20 03:27:37,955 [INFO] Remotion stdout: Rendered 744/1960, time remaining: 17m 13s
+2026-03-20 03:28:37,969 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/032837.916:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Setting the current frame to 827" handle was cleared after 62ms", s
+2026-03-20 03:29:38,483 [INFO] Remotion stdout: Rendered 902/1960, time remaining: 13m 25s
+2026-03-20 03:30:38,545 [INFO] Remotion stdout: Rendered 968/1960, time remaining: 13m 51s
+2026-03-20 03:31:39,001 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/033138.999:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/800a9e73-2800-4d1
+2026-03-20 03:32:39,476 [INFO] Remotion stdout: Rendered 1131/1960, time remaining: 10m 20s
+2026-03-20 03:33:39,508 [INFO] Remotion stdout: [40m Tab 0, delayRender() [49m [90m[90m"Fetching http://localhost:3000/proxy?src=http%3A%2F%2Flocalhost%3A3000%2Fpublic%2Fmedia%2Fclip_3.mp4&time=10.4&transparent=false&toneMapped=true from server
+2026-03-20 03:34:40,078 [INFO] Remotion stdout: Rendered 1272/1960, time remaining: 9m 48s
+2026-03-20 03:35:41,074 [INFO] Remotion stdout: Rendered 1354/1960, time remaining: 8m 29s
+2026-03-20 03:36:41,109 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/033641.013:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/d7757c66-59ea-481
+2026-03-20 03:37:41,632 [INFO] Remotion stdout: Rendered 1518/1960, time remaining: 5m 27s
+2026-03-20 03:38:42,257 [INFO] Remotion stdout: [40m Tab 1, delayRender() [49m [90m[90m"Loading <Img> with src=blob:http://localhost:3000/8f979cff-481c-47d6-96e3-ea3f1137a08b" handle was cleared after 792ms[39m[90m[39m
+2026-03-20 03:39:42,272 [INFO] Remotion stdout: Rendered 1663/1960, time remaining: 4m 8s
+2026-03-20 03:40:43,453 [INFO] Remotion stdout: Rendered 1747/1960, time remaining: 2m 36s
+2026-03-20 03:41:43,586 [INFO] Remotion stdout: Rendered 1831/1960, time remaining: 1m 33s
+2026-03-20 03:42:43,782 [INFO] Remotion stderr: [40m chrome [49m [31m[0320/034243.780:INFO:CONSOLE:19826] "Symbol(__remotion_tag_delayRender()) Symbol(__remotion_level_verbose) "Loading <Img> with src=blob:http://localhost:3000/015eacc7-f3c7-45a
+2026-03-20 03:43:44,277 [INFO] Remotion stdout: Encoded 279/1960
+2026-03-20 03:44:44,700 [INFO] Remotion stdout: Encoded 1150/1960
+2026-03-20 03:45:35,890 [INFO] Remotion render complete: test_english_learning_final_1773994388.mp4 (72.3 MB)
+2026-03-20 03:45:37,134 [INFO] [english_learning] Final video: test_english_learning_final_1773994388.mp4 (72.34 MB, 65.4s)
+2026-03-20 03:45:37,135 [INFO] [english_learning] SUCCESS!
+2026-03-20 03:45:37,135 [INFO] 
+2026-03-20 03:45:37,135 [INFO] ============================================================
+2026-03-20 03:45:37,135 [INFO] DRY RUN v3 SUMMARY (93.3 minutes)
+2026-03-20 03:45:37,142 [INFO] ============================================================
+2026-03-20 03:45:37,142 [INFO]   personal_finance     [stock_footage] OK
+2026-03-20 03:45:37,143 [INFO]     -> test_personal_finance_final_1773990821.mp4 (58.46 MB, 86.8s)
+2026-03-20 03:45:37,143 [INFO]   betrayal_revenge     [gameplay] OK
+2026-03-20 03:45:37,143 [INFO]     -> test_betrayal_revenge_final_1773994043.mp4 (103.96 MB, 95.3s)
+2026-03-20 03:45:37,143 [INFO]   english_learning     [stock_footage] OK
+2026-03-20 03:45:37,143 [INFO]     -> test_english_learning_final_1773994388.mp4 (72.34 MB, 65.4s)
+2026-03-20 03:45:37,148 [INFO] Full results saved to C:\Users\claws\OneDrive\Desktop\gold\data\dry_run_results.json
+2026-03-20 03:45:37,155 [INFO] Prompts saved to C:\Users\claws\OneDrive\Desktop\gold\data\dry_run_prompts.txt
+2026-03-20 03:45:37,155 [INFO] Result: 3/3 niches succeeded
+2026-03-20 03:45:37,155 [INFO] 
+2026-03-20 03:45:37,155 [INFO] COST PER VIDEO:
+2026-03-20 03:45:37,155 [INFO]   reddit_stories    (gameplay):       ~$0.12 (voiceover + thumbnail)
+2026-03-20 03:45:37,155 [INFO]   personal_finance  (stock_footage):  ~$0.10 (Pexels FREE + voiceover + thumbnail)
+2026-03-20 03:45:37,156 [INFO]   ai_tools          (stock_footage):  ~$0.10 (Pexels FREE + voiceover + thumbnail)
+2026-03-20 03:45:37,156 [INFO]   true_crime        (stock_footage):  ~$0.10 (Pexels FREE + voiceover + thumbnail)
+2026-03-20 03:45:37,156 [INFO]   betrayal_revenge  (gameplay):       ~$0.12 (voiceover + thumbnail)
+2026-03-20 03:45:37,156 [INFO]   english_learning  (stock_footage):  ~$0.10 (Pexels FREE + voiceover + thumbnail)
+2026-03-20 03:45:37,156 [INFO]   DAILY TOTAL (6 niches x 2):       ~$1.28

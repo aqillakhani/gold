@@ -1,0 +1,59 @@
+niche:
+  id: reddit_stories
+  name: "Reddit Stories"
+  engine_class: gold.niches.reddit_stories.RedditStoriesEngine
+  video_style: gameplay
+  background_category: mixed
+  voice:
+    provider: fish
+    voice_id: "d67524ad1936410896ad120583cb1117"  # Andrew — deep storytelling, natural American
+    elevenlabs_voice_id: pNInz6obpgDQGcFmaJgB  # Adam (fallback)
+    style: conversational
+  tone: engaging, dramatic, conversational
+  target_duration: 50
+  has_voiceover: true
+  multi_part:
+    enabled: true
+    parts: 3
+    max_duration_per_part: 55  # each part under 60s for copyright safety
+    prefer_long_stories: true  # fetch longer Reddit posts (1500+ chars)
+  topics:
+    - AITA stories
+    - TIFU stories
+    - relationship drama
+    - petty revenge
+    - malicious compliance
+    - entitled people
+    - choosing beggars
+    - workplace stories
+  subreddits:
+    - AmItheAsshole
+    - tifu
+    - relationship_advice
+    - pettyrevenge
+    - MaliciousCompliance
+    - EntitledPeople
+    - ChoosingBeggars
+    - antiwork
+  hashtags:
+    - "#reddit"
+    - "#redditstories"
+    - "#aita"
+    - "#storytime"
+    - "#drama"
+    - "#minecraft"
+    - "#viral"
+    - "#relatable"
+  paraphrasing_enforcement: true
+  paraphrasing_threshold: 0.8
+  cta:
+    youtube: "Subscribe for daily Reddit stories!"
+    tiktok: "Follow for Part 2!"
+    instagram: "Follow for more Reddit drama!"
+    facebook: "Share with a friend who loves Reddit!"
+  music:
+    style: lofi
+    bpm_range: [80, 110]
+  music_volume: 0.20
+  affiliate:
+    audiobooks: ["audible"]

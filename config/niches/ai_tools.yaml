@@ -1,0 +1,61 @@
+niche:
+  id: ai_tools
+  name: "AI Tools"
+  engine_class: gold.niches.ai_tools.AIToolsEngine
+  video_style: stock_footage
+  visual:
+    footage_source: ai_video  # LTX-2.3 via ComfyUI, falls back to Pexels
+    footage_orientation: portrait
+    music_mood: electronic
+    transition_style: crossfade
+    transition_duration: 0.5
+    text_overlay_style: bold_bottom
+    text_font: impact
+    text_size: 72
+    # Niche-specific visual treatments
+    color_grade: cool_tech  # slight blue/cyan tint for tech feel
+    vignette: false
+    grain: light
+    overlay_tint: "0x0a0a1a"  # dark blue-black tint at 10% for depth
+    text_style: code_window  # monospace font for text overlays
+  voice:
+    provider: fish
+    voice_id: "802e3bc2b27e49c2995d23ef70e6ac89"  # Energetic Male — dynamic, enthusiastic American
+    elevenlabs_voice_id: ErXwobaYiN019PkySvjV  # Antoni (fallback)
+    style: enthusiastic
+  tone: excited, informative, practical
+  target_duration: 55
+  has_voiceover: true
+  topics:
+    - best AI tools this week
+    - AI tools for productivity
+    - ChatGPT alternatives reviewed
+    - AI tools for business owners
+    - automation tools compared
+    - coding assistants compared
+    - AI image and video generators
+    - no-code AI tools walkthrough
+    - AI tools under the radar
+    - free vs paid AI tools
+  hashtags:
+    - "#aitools"
+    - "#ai"
+    - "#artificialintelligence"
+    - "#productivity"
+    - "#automation"
+    - "#chatgpt"
+    - "#tech"
+  ftc_disclosure:
+    verbal: "Some links in the description may be affiliate links."
+    description: "Disclosure: Some links may be affiliate links. We may earn a commission at no extra cost to you."
+  cta:
+    youtube: "Subscribe for weekly AI tool reviews!"
+    tiktok: "Follow for the best AI tools!"
+    instagram: "Save this tool for later!"
+    facebook: "Tag someone who needs this!"
+  music:
+    style: electronic
+    bpm_range: [100, 140]
+  music_volume: 0.25
+  affiliate:
+    saas: ["notion", "jasper", "midjourney", "cursor"]

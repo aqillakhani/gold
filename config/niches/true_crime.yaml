@@ -1,0 +1,70 @@
+niche:
+  id: true_crime
+  name: "True Crime"
+  engine_class: gold.niches.true_crime.TrueCrimeEngine
+  video_style: stock_footage
+  visual:
+    footage_source: ai_video  # LTX-2.3 via ComfyUI, falls back to Pexels
+    footage_orientation: portrait
+    music_mood: suspense
+    # Prefer dark, moody stock footage — red-lit scenes, shadows, investigation
+    preferred_search_suffixes: ["dark", "shadows", "night", "red light"]
+    transition_style: crossfade
+    transition_duration: 0.5
+    text_overlay_style: bold_bottom
+    text_font: impact
+    text_size: 72
+    # Niche-specific visual treatments
+    color_grade: desaturated  # muted, noir-style color grading
+    vignette: true  # dark edge vignette for atmospheric feel
+    overlay_tint: "0x1a1a2e"  # dark blue-black tint overlay at 15% opacity
+    grain: light  # subtle film grain for documentary feel
+  voice:
+    provider: fish
+    voice_id: "fd176117735446968cca7911ee4da42b"  # DEEP STORY — dramatic, mysterious, authoritative
+    elevenlabs_voice_id: onwK4e9ZLuTAKqWW03F9  # Daniel (fallback)
+    style: serious_narrator
+  tone: serious, investigative, gripping
+  target_duration: 55  # capped at 55s for all niches
+  has_voiceover: true
+  topics:
+    - unsolved murders
+    - cold cases reopened
+    - forensic breakthroughs
+    - wrongful convictions
+    - serial killers
+    - missing persons
+    - heists and fraud
+    - true crime updates
+  hashtags:
+    - "#truecrime"
+    - "#crime"
+    - "#mystery"
+    - "#coldcase"
+    - "#unsolved"
+    - "#forensics"
+    - "#justice"
+  ftc_disclosure:
+    verbal: ""
+    description: "Some links may be affiliate links. We may earn a commission at no extra cost to you."
+  cta:
+    youtube: "Subscribe for weekly case breakdowns!"
+    tiktok: "Follow for true crime updates!"
+    instagram: "Save this case for later!"
+    facebook: "Share to help spread awareness!"
+  music:
+    style: ambient
+    bpm_range: [60, 90]
+  music_volume: 0.25
+  ambient_audio:
+    style: dark_ambient
+    effects: ["suspense", "heartbeat", "static"]
+  long_form:
+    enabled: true
+    target_duration: 480  # 8 minutes
+    video_style: cinematic_doc
+    shorts_extraction: true
+    posting_cadence: biweekly  # 1 long-form every 2 weeks
+  affiliate:
+    audiobooks: ["audible"]
+    podcasts: ["crime junkie"]

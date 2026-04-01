@@ -1,0 +1,68 @@
+niche:
+  id: personal_finance
+  name: "Personal Finance"
+  engine_class: gold.niches.personal_finance.PersonalFinanceEngine
+  video_style: stock_footage
+  visual:
+    footage_source: ai_video  # LTX-2.3 via ComfyUI, falls back to Pexels
+    footage_orientation: portrait
+    music_mood: ambient
+    transition_style: crossfade
+    transition_duration: 0.5
+    text_overlay_style: bold_bottom
+    text_font: impact
+    text_size: 72
+    # Niche-specific visual treatments
+    color_grade: warm  # warm, trustworthy tones (slight gold/amber)
+    vignette: false
+    grain: light
+    overlay_tint: "0x1a1a0a"  # warm dark tint at 8% for richness
+    text_accent_color: "0x00c853"  # green for money/positive numbers
+    text_negative_color: "0xff1744"  # red for debt/negative numbers
+  voice:
+    provider: fish
+    voice_id: "802e3bc2b27e49c2995d23ef70e6ac89"  # Energetic Male — authoritative, encouraging
+    elevenlabs_voice_id: pNInz6obpgDQGcFmaJgB  # Adam (fallback)
+    style: authoritative
+  tone: helpful, authoritative, encouraging
+  target_duration: 55
+  has_voiceover: true
+  topics:
+    - credit score improvement
+    - budgeting hacks
+    - side hustles
+    - passive income strategies
+    - debt payoff methods
+    - investing basics
+    - salary negotiation tips
+    - savings optimization
+  hashtags:
+    - "#PersonalFinance"
+    - "#MoneyTips"
+    - "#BudgetingTips"
+    - "#PassiveIncome"
+    - "#FinancialFreedom"
+    - "#CreditScore"
+    - "#WealthBuilding"
+    - "#SideHustle"
+  ftc_disclosure:
+    verbal: "This video contains affiliate links. I may earn a commission at no extra cost to you."
+    description: "Disclosure: This content is for informational purposes only and does not constitute financial advice. Some links may be affiliate links — we may earn a commission at no extra cost to you."
+  paraphrasing_threshold: 0.8
+  cta:
+    youtube: "Subscribe for weekly money tips!"
+    tiktok: "Follow for money hacks!"
+    instagram: "Save this tip for later!"
+    facebook: "Share with a friend who needs this!"
+  music:
+    style: ambient
+    bpm_range: [80, 110]
+  music_volume: 0.25
+  long_form:
+    enabled: true
+    target_duration: 420  # 7 minutes
+    video_style: cinematic_doc
+    shorts_extraction: true
+    posting_cadence: weekly  # 1 long-form per week alongside shorts
+  affiliate:
+    finance: ["sofi", "credit_karma", "acorns", "personal_capital"]

@@ -1,0 +1,133 @@
+accounts:
+  - id: reddit_stories
+    niche: reddit_stories
+    display_name: "StoryVault"
+    warmup_complete: true
+    platforms:
+      facebook:
+        page_id: "994748643726124"
+        token_env: META_PAGE_ACCESS_TOKEN_REDDIT
+      instagram:
+        account_id: "17841445970193656"
+        token_env: INSTAGRAM_ACCESS_TOKEN_REDDIT
+      youtube:
+        channel_id: "UCAMQuZQXguQjWdus-EZTb-g"
+        client_id_env: YOUTUBE_CLIENT_ID_REDDIT
+        client_secret_env: YOUTUBE_CLIENT_SECRET_REDDIT
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_REDDIT
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_REDDIT
+
+  - id: personal_finance
+    niche: personal_finance
+    display_name: "SmartStack"
+    warmup_complete: true
+    platforms:
+      facebook:
+        page_id: ""
+        token_env: META_PAGE_ACCESS_TOKEN_FINANCE
+      instagram:
+        account_id: "17841441224188640"
+        token_env: INSTAGRAM_ACCESS_TOKEN_FINANCE
+      youtube:
+        channel_id: "UCUjiGCcIbliUPJl2Whc4gHw"
+        client_id_env: YOUTUBE_CLIENT_ID_FINANCE
+        client_secret_env: YOUTUBE_CLIENT_SECRET_FINANCE
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_FINANCE
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_FINANCE
+
+  - id: ai_tools
+    niche: ai_tools
+    display_name: "ToolStack"
+    warmup_complete: true
+    platforms:
+      facebook:
+        page_id: "1019021777964219"
+        token_env: META_PAGE_ACCESS_TOKEN_TECH
+      instagram:
+        account_id: "17841443112000007"
+        token_env: INSTAGRAM_ACCESS_TOKEN_TECH
+      youtube:
+        channel_id: "UCQiULF-Qp7TgVQFLWyM929Q"
+        client_id_env: YOUTUBE_CLIENT_ID_TECH
+        client_secret_env: YOUTUBE_CLIENT_SECRET_TECH
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_TECH
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_TECH
+
+  - id: true_crime
+    niche: true_crime
+    display_name: "Cold Cases"
+    warmup_complete: true
+    platforms:
+      facebook:
+        page_id: "980988605105229"
+        token_env: META_PAGE_ACCESS_TOKEN_TRUECRIME
+      instagram:
+        account_id: "17841441652822843"
+        token_env: INSTAGRAM_ACCESS_TOKEN_TRUECRIME
+      youtube:
+        channel_id: "UCgqyZTmFSuqast1BJuQlSjg"
+        client_id_env: YOUTUBE_CLIENT_ID_TRUECRIME
+        client_secret_env: YOUTUBE_CLIENT_SECRET_TRUECRIME
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_TRUECRIME
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_TRUECRIME
+
+  - id: betrayal_revenge
+    niche: betrayal_revenge
+    display_name: "StoryVault"  # Posts to StoryVault alongside reddit_stories
+    warmup_complete: true
+    platforms:
+      facebook:
+        page_id: "994748643726124"  # Same as reddit_stories (StoryVault)
+        token_env: META_PAGE_ACCESS_TOKEN_REDDIT
+      instagram:
+        account_id: "17841445970193656"  # Same as reddit_stories (StoryVault)
+        token_env: INSTAGRAM_ACCESS_TOKEN_REDDIT
+      youtube:
+        channel_id: "UCAMQuZQXguQjWdus-EZTb-g"  # Same as reddit_stories (StoryVault)
+        client_id_env: YOUTUBE_CLIENT_ID_REDDIT
+        client_secret_env: YOUTUBE_CLIENT_SECRET_REDDIT
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_REDDIT
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_REDDIT
+
+  - id: english_learning
+    niche: english_learning
+    display_name: "FluentIn60"
+    warmup_complete: true
+    platforms:
+      facebook:
+        page_id: ""
+        token_env: META_PAGE_ACCESS_TOKEN_ENGLISH
+      instagram:
+        account_id: "17841441749010689"
+        token_env: INSTAGRAM_ACCESS_TOKEN_ENGLISH
+      youtube:
+        channel_id: "UCvI3_6t7SaBvCYU4F9E8M6g"
+        client_id_env: YOUTUBE_CLIENT_ID_ENGLISH
+        client_secret_env: YOUTUBE_CLIENT_SECRET_ENGLISH
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_ENGLISH
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_ENGLISH
+
+  - id: dangerous_nature
+    niche: dangerous_nature
+    display_name: "Nature's Fury"
+    warmup_complete: false
+    platforms:
+      facebook:
+        page_id: ""
+        token_env: META_PAGE_ACCESS_TOKEN_NATURE
+      instagram:
+        account_id: ""
+        token_env: INSTAGRAM_ACCESS_TOKEN_NATURE
+      youtube:
+        channel_id: ""
+        client_id_env: YOUTUBE_CLIENT_ID_NATURE
+        client_secret_env: YOUTUBE_CLIENT_SECRET_NATURE
+        refresh_token_env: YOUTUBE_REFRESH_TOKEN_NATURE
+      tiktok:
+        token_env: TIKTOK_ACCESS_TOKEN_NATURE

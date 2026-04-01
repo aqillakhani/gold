@@ -1,0 +1,37 @@
+niche:
+  id: horror_stories
+  name: "Horror Stories"
+  engine_class: gold.niches.horror_stories.HorrorStoriesEngine
+  voice:
+    provider: elevenlabs
+    voice_id: onwK4e9ZLuTAKqWW03F9  # Daniel
+    style: dramatic_whisper
+  tone: eerie, suspenseful, immersive
+  target_duration: 55
+  topics:
+    - true scary stories from reddit
+    - urban legends
+    - creepy encounters
+    - haunted places
+    - paranormal experiences
+    - folklore monsters
+    - deep web stories
+    - camping horror stories
+  hashtags:
+    - "#horror"
+    - "#scary"
+    - "#creepy"
+    - "#storytime"
+    - "#paranormal"
+    - "#truestory"
+    - "#haunted"
+  cta:
+    youtube: "Subscribe if you dare..."
+    tiktok: "Follow for nightly horror stories!"
+    instagram: "Save this for a dark night!"
+    facebook: "Share to scare a friend!"
+  ambient_audio:
+    style: dark_ambient
+    effects: ["rain", "thunder", "wind", "creaking"]
+  affiliate:
+    audiobooks: ["audible"]

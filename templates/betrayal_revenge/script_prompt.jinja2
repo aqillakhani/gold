@@ -1,0 +1,68 @@
+Write a 3-PART short-form video script narrating a betrayal/revenge Reddit story. Each part will be a separate video under 55 seconds.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+{% if idea.story_text %}
+Original Reddit post:
+{{ idea.story_text[:4000] }}
+{% endif %}
+Tone: {{ niche.tone }}
+Target duration per part: {{ niche.target_duration }} seconds (3 parts total)
+
+IMPORTANT: This video uses GAMEPLAY FOOTAGE as background (like Subway Surfers or Minecraft parkour). The voiceover carries the ENTIRE story. Word-by-word subtitles are burned in automatically. Your ONLY job is to write an incredible voiceover script split into 3 parts.
+
+This is a 3-PART SERIES. Each part is a separate video. Viewers must follow to see the next part.
+
+Requirements:
+1. hook_text: A Reddit post title summarizing the FULL story. 10-20 words. Focus on BETRAYAL and REVENGE. Examples:
+   - "My best friend slept with my fiance so I ruined both their careers"
+   - "My boss stole my promotion so I got him fired and took his job"
+   - "I caught my sister stealing from our dying mother's bank account"
+
+2. parts: An array of exactly 3 objects, each representing one video part:
+
+   Part 1 — THE BETRAYAL (120-150 words):
+   - Set the scene: who are the people, what was the relationship
+   - Build trust, show normalcy, then DROP the betrayal
+   - End on a HARD CLIFFHANGER: "And that's when I saw the texts..." or "But what I found next destroyed everything..."
+   - Last line MUST be: "Follow for Part 2."
+
+   Part 2 — THE PLAN (120-150 words):
+   - Brief 1-sentence recap of Part 1
+   - The situation escalates — more betrayal discovered, or the revenge plan takes shape
+   - Show the protagonist preparing, gathering evidence, making moves
+   - End on cliffhanger: "Everything was in place. All I had to do was make one call..." or "And then... I pressed send."
+   - Last line MUST be: "Follow for Part 3 — the finale."
+
+   Part 3 — THE PAYOFF (120-150 words):
+   - Brief recap, then deliver the FULL revenge/justice
+   - Show the consequences: what happened to the betrayer
+   - Include aftermath and fallout
+   - End with verdict: "Was I wrong? Comment below." or "Would you have done the same?"
+   - This is the finale — no "follow for part X."
+
+   Each part object must have:
+   - "voiceover_script": Narration for this part (120-150 words STRICT)
+   - "part_label": "Part 1", "Part 2", or "Part 3"
+   - "part_hook": 5-10 word SPECIFIC teaser for screen overlay. MUST reference a concrete detail, NOT be vague.
+     GOOD: "The FBI found $2M in his basement" / "She recorded every conversation for 6 months" / "His own lawyer testified against him"
+     BAD: "The plan unfolds" / "Empire crumbles" / "Justice served" (too generic, no story detail)
+
+3. narrator_gender: "male" or "female" — based on the protagonist's gender. Look at pronouns and context.
+
+4. subreddit: Best fitting subreddit (NuclearRevenge, ProRevenge, pettyrevenge, BestofRedditorUpdates)
+5. captions: Per-platform captions with "Part X/3" included.
+6. hashtags: Array of 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+7. thumbnail_prompt: Dramatic scene from the story.
+
+8. music_tags: ["lofi", "ambient", "chill", "soft"] — subtle lo-fi background only.
+9. music_speed: "low" — casual background atmosphere.
+
+CRITICAL RULES:
+- The story MUST fill 3 parts. Expand with realistic details and dialogue if needed.
+- Each part stands alone as a watchable video.
+- Cliffhangers must be genuine — cut at the most dramatic moment.
+- Total across all 3 parts: 360-450 words.
+- DO NOT include "scenes" or "image_prompt" — gameplay footage background.
+
+Return as valid JSON only. No markdown formatting, no code blocks.

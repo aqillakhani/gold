@@ -1,0 +1,35 @@
+niche:
+  id: psychology_facts
+  name: "Psychology Facts"
+  engine_class: gold.niches.psychology_facts.PsychologyFactsEngine
+  voice:
+    provider: elevenlabs
+    voice_id: VR6AewLTigWG4xSOukaG  # Rachel
+    style: calm_authoritative
+  tone: intriguing, educational, relatable
+  target_duration: 35
+  topics:
+    - dark psychology tricks
+    - body language secrets
+    - manipulation tactics to avoid
+    - cognitive biases
+    - emotional intelligence
+    - habit formation
+    - social psychology
+    - subconscious mind
+  hashtags:
+    - "#psychology"
+    - "#facts"
+    - "#mindset"
+    - "#darkpsychology"
+    - "#bodylanguage"
+    - "#emotionalintelligence"
+    - "#selfimprovement"
+  cta:
+    youtube: "Subscribe to unlock your mind!"
+    tiktok: "Follow for daily psychology facts!"
+    instagram: "Share this with someone who needs it!"
+    facebook: "Tag a friend who loves psychology!"
+  affiliate:
+    books: ["influence", "thinking-fast-and-slow", "atomic-habits"]
+    courses: ["masterclass", "skillshare"]

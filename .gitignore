@@ -1,0 +1,35 @@
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Secrets
+secrets/
+
+# Data (videos, audio, DB — too large for git)
+data/gold.db
+data/*.db
+data/*.db-journal
+data/media/
+data/logs/
+data/tiktok_guides/
+data/topic_overrides.json
+data/backgrounds/
+
+# Remotion build artifacts
+remotion/node_modules/
+remotion/out/
+remotion/public/media/
+
+# Python
+.venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temp
+*.tmp
+*.temp.*

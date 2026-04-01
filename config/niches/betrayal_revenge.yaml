@@ -1,0 +1,67 @@
+niche:
+  id: betrayal_revenge
+  name: "Betrayal & Revenge Stories"
+  engine_class: gold.niches.betrayal_revenge.BetrayalRevengeEngine
+  video_style: gameplay
+  background_category: mixed
+  visual:
+    footage_source: pexels
+    footage_orientation: portrait
+    fallback: ai_image
+    music_mood: dark
+    transition_style: crossfade
+    transition_duration: 0.5
+    text_overlay_style: bold_bottom
+    text_font: impact
+    text_size: 72
+  voice:
+    provider: fish
+    voice_id: "d67524ad1936410896ad120583cb1117"  # Andrew — male narrator (default)
+    voice_id_female: "933563129e564b19a115bedd57b7406a"  # Sarah — female narrator, sincere, intimate storytelling
+    elevenlabs_voice_id: pNInz6obpgDQGcFmaJgB  # Adam (fallback)
+    style: conversational
+  tone: engaging, conversational, empathetic
+  target_duration: 50
+  has_voiceover: true
+  multi_part:
+    enabled: true
+    parts: 3
+    max_duration_per_part: 55  # each part under 60s for copyright safety
+    prefer_long_stories: true  # fetch longer Reddit posts (1500+ chars)
+  topics:
+    - nuclear revenge
+    - pro revenge
+    - betrayal stories
+    - infidelity payback
+    - workplace revenge
+    - family betrayal
+    - friendship betrayal
+    - justice served
+  subreddits:
+    - NuclearRevenge
+    - ProRevenge
+    - BestofRedditorUpdates
+    - relationship_advice
+    - pettyrevenge
+  hashtags:
+    - "#RedditStories"
+    - "#NuclearRevenge"
+    - "#RevengeStories"
+    - "#Betrayal"
+    - "#AITA"
+    - "#JusticeServed"
+    - "#ProRevenge"
+    - "#Drama"
+  paraphrasing_enforcement: true
+  paraphrasing_threshold: 0.8
+  cta:
+    youtube: "Subscribe for more revenge stories!"
+    tiktok: "Follow for Part 2!"
+    instagram: "Save this for later!"
+    facebook: "Share this wild story!"
+  music:
+    style: lofi
+    bpm_range: [80, 110]
+  music_volume: 0.21
+  affiliate:
+    audiobooks: ["audible"]

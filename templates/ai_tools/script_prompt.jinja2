@@ -1,0 +1,87 @@
+Write a short-form video script demonstrating an AI tool in action.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+IMPORTANT: This video uses AI-GENERATED video clips with smooth crossfade transitions between scenes. Each scene's image_prompt drives the video generation model — QUALITY OF PROMPTS IS CRITICAL. Write prompts as if directing a cinematographer. The voiceover carries the narrative. Word-by-word subtitles are burned in automatically. Background music plays underneath.
+
+CRITICAL TONE SHIFT: Do NOT write hype-based content like "This AI is BETTER than 10 developers!" Instead, write DEMO-BASED content that shows real capability: "Watch me build a full landing page in 45 seconds with this tool." Show, don't hype. Specific results, not superlatives.
+
+Requirements:
+1. hook_text: Opening hook (first 3 seconds, max 15 words) — demonstrate a specific capability or result.
+   GOOD examples: "I built a full website in 2 minutes with this free tool", "Watch me turn a napkin sketch into a working app"
+   BAD examples: "This AI is INSANE!", "Better than 10 developers!", "You NEED this tool!"
+
+2. voiceover_script: Full demo-style narration, 120-150 words. STRICT LIMIT: Do NOT exceed 150 words. Keep it punchy — one tool, one feature, one benefit. THIS IS THE MOST IMPORTANT PART.
+   - Structure: Specific problem → "Here's what I did" demo walkthrough → Actual result → Honest pros/cons → Pricing → Verdict
+   - Describe the actual workflow step by step as if screen-recording
+   - Include REAL pricing tiers and honest limitations (not just hype)
+   - Compare to ONE specific alternative with concrete differences
+   - Be genuinely helpful — viewers should learn something actionable
+   - End with honest verdict and "Follow for weekly tool demos"
+   - DO NOT cut off mid-thought. Must have a proper conclusion.
+
+3. scenes: An array of 6-8 scene objects. Each scene has:
+   - search_keywords: 2-4 word backup Pexels search query in case AI video generation fails. Keep simple and generic.
+   - image_prompt: DETAILED cinematographic prompt for AI video generation. THIS IS CRITICAL — vague prompts produce generic AI slop. Write each prompt as a specific camera direction.
+     REQUIRED ELEMENTS (include ALL in every prompt):
+     - Shot type: macro, close-up, medium, wide, over-shoulder, overhead, tracking, dolly, aerial
+     - Subject: specific objects, textures, actions the camera sees
+     - Lighting: natural, desk lamp, monitor glow, golden hour, overcast, neon, backlit
+     - Depth of field: shallow (blurred background), deep (everything sharp), rack focus
+     - Camera motion: slight drift, slow dolly forward, gentle pan right, static, handheld
+     - Mood/atmosphere: one or two words setting the feel
+
+     UNIVERSAL RULES:
+     - NEVER include human faces or full bodies — use hands-only, over-shoulder (back of head), or silhouettes
+     - NEVER include readable text, logos, or brand names
+     - NEVER use "futuristic", "holographic", or "glowing interface"
+     - Each scene MUST have a unique visual — no two scenes should look similar
+
+     CRITICAL — WHAT THE VIDEO MODEL CANNOT DO:
+     - NEVER describe screens, interfaces, dashboards, apps, or software UI — the model renders these as garbled mess
+     - NEVER describe text being displayed on screens or monitors
+     - NEVER ask for "stick figure animation" — the model cannot render this style
+     - Instead of showing the TOOL/APP, show the PHYSICAL WORLD AROUND IT:
+       WRONG: "Phone screen showing receipt scanning app with green checkmarks"
+       RIGHT: "Close-up of hand holding crumpled grocery receipt next to smartphone lying face-down on kitchen counter, warm morning light"
+       WRONG: "Laptop displaying expense categorization dashboard"
+       RIGHT: "Over-shoulder shot of person's hands resting on laptop keyboard, screen glow reflecting on their fingers, shallow depth of field so screen is blurred"
+       WRONG: "App pricing page showing free and pro tiers"
+       RIGHT: "Macro close-up of credit card being placed on a wooden desk next to a coffee mug, warm desk lamp, slight camera drift"
+     - The rule is: CAMERA SEES THE REAL WORLD, not the digital world
+     - If the scene is about using an app: show the HANDS, the DESK, the COFFEE, the ENVIRONMENT — never the screen content
+     - Screens can appear but MUST be out of focus / blurred in background
+
+     GOOD PROMPTS FOR THIS NICHE:
+     - "Macro close-up of fingers typing on a mechanical keyboard, RGB backlight glow, shallow depth of field, desk lamp warm light, slight camera drift left, professional workspace"
+     - "Over-shoulder shot of hands typing on laptop, blurred coffee shop background, natural daylight from window, shallow depth of field, static camera"
+     - "Overhead flat-lay of clean desk with laptop, notebook, pen, and coffee mug, morning sunlight casting soft shadows, slow gentle zoom in, minimal aesthetic"
+     - "Close-up of hands on keyboard, keyboard keys in focus, screen glow reflected on desk surface, shallow depth of field, steady camera"
+     - "Wide shot of modern workspace at golden hour, monitor on standing desk, plants, clean cables, warm light through blinds, slow dolly right"
+     - "Close-up of hands excitedly gesturing while talking, shallow depth of field, warm natural light, slight handheld camera movement"
+
+     BAD PROMPTS (NEVER write these):
+     - "Futuristic holographic dashboard with blue ambient glow" (generic AI cliche)
+     - "Person using AI tool on computer" (too vague, generates uncanny face)
+     - "Technology concept with data flowing" (abstract nonsense)
+     - "Modern tech environment" (meaningless)
+
+   - ken_burns: Fallback camera effect if AI image is used. One of: "zoom_in", "zoom_out", "pan_left", "pan_right", "diagonal", "zoom_pan_combo".
+   - duration: Duration in seconds (5-8). Total should be ~{{ niche.target_duration }}s.
+   - text_overlay: Optional short text to display on this scene (max 6 words). Use for key features or prices. Examples: "FREE TIER AVAILABLE", "10x FASTER THAN GPT", "BEST FOR BEGINNERS". Leave empty string for scenes where visuals speak for themselves.
+
+4. captions: Platform-specific captions (youtube, tiktok, instagram, facebook) — each 100-200 characters
+
+5. hashtags: Array of 10 relevant hashtags including {{ niche.hashtags[:5] | join(', ') }}
+
+6. thumbnail_prompt: Bold, eye-catching thumbnail with the tool name and a reaction element.
+
+7. music_tags: Array of 3-5 descriptive tags for searching SUBTLE, UNDERSTATED background music. The music must sit quietly BEHIND the voiceover — viewers need to focus on the tool review, not the beat. Think clean, minimal tech underscore like Apple keynote background music. Examples: ["ambient", "electronic", "soft", "modern"] for tool demos, ["inspiring", "ambient", "cinematic", "calm"] for exciting discoveries, ["relaxing", "electronic", "minimal", "soft"] for comparison reviews. AVOID tags like "energetic", "hiphop", "trap", "upbeat" — these produce distracting music that competes with the narration.
+
+8. music_speed: One of "verylow", "low", "medium", "high", "veryhigh" — use "low" or "medium" for most AI tool content. The music should feel like gentle background atmosphere, not a driving beat.
+
+Return as valid JSON only. No markdown formatting, no code blocks.

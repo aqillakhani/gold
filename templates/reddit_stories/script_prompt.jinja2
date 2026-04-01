@@ -1,0 +1,67 @@
+Write a 3-PART short-form video script narrating a Reddit story. Each part will be a separate video under 55 seconds.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+{% if idea.story_text %}
+Original Reddit post:
+{{ idea.story_text[:4000] }}
+{% endif %}
+Tone: {{ niche.tone }}
+Target duration per part: {{ niche.target_duration }} seconds (3 parts total)
+
+IMPORTANT: This video uses GAMEPLAY FOOTAGE as background (like Subway Surfers or Minecraft parkour). The voiceover carries the ENTIRE story. Viewers watch the gameplay while listening. Word-by-word subtitles are burned in automatically. Your ONLY job is to write an incredible voiceover script split into 3 parts.
+
+This is a 3-PART SERIES. Each part is a separate video posted to the same channel. Viewers must follow to see the next part. This is the #1 growth strategy for story channels — use it well.
+
+Requirements:
+1. hook_text: A Reddit post title that summarizes the FULL story (shown as a card on screen). Must be a COMPLETE thought. 10-20 words. Examples:
+   - "AITA for refusing to let my sister bring her kids to my childfree wedding?"
+   - "I found out my husband has been lying about his job for 3 years"
+   - "My landlord tried to keep my deposit so I reported every code violation"
+
+2. parts: An array of exactly 3 objects, each representing one video part:
+
+   Part 1 — THE SETUP (120-150 words):
+   - Open with context: who, where, what the relationship was
+   - Establish trust/normalcy, then DROP the betrayal or problem
+   - End on a HARD CLIFFHANGER mid-action: "And that's when I checked her phone..." or "But what I found in the folder changed everything..."
+   - Last line MUST be: "Follow for Part 2."
+
+   Part 2 — THE ESCALATION (120-150 words):
+   - Brief 1-sentence recap: "So my MIL threw out my late mom's jewelry..."
+   - Escalate the conflict — things get worse, or the revenge plan forms
+   - Add a twist or complication nobody saw coming
+   - End on another cliffhanger: "And THAT'S when I made the call..." or "What happened next... even I couldn't believe."
+   - Last line MUST be: "Follow for Part 3 — the finale."
+
+   Part 3 — THE PAYOFF (120-150 words):
+   - Brief recap: "So after catching my boss in the lie..."
+   - Deliver the FULL resolution — revenge executed, karma served, consequences revealed
+   - Include aftermath: what happened to everyone involved
+   - End with verdict + engagement: "Was I wrong? Comment below." or "What would YOU have done?"
+   - Do NOT say "follow for part X" — this is the finale.
+
+   Each part object must have:
+   - "voiceover_script": The narration text for this part (120-150 words STRICT)
+   - "part_label": "Part 1", "Part 2", or "Part 3"
+   - "part_hook": A 5-10 word SPECIFIC teaser shown on screen. MUST reference a concrete detail from the story, NOT be vague.
+     GOOD: "She had no idea I recorded everything" / "The landlord found 47 code violations" / "His wife answered my call"
+     BAD: "Part 2: Things escalate" / "The plan unfolds" / "Empire crumbles completely" (too vague, no detail)
+
+3. subreddit: The most fitting subreddit for this story.
+4. captions: Engaging captions per platform (youtube, tiktok, instagram, facebook). Include "Part X/3" in each caption.
+5. hashtags: Array of 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+6. thumbnail_prompt: A dramatic scene from the story for the thumbnail image
+
+7. music_tags: Array of 3-5 tags for SUBTLE lo-fi background music. Examples: ["lofi", "ambient", "chill", "soft"]. AVOID "energetic", "dramatic", "orchestral".
+
+8. music_speed: "verylow" or "low".
+
+CRITICAL RULES:
+- The story MUST be long enough to fill 3 parts. If the source material is short, EXPAND it with realistic details, dialogue, and emotional reactions.
+- Each part must stand alone as a watchable video — don't start mid-sentence.
+- Cliffhangers between parts must be GENUINE — not forced. Cut at the most dramatic moment.
+- Total script across all 3 parts: 360-450 words.
+- DO NOT include "scenes" or "image_prompt" — gameplay footage is the background.
+
+Return as valid JSON only. No markdown formatting, no code blocks.

@@ -1,0 +1,204 @@
+{% if niche.long_form %}
+Write a LONG-FORM educational video script for a personal finance YouTube channel.
+This is a premium, well-researched deep dive — NOT a quick tip.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ (niche.target_duration // 60) }}-{{ (niche.target_duration // 60) + 5 }} minutes ({{ niche.target_duration }} seconds)
+
+IMPORTANT CONTEXT: This video uses AI-GENERATED video clips with smooth crossfade transitions. Each scene's image_prompt drives the video generation model — QUALITY OF PROMPTS IS CRITICAL. Write prompts as if directing a cinematographer. The voiceover narration carries the entire lesson. Word-by-word animated subtitles are burned in. Ambient background music plays underneath.
+
+Requirements:
+1. hook_text: Opening title card (first 4 seconds, max 15 words). Create IMMEDIATE curiosity.
+   Examples: "This One Credit Hack Raised My Score 200 Points" / "The $500/Month Side Hustle Nobody Talks About" / "Stop Wasting Money on These 5 Things"
+
+2. voiceover_script: Full narration, 120-150 words. STRICT LIMIT: Do NOT exceed 150 words. One tip per video — deliver the insight fast.
+
+   CRITICAL WRITING GUIDELINES:
+   - Open with a RELATABLE hook: a common financial mistake, a shocking stat, or a "what if" scenario
+   - Use SPECIFIC numbers: "$47,000 average student loan debt", "23% APR", "$500/month in subscriptions"
+   - Include actionable steps the viewer can do TODAY — not vague advice
+   - Use before/after comparisons: "If you save $200/month starting at 25, you'll have $400,000 by 65"
+   - Vary pacing: fast for excitement, slower for important takeaways
+   - Include "This is not financial advice" woven naturally near the end
+   - Add FTC disclosure: "Some links in the description may be affiliate links"
+   - End with a strong, specific call to action
+   - Write for AUDIO — every sentence should sound natural when spoken aloud
+
+3. chapters: Array of 4-7 chapter objects for YouTube timestamp markers:
+   - title: Chapter name (3-6 words). Make them actionable.
+     Good: "The 50/30/20 Rule" / "Kill Your Debt Fast" / "Your First $1000 Invested"
+     Bad: "Introduction" / "Tips" / "Conclusion"
+   - approximate_timestamp: Estimated time in "MM:SS" format
+
+4. scenes: Array of {{ (niche.target_duration // 60) * 2 }}-{{ (niche.target_duration // 60) * 3 }} scene objects. Each scene has:
+   - search_keywords: 2-4 word backup Pexels search query in case AI video generation fails. Keep simple and generic.
+   - image_prompt: DETAILED cinematographic prompt for AI video generation. THIS IS CRITICAL — vague prompts produce generic AI slop. Write each prompt as a specific camera direction.
+     REQUIRED ELEMENTS (include ALL in every prompt):
+     - Shot type: macro, close-up, medium, wide, over-shoulder, overhead, tracking, dolly, aerial
+     - Subject: specific objects, textures, actions the camera sees
+     - Lighting: natural, desk lamp, monitor glow, golden hour, overcast, neon, backlit
+     - Depth of field: shallow (blurred background), deep (everything sharp), rack focus
+     - Camera motion: slight drift, slow dolly forward, gentle pan right, static, handheld
+     - Mood/atmosphere: one or two words setting the feel
+
+     UNIVERSAL RULES:
+     - NEVER include human faces or full bodies — use hands-only, over-shoulder (back of head), or silhouettes
+     - NEVER include readable text, logos, or brand names
+     - NEVER use "futuristic", "holographic", or "glowing interface"
+     - Each scene MUST have a unique visual — no two scenes should look similar
+
+     CRITICAL — WHAT THE VIDEO MODEL CANNOT DO:
+     - NEVER describe screens, interfaces, dashboards, apps, or software UI — the model renders these as garbled mess
+     - NEVER describe text being displayed on screens or monitors
+     - NEVER ask for "stick figure animation" — the model cannot render this style
+     - Instead of showing the TOOL/APP, show the PHYSICAL WORLD AROUND IT:
+       WRONG: "Phone screen showing receipt scanning app with green checkmarks"
+       RIGHT: "Close-up of hand holding crumpled grocery receipt next to smartphone lying face-down on kitchen counter, warm morning light"
+       WRONG: "Laptop displaying expense categorization dashboard"
+       RIGHT: "Over-shoulder shot of person's hands resting on laptop keyboard, screen glow reflecting on their fingers, shallow depth of field so screen is blurred"
+       WRONG: "App pricing page showing free and pro tiers"
+       RIGHT: "Macro close-up of credit card being placed on a wooden desk next to a coffee mug, warm desk lamp, slight camera drift"
+     - The rule is: CAMERA SEES THE REAL WORLD, not the digital world
+     - If the scene is about using an app: show the HANDS, the DESK, the COFFEE, the ENVIRONMENT — never the screen content
+     - Screens can appear but MUST be out of focus / blurred in background
+
+     GOOD PROMPTS FOR THIS NICHE:
+     - "Macro close-up of gold coins stacked on warm wooden desk, morning sunlight through window blinds casting striped shadows, shallow depth of field, slight camera drift right"
+     - "Over-shoulder view of hands writing numbers in leather notebook with fountain pen, calculator and coffee beside it, warm desk lamp, slow gentle zoom in"
+     - "Close-up of credit card placed on wooden table, wallet open nearby, soft warm ambient light, shallow depth of field, static camera with slight movement"
+     - "Wide shot of clean home office, plants on shelf, golden hour light, slow dolly forward, calm professional atmosphere, screen blurred in background"
+     - "Overhead flat-lay of budgeting items: notebook, calculator, receipts, pen on marble surface, soft diffused daylight, slow gentle zoom out, clean minimal aesthetic"
+     - "Close-up of hands excitedly handling stacks of coins, shallow depth of field, warm natural light, friendly atmosphere"
+
+     BAD PROMPTS:
+     - "Money" (too vague)
+     - "Person checking finances" (face generation)
+
+     EXTRA RULES:
+     - Warm, trustworthy aesthetic: golden light, wood textures, clean surfaces
+     - No specific dollar amounts or brand logos in prompts
+
+   - motion_prompt: Brief camera motion description (e.g. "slow dolly forward", "camera pans right")
+   - ken_burns: Fallback effect. One of: zoom_in, zoom_out, pan_left, pan_right, pan_up, pan_down.
+   - duration: 15-30 seconds per scene.
+   - text_overlay: Key stat or data point (max 10 words). Use for IMPACT moments:
+     "SAVE $500/MONTH", "CREDIT SCORE: 750+", "DEBT FREE IN 18 MONTHS"
+     Leave empty string for transitional scenes.
+   - section: Which chapter this scene belongs to
+
+5. shorts_hooks: Array of 3-5 standalone highlights for Shorts/TikTok/Reels:
+   - hook_text: Punchy hook (max 12 words)
+   - voiceover_excerpt: 50-70 words that work as standalone clip
+   - scene_range: [start_scene_number, end_scene_number] (1-indexed)
+
+6. captions: Platform-optimized captions:
+   - youtube: 200-500 chars. Include chapter timestamps.
+   - tiktok: 100-150 chars. Punchy, end with question.
+   - instagram: 100-200 chars. Professional but engaging.
+   - facebook: 100-200 chars. Conversational, shareable.
+
+7. hashtags: Array of 15 relevant hashtags (include: {{ niche.hashtags[:5] | join(', ') }})
+
+8. music_tags: Array of 3-5 tags for SUBTLE background music. Think calm, motivational underscore. Examples: ["ambient", "inspiring", "cinematic", "soft"]. AVOID: "energetic", "hiphop", "trap".
+
+9. music_speed: One of "verylow", "low", "medium" — use "low" for most finance content.
+
+10. thumbnail_prompt: A clean, bold thumbnail:
+    - Bold number or key stat as focal point
+    - Professional but approachable look
+    - High contrast, clean background
+    - NO text in the image
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+
+{% else %}
+Write a viral short-form video script for a personal finance channel.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+IMPORTANT: This video uses AI-GENERATED video clips with smooth crossfade transitions. Each scene's image_prompt drives the video generation model — QUALITY OF PROMPTS IS CRITICAL. Write prompts as if directing a cinematographer. The voiceover carries the narrative. Word-by-word subtitles are burned in automatically. Background music plays underneath.
+
+Requirements:
+1. hook_text: Opening hook (first 3 seconds, max 15 words) — create curiosity. Example: "This one credit hack can boost your score 100 points overnight"
+
+2. voiceover_script: Full voiceover narration, 250-330 words. STRICT LIMIT: Do NOT exceed 330 words. THIS IS THE MOST IMPORTANT PART.
+   - Must tell a COMPLETE story from start to finish
+   - Include specific numbers, dollar amounts, and percentages
+   - Structure: Hook → Problem → Strategy → Numbers/Proof → Actionable Step → CTA
+   - Use relatable language: "most people don't know this", "here's what changed everything"
+   - End with clear actionable takeaway and "Follow for weekly money tips"
+   - Include "Not financial advice" naturally
+   - Include FTC disclosure naturally
+   - DO NOT cut off mid-thought. Must have a proper conclusion.
+
+3. scenes: An array of 6-8 scene objects. Each scene has:
+   - search_keywords: 2-4 word backup Pexels search query in case AI video generation fails. Keep simple and generic.
+   - image_prompt: DETAILED cinematographic prompt for AI video generation. THIS IS CRITICAL — vague prompts produce generic AI slop. Write each prompt as a specific camera direction.
+     REQUIRED ELEMENTS (include ALL in every prompt):
+     - Shot type: macro, close-up, medium, wide, over-shoulder, overhead, tracking, dolly, aerial
+     - Subject: specific objects, textures, actions the camera sees
+     - Lighting: natural, desk lamp, monitor glow, golden hour, overcast, neon, backlit
+     - Depth of field: shallow (blurred background), deep (everything sharp), rack focus
+     - Camera motion: slight drift, slow dolly forward, gentle pan right, static, handheld
+     - Mood/atmosphere: one or two words setting the feel
+
+     UNIVERSAL RULES:
+     - NEVER include human faces or full bodies — use hands-only, over-shoulder (back of head), or silhouettes
+     - NEVER include readable text, logos, or brand names
+     - NEVER use "futuristic", "holographic", or "glowing interface"
+     - Each scene MUST have a unique visual — no two scenes should look similar
+
+     CRITICAL — WHAT THE VIDEO MODEL CANNOT DO:
+     - NEVER describe screens, interfaces, dashboards, apps, or software UI — the model renders these as garbled mess
+     - NEVER describe text being displayed on screens or monitors
+     - NEVER ask for "stick figure animation" — the model cannot render this style
+     - Instead of showing the TOOL/APP, show the PHYSICAL WORLD AROUND IT:
+       WRONG: "Phone screen showing receipt scanning app with green checkmarks"
+       RIGHT: "Close-up of hand holding crumpled grocery receipt next to smartphone lying face-down on kitchen counter, warm morning light"
+       WRONG: "Laptop displaying expense categorization dashboard"
+       RIGHT: "Over-shoulder shot of person's hands resting on laptop keyboard, screen glow reflecting on their fingers, shallow depth of field so screen is blurred"
+       WRONG: "App pricing page showing free and pro tiers"
+       RIGHT: "Macro close-up of credit card being placed on a wooden desk next to a coffee mug, warm desk lamp, slight camera drift"
+     - The rule is: CAMERA SEES THE REAL WORLD, not the digital world
+     - If the scene is about using an app: show the HANDS, the DESK, the COFFEE, the ENVIRONMENT — never the screen content
+     - Screens can appear but MUST be out of focus / blurred in background
+
+     GOOD PROMPTS FOR THIS NICHE:
+     - "Macro close-up of gold coins stacked on warm wooden desk, morning sunlight through window blinds casting striped shadows, shallow depth of field, slight camera drift right"
+     - "Over-shoulder view of hands writing numbers in leather notebook with fountain pen, calculator and coffee beside it, warm desk lamp, slow gentle zoom in"
+     - "Close-up of credit card placed on wooden table, wallet open nearby, soft warm ambient light, shallow depth of field, static camera with slight movement"
+     - "Wide shot of clean home office, plants on shelf, golden hour light, slow dolly forward, calm professional atmosphere, screen blurred in background"
+     - "Overhead flat-lay of budgeting items: notebook, calculator, receipts, pen on marble surface, soft diffused daylight, slow gentle zoom out, clean minimal aesthetic"
+     - "Close-up of hands excitedly handling stacks of coins, shallow depth of field, warm natural light, friendly atmosphere"
+
+     BAD PROMPTS:
+     - "Money" (too vague)
+     - "Person checking finances" (face generation)
+
+     EXTRA RULES:
+     - Warm, trustworthy aesthetic: golden light, wood textures, clean surfaces
+     - No specific dollar amounts or brand logos in prompts
+
+   - ken_burns: Fallback camera effect. One of: "zoom_in", "zoom_out", "pan_left", "pan_right", "diagonal", "zoom_pan_combo".
+   - duration: Duration in seconds (5-10). Total should be ~{{ niche.target_duration }}s.
+   - text_overlay: Optional short text (max 8 words). Use for key data. Examples: "SAVE $500/MONTH", "CREDIT SCORE: 750+". Leave empty string for atmospheric scenes.
+
+4. captions: Platform-specific captions (youtube, tiktok, instagram, facebook) — each 100-200 characters
+
+5. hashtags: Array of 10 relevant hashtags including {{ niche.hashtags[:5] | join(', ') }}
+
+6. thumbnail_prompt: Eye-catching thumbnail with bold numbers. Should look like a professional finance tip.
+
+7. music_tags: Array of 3-5 tags for SUBTLE background music. Examples: ["ambient", "inspiring", "cinematic", "soft"]. AVOID: "energetic", "hiphop", "trap".
+
+8. music_speed: One of "verylow", "low", "medium" — use "low" for most finance content.
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+{% endif %}

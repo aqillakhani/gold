@@ -1,0 +1,60 @@
+niche:
+  id: english_learning
+  name: "English Learning"
+  engine_class: gold.niches.english_learning.EnglishLearningEngine
+  video_style: stock_footage
+  visual:
+    footage_source: ai_video  # LTX-2.3 via ComfyUI, falls back to Pexels
+    footage_orientation: portrait
+    music_mood: calm
+    transition_style: crossfade
+    transition_duration: 0.5
+    text_overlay_style: large_centered
+    text_font: impact
+    text_size: 96
+    color_grade: warm
+    grain: light
+  voice:
+    provider: fish
+    voice_id: "c2623f0c075b4492ac367989aee1576f"  # Paula — casual teacher, educational, conversational, friendly, articulate
+    elevenlabs_voice_id: ErXwobaYiN019PkySvjV  # Antoni (fallback)
+    style: educational
+    speed: 0.65
+  tone: patient, clear, encouraging, educational
+  target_duration: 55
+  has_voiceover: true
+  topics:
+    - common English mistakes
+    - phrasal verbs explained
+    - business English phrases
+    - pronunciation tips
+    - idioms and expressions
+    - grammar rules simplified
+    - vocabulary building
+    - IELTS preparation tips
+    - conversation practice
+    - British vs American English
+  hashtags:
+    - "#LearnEnglish"
+    - "#EnglishVocabulary"
+    - "#EnglishLessons"
+    - "#SpeakEnglish"
+    - "#EnglishGrammar"
+    - "#LanguageLearning"
+    - "#IELTS"
+    - "#BusinessEnglish"
+  ftc_disclosure:
+    verbal: ""
+    description: ""
+  paraphrasing_threshold: 0.8
+  cta:
+    youtube: "Subscribe for daily English lessons!"
+    tiktok: "Follow to improve your English!"
+    instagram: "Save this lesson for practice!"
+    facebook: "Share with someone learning English!"
+  music:
+    style: calm
+    bpm_range: [60, 90]
+  music_volume: 0.19
+  affiliate:
+    education: ["italki", "preply"]

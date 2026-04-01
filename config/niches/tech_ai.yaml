@@ -1,0 +1,34 @@
+niche:
+  id: tech_ai
+  name: "Tech & AI Tools"
+  engine_class: gold.niches.tech_ai.TechAIEngine
+  voice:
+    provider: elevenlabs
+    voice_id: ErXwobaYiN019PkySvjV  # Antoni
+    style: enthusiastic
+  tone: excited, informative, practical
+  target_duration: 40
+  topics:
+    - new AI tools this week
+    - productivity hacks with AI
+    - ChatGPT alternatives
+    - AI for business
+    - automation tools
+    - coding with AI
+    - AI image generation
+    - no-code AI tools
+  hashtags:
+    - "#ai"
+    - "#tech"
+    - "#aitools"
+    - "#productivity"
+    - "#automation"
+    - "#chatgpt"
+    - "#artificialintelligence"
+  cta:
+    youtube: "Subscribe for weekly AI tool reviews!"
+    tiktok: "Follow for the best AI tools!"
+    instagram: "Save this tool for later!"
+    facebook: "Tag someone who needs this!"
+  affiliate:
+    saas: ["notion", "jasper", "midjourney", "cursor"]

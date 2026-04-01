@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gold Platform - Upload Content</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f0f1a; color: #e0e0e0; min-height: 100vh; }
+.sidebar { position: fixed; left: 0; top: 0; width: 240px; height: 100vh; background: #1a1a2e; border-right: 1px solid #2a2a4a; padding: 20px 0; }
+.sidebar .logo { padding: 0 20px 20px; border-bottom: 1px solid #2a2a4a; margin-bottom: 20px; }
+.sidebar .logo h1 { font-size: 22px; color: #00f2ea; }
+.sidebar .logo span { font-size: 12px; color: #888; }
+.sidebar nav a { display: flex; align-items: center; padding: 12px 20px; color: #aaa; text-decoration: none; font-size: 14px; transition: all 0.2s; }
+.sidebar nav a:hover, .sidebar nav a.active { background: #2a2a4a; color: #fff; }
+.sidebar nav a.active { border-left: 3px solid #00f2ea; }
+.main { margin-left: 240px; padding: 30px; }
+.header h2 { font-size: 24px; color: #fff; margin-bottom: 30px; }
+
+.upload-grid { display: grid; grid-template-columns: 1fr 360px; gap: 24px; }
+
+/* Left: Upload form */
+.form-section { background: #1a1a2e; border-radius: 12px; padding: 28px; border: 1px solid #2a2a4a; }
+.form-section h3 { color: #fff; margin-bottom: 20px; font-size: 18px; }
+
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 13px; color: #888; margin-bottom: 6px; text-transform: uppercase; }
+.form-group input, .form-group textarea, .form-group select { width: 100%; background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 8px; padding: 12px; color: #fff; font-size: 14px; font-family: inherit; }
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-group input:focus, .form-group textarea:focus { outline: none; border-color: #00f2ea; }
+
+.drop-zone { border: 2px dashed #2a2a4a; border-radius: 12px; padding: 40px; text-align: center; cursor: pointer; transition: all 0.2s; margin-bottom: 20px; }
+.drop-zone:hover { border-color: #00f2ea; background: #00f2ea08; }
+.drop-zone .icon { font-size: 36px; margin-bottom: 8px; }
+.drop-zone .text { color: #888; font-size: 14px; }
+.drop-zone .text strong { color: #00f2ea; }
+
+.file-selected { display: none; background: #0f0f1a; border-radius: 8px; padding: 14px; margin-bottom: 20px; border: 1px solid #22c55e40; }
+.file-selected.show { display: flex; align-items: center; gap: 12px; }
+.file-selected .file-icon { font-size: 24px; }
+.file-selected .file-name { color: #fff; font-weight: 600; }
+.file-selected .file-size { color: #888; font-size: 12px; }
+
+/* Platform checkboxes */
+.platform-select { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.platform-option { display: flex; align-items: center; gap: 10px; background: #0f0f1a; border: 1px solid #2a2a4a; border-radius: 8px; padding: 12px; cursor: pointer; transition: all 0.2s; }
+.platform-option.selected { border-color: #00f2ea; background: #00f2ea08; }
+.platform-option input { display: none; }
+.platform-option .dot { width: 18px; height: 18px; border-radius: 50%; border: 2px solid #2a2a4a; display: flex; align-items: center; justify-content: center; }
+.platform-option.selected .dot { border-color: #00f2ea; background: #00f2ea; }
+.platform-option.selected .dot::after { content: '✓'; color: #000; font-size: 11px; font-weight: 800; }
+
+/* AI disclosure */
+.ai-disclosure { background: #eab30815; border: 1px solid #eab30830; border-radius: 8px; padding: 14px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+.ai-disclosure .icon { font-size: 18px; }
+.ai-disclosure .text { font-size: 13px; color: #eab308; }
+
+/* Right: Preview */
+.preview-section { background: #1a1a2e; border-radius: 12px; padding: 28px; border: 1px solid #2a2a4a; position: sticky; top: 30px; }
+.preview-section h3 { color: #fff; margin-bottom: 16px; font-size: 18px; }
+.phone-preview { background: #000; border-radius: 24px; padding: 8px; width: 280px; margin: 0 auto; }
+.phone-screen { background: #1a1a2e; border-radius: 20px; height: 500px; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.phone-screen .placeholder { color: #444; font-size: 14px; text-align: center; }
+.phone-screen .placeholder .icon { font-size: 40px; margin-bottom: 8px; display: block; }
+.phone-screen.has-video .placeholder { display: none; }
+.phone-screen.has-video { background: linear-gradient(135deg, #1a1a2e, #0f3460); }
+.phone-screen .video-overlay { display: none; position: absolute; bottom: 16px; left: 16px; right: 16px; }
+.phone-screen.has-video .video-overlay { display: block; }
+.video-overlay .caption { font-size: 12px; color: #fff; margin-bottom: 6px; text-shadow: 0 1px 3px rgba(0,0,0,0.5); }
+.video-overlay .tags { font-size: 11px; color: #00f2ea; }
+
+.api-details { margin-top: 16px; background: #0f0f1a; border-radius: 8px; padding: 14px; font-size: 12px; }
+.api-details .row { display: flex; justify-content: space-between; padding: 4px 0; }
+.api-details .row .k { color: #666; }
+.api-details .row .v { color: #00f2ea; font-family: monospace; }
+
+.btn-publish { width: 100%; background: #00f2ea; color: #000; border: none; padding: 14px; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer; margin-top: 16px; transition: all 0.2s; }
+.btn-publish:hover { background: #00d4cd; }
+.btn-publish:disabled { background: #2a2a4a; color: #666; cursor: not-allowed; }
+
+/* Upload progress modal */
+.progress-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 100; justify-content: center; align-items: center; }
+.progress-overlay.show { display: flex; }
+.progress-card { background: #1a1a2e; border-radius: 16px; padding: 36px; width: 500px; text-align: center; border: 1px solid #2a2a4a; }
+.progress-card h3 { color: #fff; margin-bottom: 20px; }
+.progress-bar-bg { background: #0f0f1a; border-radius: 8px; height: 12px; overflow: hidden; margin-bottom: 12px; }
+.progress-bar { height: 100%; background: linear-gradient(90deg, #00f2ea, #0066ff); border-radius: 8px; width: 0%; transition: width 0.3s; }
+.progress-text { color: #888; font-size: 13px; margin-bottom: 8px; }
+.progress-steps { text-align: left; margin-top: 20px; }
+.progress-step { display: flex; align-items: center; gap: 10px; padding: 8px 0; font-size: 13px; }
+.progress-step .step-icon { width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.progress-step .step-icon.done { background: #22c55e20; color: #22c55e; }
+.progress-step .step-icon.active { background: #00f2ea20; color: #00f2ea; animation: pulse 1s infinite; }
+.progress-step .step-icon.pending { background: #2a2a4a; color: #666; }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.5; } }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="logo">
+    <h1>Gold</h1>
+    <span>Content Platform</span>
+  </div>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="accounts.html">Connected Accounts</a>
+    <a href="upload.html" class="active">Upload Content</a>
+    <a href="#">Schedule</a>
+    <a href="#">Analytics</a>
+    <a href="#">Settings</a>
+  </nav>
+</div>
+
+<div class="main">
+  <div class="header">
+    <h2>Upload & Publish Content</h2>
+  </div>
+
+  <div class="upload-grid">
+    <div>
+      <div class="form-section">
+        <h3>Video Details</h3>
+
+        <div class="drop-zone" id="dropZone" onclick="selectFile()">
+          <div class="icon">🎬</div>
+          <div class="text">Drop your video here or <strong>browse files</strong></div>
+          <div style="color:#555;font-size:12px;margin-top:4px">MP4, MOV up to 500MB</div>
+        </div>
+
+        <div class="file-selected" id="fileSelected">
+          <div class="file-icon">📹</div>
+          <div>
+            <div class="file-name">content_8_master_20260313.mp4</div>
+            <div class="file-size">24.3 MB • 0:42 • 1080x1920</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Caption</label>
+          <textarea id="caption" placeholder="Write a caption...">Bitcoin just hit a new all-time high and most people have no idea why. Here's what's actually driving the surge.</textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Hashtags</label>
+          <input type="text" id="hashtags" value="#bitcoin #crypto #btc #investing #finance #cryptocurrency">
+        </div>
+
+        <div class="form-group">
+          <label>Privacy</label>
+          <select>
+            <option value="public">Public — Anyone can view</option>
+            <option value="friends">Friends — Only friends can view</option>
+            <option value="private">Private — Only you can view</option>
+          </select>
+        </div>
+
+        <div class="ai-disclosure">
+          <div class="icon">⚠️</div>
+          <div class="text"><strong>AI Content Disclosure:</strong> This content will be marked as AI-generated (is_aigc: true) per TikTok's Content Posting API requirements.</div>
+        </div>
+
+        <div class="form-group">
+          <label>Publish To</label>
+          <div class="platform-select">
+            <div class="platform-option selected" onclick="this.classList.toggle('selected')">
+              <div class="dot"></div>
+              <span>TikTok</span>
+            </div>
+            <div class="platform-option selected" onclick="this.classList.toggle('selected')">
+              <div class="dot"></div>
+              <span>YouTube</span>
+            </div>
+            <div class="platform-option selected" onclick="this.classList.toggle('selected')">
+              <div class="dot"></div>
+              <span>Instagram</span>
+            </div>
+            <div class="platform-option selected" onclick="this.classList.toggle('selected')">
+              <div class="dot"></div>
+              <span>Facebook</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="preview-section">
+        <h3>Preview</h3>
+        <div class="phone-preview">
+          <div class="phone-screen has-video" id="phoneScreen">
+            <div class="placeholder">
+              <span class="icon">📱</span>
+              Select a video to preview
+            </div>
+            <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:48px;opacity:0.3">▶</div>
+            <div class="video-overlay">
+              <div class="caption">Bitcoin just hit a new all-time high and most people have no idea why...</div>
+              <div class="tags">#bitcoin #crypto #btc #investing</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="api-details">
+          <div style="font-weight:600;color:#fff;margin-bottom:8px;font-size:13px">TikTok API Call</div>
+          <div class="row"><span class="k">Endpoint</span><span class="v">POST /v2/post/publish/video/init/</span></div>
+          <div class="row"><span class="k">Scope</span><span class="v">video.publish</span></div>
+          <div class="row"><span class="k">Upload</span><span class="v">video.upload (chunked)</span></div>
+          <div class="row"><span class="k">AI Disclosure</span><span class="v">is_aigc: true</span></div>
+          <div class="row"><span class="k">Privacy</span><span class="v">SELF_ONLY (sandbox)</span></div>
+        </div>
+
+        <button class="btn-publish" onclick="publishVideo()">Publish to All Platforms →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Upload Progress -->
+<div class="progress-overlay" id="progressOverlay">
+  <div class="progress-card">
+    <h3 id="progressTitle">Publishing to TikTok...</h3>
+    <div class="progress-bar-bg"><div class="progress-bar" id="progressBar"></div></div>
+    <div class="progress-text" id="progressText">Initializing upload...</div>
+    <div class="progress-steps">
+      <div class="progress-step" id="step1"><div class="step-icon active">⟳</div><span>POST /v2/post/publish/video/init/ — Initialize upload</span></div>
+      <div class="progress-step" id="step2"><div class="step-icon pending">○</div><span>video.upload — Chunked file upload (24.3 MB)</span></div>
+      <div class="progress-step" id="step3"><div class="step-icon pending">○</div><span>video.publish — Set caption, hashtags, AI disclosure</span></div>
+      <div class="progress-step" id="step4"><div class="step-icon pending">○</div><span>Publish status check — Confirm video is live</span></div>
+    </div>
+  </div>
+</div>
+
+<script>
+function selectFile() {
+  document.getElementById('dropZone').style.display = 'none';
+  document.getElementById('fileSelected').classList.add('show');
+}
+
+// Auto-select file on load
+window.addEventListener('load', () => {
+  setTimeout(selectFile, 500);
+});
+
+function publishVideo() {
+  const overlay = document.getElementById('progressOverlay');
+  const bar = document.getElementById('progressBar');
+  const text = document.getElementById('progressText');
+  overlay.classList.add('show');
+
+  const steps = [
+    { pct: 15, text: 'Initializing video upload via Content Posting API...', step: 1, duration: 1500 },
+    { pct: 45, text: 'Uploading video chunks (video.upload scope)...', step: 2, duration: 2000 },
+    { pct: 70, text: 'Setting caption, hashtags, AI disclosure (video.publish)...', step: 3, duration: 1500 },
+    { pct: 90, text: 'Confirming publish status...', step: 4, duration: 1000 },
+    { pct: 100, text: 'Published successfully!', step: 5, duration: 500 },
+  ];
+
+  let delay = 0;
+  steps.forEach((s, i) => {
+    delay += s.duration;
+    setTimeout(() => {
+      bar.style.width = s.pct + '%';
+      text.textContent = s.text;
+      // Update step icons
+      for (let j = 1; j <= 4; j++) {
+        const el = document.getElementById('step' + j);
+        const icon = el.querySelector('.step-icon');
+        if (j < s.step) {
+          icon.className = 'step-icon done';
+          icon.textContent = '✓';
+        } else if (j === s.step) {
+          icon.className = 'step-icon active';
+          icon.textContent = '⟳';
+        }
+      }
+    }, delay);
+  });
+
+  // Redirect to success
+  setTimeout(() => {
+    location.href = 'publish_success.html';
+  }, delay + 1500);
+}
+</script>
+</body>
+</html>

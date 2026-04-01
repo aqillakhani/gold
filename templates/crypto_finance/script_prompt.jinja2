@@ -1,0 +1,175 @@
+{% if niche.long_form %}
+Write a LONG-FORM cinematic documentary video script for a crypto/finance YouTube channel.
+This is a premium, Bloomberg/CNBC-style deep dive — NOT a quick news update.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ (niche.target_duration // 60) }}-{{ (niche.target_duration // 60) + 5 }} minutes ({{ niche.target_duration }} seconds)
+
+{% if idea.market_data %}
+Current market data (USE THESE EXACT NUMBERS — do not make up prices):
+{% for coin, data in idea.market_data.items() %}
+- {{ coin }}: ${{ data.usd | round(2) }}{% if data.usd_24h_change %} ({{ data.usd_24h_change | round(1) }}% 24h){% endif %}
+{% endfor %}
+{% endif %}
+
+IMPORTANT CONTEXT: This video uses a MIX of real stock footage (Pexels) and AI-generated cinematic images. The voiceover narration carries the entire story — footage illustrates it. Word-by-word animated subtitles are burned in. Ambient electronic music plays underneath. This needs to be engaging enough to hold viewers for 10+ minutes — think Vice documentaries, Bloomberg Quicktake, or Vox-style explainers.
+
+Requirements:
+1. hook_text: Opening title card (first 4 seconds, max 15 words). Create IMMEDIATE curiosity or urgency.
+   Examples: "The $40 Billion Crypto Scheme Nobody Saw Coming" / "Wall Street's Secret Bitcoin Play Just Leaked" / "This Chart Pattern Predicted Every Major Crash"
+
+2. voiceover_script: Full narration, {{ (niche.target_duration // 60) * 130 }}-{{ (niche.target_duration // 60) * 170 }} words (approx 150 words per minute).
+
+   CRITICAL WRITING GUIDELINES:
+   - Open with a DRAMATIC hook: a shocking stat, a vivid scene-setting moment, or a provocative question
+   - Build a clear narrative arc: Setup → Rising tension → Key insight → Implications → Conclusion
+   - Include SPECIFIC data: exact dollar amounts, percentages, dates, on-chain metrics, institutional names
+   - Reference real entities: BlackRock, Fidelity, SEC, Michael Saylor, CZ, Vitalik — gives credibility
+   - Use rhetorical questions every 60-90 seconds to re-engage viewers: "But here's what nobody's asking..."
+   - Vary pacing: fast staccato sentences for excitement, longer flowing ones for explanation
+   - Include at least 2-3 "pattern interrupts" — moments that make the viewer go "wait, what?"
+   - Use concrete analogies to explain complex concepts ("That's like buying every house in Manhattan — twice")
+   - Each chapter transition should feel like a mini-cliffhanger
+   - Write for AUDIO — every sentence should sound natural when spoken aloud
+   - End with a strong, actionable takeaway — not just "subscribe"
+   - Include "This is not financial advice — always do your own research before investing" woven naturally near the end
+
+3. chapters: Array of 4-7 chapter objects for YouTube timestamp markers:
+   - title: Chapter name (3-6 words). Make them intriguing, not generic.
+     Good: "The Hidden Whale Signal" / "What the Charts Really Say" / "The DeFi Trap Nobody Mentions"
+     Bad: "Introduction" / "Market Analysis" / "Conclusion"
+   - approximate_timestamp: Estimated time in "MM:SS" format
+
+4. scenes: Array of {{ (niche.target_duration // 60) * 2 }}-{{ (niche.target_duration // 60) * 3 }} scene objects. Each scene has:
+   - search_keywords: 2-4 word Pexels search query. Be SPECIFIC and VISUAL.
+     GOOD keywords for crypto/finance stock footage:
+     "bitcoin cryptocurrency coins", "stock market trading screens", "wall street new york",
+     "trading floor brokers", "gold bars vault", "server room technology", "city skyline night",
+     "business meeting boardroom", "digital currency abstract", "cash money counting",
+     "computer data analytics", "world map connections", "cryptocurrency mining farm",
+     "financial newspaper headlines", "luxury lifestyle wealth", "chart graph analysis",
+     "bank building exterior", "protest crowd people", "ocean waves storm",
+     "clock time passing", "domino effect falling", "maze labyrinth aerial"
+     AVOID: overly specific crypto terms Pexels won't have
+   - image_prompt: Fallback AI image prompt. Create CINEMATIC, dramatic compositions:
+     "A massive Bitcoin coin floating above a dark cityscape at night, golden glow reflecting off skyscrapers, dramatic volumetric lighting, 8K cinematic photography"
+     NOT: "bitcoin image" or "crypto chart"
+     Each image prompt should specify: subject, environment, lighting, camera angle, mood, color palette
+   - motion_prompt: Brief description of camera motion for AI video animation (e.g. "slow dolly forward toward subject", "camera pans right across scene", "subtle zoom into center")
+   - ken_burns: Fallback effect. One of: zoom_in, zoom_out, pan_left, pan_right, pan_up, pan_down. VARY across scenes.
+   - duration: 15-30 seconds per scene. Total should approximately match voiceover length.
+   - text_overlay: Key stat or data point (max 10 words). Use for IMPACT moments:
+     "BTC: $105,000 (+12% THIS WEEK)", "WHALE ALERT: 15,000 BTC MOVED", "$2.4B LIQUIDATED IN 24 HOURS"
+     Leave empty string for atmospheric/transitional scenes.
+   - section: Which chapter this scene belongs to (use chapter title)
+
+5. shorts_hooks: Array of 3-5 standalone highlights for YouTube Shorts / TikTok / Reels extraction:
+   - hook_text: Punchy hook for the Short (max 12 words)
+   - voiceover_excerpt: 50-70 words from the main voiceover that work as a standalone clip
+   - scene_range: [start_scene_number, end_scene_number] (1-indexed) — which scenes to cut
+
+6. captions: Platform-optimized captions:
+   - youtube: 200-500 chars. Include chapter timestamps. Mention the topic and key insight.
+   - tiktok: 100-150 chars. Punchy, use crypto slang. End with a question.
+   - instagram: 100-200 chars. Professional but engaging.
+   - facebook: 100-200 chars. Conversational, shareable.
+
+7. hashtags: Array of 15 relevant hashtags (include: {{ niche.hashtags[:5] | join(', ') }})
+
+8. music_tags: Array of 3-5 descriptive tags for searching SUBTLE, UNDERSTATED background music. The music must sit BEHIND the voiceover — never compete with it. Think Bloomberg/CNBC documentary underscore, not a music video. Examples: ["ambient", "electronic", "cinematic", "calm"] for market analysis, ["dark", "ambient", "atmospheric", "cinematic"] for crash/hack coverage, ["inspiring", "ambient", "cinematic", "soft"] for institutional adoption stories. AVOID tags like "energetic", "hiphop", "trap", "upbeat" — these produce distracting music that drowns out the narration.
+
+9. music_speed: One of "verylow", "low", "medium", "high", "veryhigh" — use "low" or "medium" for most crypto content. The music should feel like a gentle pulse underneath, not a beat that demands attention.
+
+10. thumbnail_prompt: A DRAMATIC, high-contrast thumbnail image:
+   - Bold subject (giant Bitcoin, dramatic chart, shocked face)
+   - Moody lighting: dark background with a single dramatic light source
+   - Rich color grading: teal shadows, orange highlights (cinema LUT style)
+   - NO text in the image (text is added separately)
+   Example: "Extreme close-up of a golden Bitcoin coin with cracks forming on its surface, dramatic rim lighting on black background, sparks flying, cinematic color grading with deep shadows and warm gold highlights, 8K macro photography"
+
+QUALITY STANDARDS:
+- Every scene's search_keywords must be DIFFERENT — no visual repetition
+- image_prompt must describe a SPECIFIC cinematic composition, not a generic concept
+- text_overlay should only appear on 40-50% of scenes — visual breathing room
+- The voiceover must be factually grounded — use real data, not vague claims
+- Shorts excerpts must be self-contained stories that make sense without context
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+
+{% else %}
+Write a viral short-form video script for a crypto/finance channel.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+{% if idea.market_data %}
+Current market data:
+{% for coin, data in idea.market_data.items() %}
+- {{ coin }}: ${{ data.usd | round(2) }}{% if data.usd_24h_change %} ({{ data.usd_24h_change | round(1) }}% 24h){% endif %}
+{% endfor %}
+{% endif %}
+
+IMPORTANT: This video uses REAL STOCK FOOTAGE from Pexels with smooth crossfade transitions between scenes. The voiceover narrates crypto/finance insights while professional stock clips create a polished look. Word-by-word subtitles are burned in automatically. Background music plays underneath.
+
+Requirements:
+1. hook_text: Opening hook (first 3 seconds, max 15 words) — create urgency. Example: "Bitcoin whales just moved $2 billion and nobody's talking about it"
+
+2. voiceover_script: Full voiceover narration, 250-330 words. STRICT LIMIT: Do NOT exceed 330 words. THIS IS THE MOST IMPORTANT PART.
+   - Must tell a COMPLETE story from start to finish
+   - Include specific numbers, dates, and data points
+   - Structure: Hook → Context → Data → Analysis → What it means for you → CTA
+   - Use urgency: "you need to hear this", "this changes everything"
+   - End with clear actionable insight and "Follow for daily crypto updates"
+   - Include "Not financial advice" naturally
+   - DO NOT cut off mid-thought. Must have a proper conclusion.
+
+3. scenes: An array of 6-8 scene objects. Each scene has:
+   - search_keywords: 2-4 word Pexels search query for finding relevant stock footage. Be specific but searchable. Examples:
+     - "bitcoin cryptocurrency coin"
+     - "stock market trading"
+     - "financial chart screen"
+     - "gold bars investment"
+     - "city skyline night"
+     - "wall street buildings"
+     - "digital currency technology"
+     - "business meeting finance"
+     - "money cash dollar"
+     - "computer data analytics"
+   - image_prompt: Fallback prompt for AI image generation if no stock footage found. Clean minimal crypto infographic on white background.
+   - ken_burns: Fallback camera effect if AI image is used. One of: "zoom_in", "zoom_out", "pan_left", "pan_right", "diagonal", "zoom_pan_combo".
+   - duration: Duration in seconds (5-10). Total should be ~{{ niche.target_duration }}s.
+   - text_overlay: Optional short text to display on this scene (max 8 words). Use for key data points. Examples: "BTC: $100,000", "WHALES ACCUMULATING", "3 ALTCOINS TO WATCH". Leave empty string for scenes where visuals speak for themselves.
+
+4. captions: Platform-specific captions (youtube, tiktok, instagram, facebook) — each 100-200 characters
+
+5. hashtags: Array of 10 relevant hashtags including {{ niche.hashtags[:5] | join(', ') }}
+
+6. thumbnail_prompt: Eye-catching thumbnail with bold numbers/arrows/charts. Should look like a crypto news alert.
+
+7. music_tags: Array of 3-5 descriptive tags for searching SUBTLE, UNDERSTATED background music. The music must sit quietly BEHIND the voiceover — never distract from it. Think clean, minimal underscore — not a beat that demands attention. Examples: ["ambient", "electronic", "cinematic", "calm"] for bullish content, ["dark", "ambient", "atmospheric"] for crash/hack stories, ["inspiring", "ambient", "soft", "cinematic"] for opportunity content. AVOID tags like "energetic", "hiphop", "trap", "upbeat" — these produce chaotic music that drowns out narration.
+
+8. music_speed: One of "verylow", "low", "medium", "high", "veryhigh" — use "low" or "medium" for most crypto content. Background music should be a gentle pulse, not a driving beat.
+
+Guidelines for search_keywords:
+- Use simple, generic terms that Pexels will have results for
+- Focus on FINANCE VISUALS: "stock market screen", "trading floor", "cryptocurrency coins", "business graph chart"
+- Match the scene's topic: whale activity → "ocean whale underwater", market crash → "falling graph red", accumulation → "gold vault safe"
+- Avoid overly specific crypto terms — Pexels won't have "Ethereum merge chart"
+- Think visually: what would a professional STOCK VIDEO of this concept look like?
+- Each scene should have DIFFERENT keywords for visual variety
+- Good fallbacks: "city lights night", "technology abstract", "money finance business"
+
+Guidelines for image_prompt (fallback only):
+- CLEAN MINIMAL design on pure WHITE backgrounds
+- Bold sans-serif typography, ONE key number per image
+- Flat design, no gradients, no 3D
+- Avoid text IN the image — use text_overlay for on-screen text
+
+Return as valid JSON only. No markdown formatting, no code blocks.
+{% endif %}

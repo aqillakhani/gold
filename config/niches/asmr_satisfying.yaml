@@ -1,0 +1,79 @@
+niche:
+  id: asmr_satisfying
+  name: "AI Imagination & Fantasy"
+  engine_class: gold.niches.asmr_satisfying.ASMRSatisfyingEngine
+  video_style: image_to_video
+  has_voiceover: false
+  tone: epic, fantastical, mind-blowing, interactive
+  target_duration: 30
+  topics:
+    - superpower choices (pick your power from 5 options)
+    - animal hybrid morphs (combine two creatures)
+    - impossible "would you rather" scenarios
+    - fantasy transformations (human to mythical creature)
+    - elemental powers (fire vs ice vs lightning)
+    - magical abilities showcase
+    - dream worlds and dimensions
+    - mythical creatures in real world
+    - time manipulation scenarios
+    - alien planet exploration
+    - underwater kingdoms
+    - giant vs tiny world perspectives
+  hashtags:
+    - "#wouldyourather"
+    - "#superpower"
+    - "#imagination"
+    - "#ai"
+    - "#fantasy"
+    - "#viral"
+    - "#mindblowing"
+    - "#whatwouldyouchoose"
+  cta:
+    youtube: "Subscribe for more mind-blowing AI content!"
+    tiktok: "Follow for daily imagination fuel!"
+    instagram: "Save this and comment your choice!"
+    facebook: "Tag someone who needs to see this!"
+  music:
+    style: electronic
+    bpm_range: [100, 140]
+  scene_count: 4
+  scene_duration: 7
+  # Override global i2v model for this niche (uncomment to switch to MiniMax)
+  # i2v_model: fal-ai/minimax/video-01-live/image-to-video
+  styles:
+    animated_life_tips:
+      weight: 30
+      image_style: "3D Pixar-style render, soft ambient lighting, cute character made entirely of [food/material], smooth plastic texture, pastel colors, studio backdrop"
+      topics:
+        - food babies
+        - dessert creatures
+        - candy characters
+        - fruit characters
+        - chocolate sculptures
+    fantasy_worlds:
+      weight: 30
+      image_style: "cinematic landscape, volumetric lighting, 8K photorealistic, dramatic atmosphere, wide angle"
+      topics:
+        - bioluminescent ocean
+        - crystal caves
+        - floating islands
+        - ancient ruins overgrown
+        - underwater temples
+    cosmic_surreal:
+      weight: 20
+      image_style: "cosmic surrealism, nebula colors, POV perspective, infinite depth, ultra detailed"
+      topics:
+        - galactic portals
+        - alien planets
+        - cosmic storms
+        - parallel dimensions
+        - space gardens
+    satisfying_process:
+      weight: 20
+      image_style: "macro photography, extreme close-up, perfect symmetry, rich textures, studio lighting"
+      topics:
+        - flowing lava
+        - melting metal
+        - crystal formation
+        - fluid dynamics
+        - ice cracking

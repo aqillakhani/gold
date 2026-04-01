@@ -1,0 +1,26 @@
+Write a short-form reaction/commentary video script.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+{% if idea.source_title %}
+Source video: {{ idea.source_title }}
+{% endif %}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+IMPORTANT CONTEXT: This is a reaction video. The source viral clip plays while AI voiceover provides commentary and reactions. Images are used for intro/outro and transition moments.
+
+Requirements:
+1. hook_text: Attention-grabbing opener (3 seconds, max 15 words) — tease the best moment
+2. voiceover_script: Energetic commentary, 150-250 words. React to key moments with personality. Use phrases like "no way", "okay watch this part", "did you catch that?". End with a question to drive comments.
+3. scenes: Array of 5-6 scene objects for intro/transition/outro images:
+   - image_prompt: A detailed prompt for reaction-style images. Example: "Colorful YouTube-style reaction thumbnail background with neon lights, shocked expression emoji, bold dynamic composition, energetic pop art style"
+   - ken_burns: Mostly zoom_in for energy
+   - duration: 2-4 seconds per scene (shorter — most time goes to the source clip)
+   - text_overlay: Reaction text like "WAIT FOR IT..." or "NO WAY" (max 4 words)
+4. captions: Energetic captions per platform (youtube, tiktok, instagram, facebook) with "What would YOU do?" CTA
+5. hashtags: 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+6. thumbnail_prompt: Energetic, colorful reaction-style image with shocked/surprised elements
+
+Keep the energy HIGH. This should feel fun and spontaneous.
+Return as valid JSON only. No markdown formatting, no code blocks.

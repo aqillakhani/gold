@@ -1,0 +1,63 @@
+niche:
+  id: dangerous_nature
+  name: "Dangerous Nature & Wildlife"
+  engine_class: gold.niches.dangerous_nature.DangerousNatureEngine
+  video_style: compilation
+  visual:
+    footage_source: reddit
+    footage_orientation: landscape
+    output_orientation: portrait
+    music_mood: dark_ambient
+    transition_style: crossfade
+    transition_duration: 0.5
+    accent_color: "#FF2222"
+    color_grade: desaturated
+    vignette: true
+    grain: light
+  voice:
+    provider: fish
+    voice_id: "b86c46f504b54aec91cb489b05f3cb45"  # Arthur — energetic young American male
+    style: casual_energetic
+  tone: suspenseful, dramatic, nature-documentary, urgent
+  target_duration: 55
+  has_voiceover: true
+  compilation:
+    min_clip_count: 3
+    max_clip_count: 4
+    target_clip_duration: 10.0
+    crossfade_duration: 0.5
+    min_reddit_score: 3000
+    subreddits:
+      - NatureIsMetal
+      - SweatyPalms
+      - nextfuckinglevel
+      - DamnThatsTerrifying
+      - NatureIsLit
+      - CrazyFuckingVideos
+      - Damnthatsinteresting
+  topics:
+    - dangerous wildlife encounters
+    - shark attacks caught on camera
+    - nature close calls
+    - extreme animal behavior
+    - survival moments
+  hashtags:
+    - "#NaturesFury"
+    - "#DangerousAnimals"
+    - "#WildlifeEncounter"
+    - "#NatureIsMetal"
+    - "#CloseCalls"
+    - "#ExtremeNature"
+    - "#CaughtOnCamera"
+    - "#NatureDocumentary"
+  cta:
+    youtube: "Subscribe for more nature compilations!"
+    tiktok: "Follow for daily nature content!"
+    instagram: "Double-tap if you'd survive this!"
+    facebook: "Tag someone brave enough!"
+  music:
+    style: dark_ambient
+    mood: tense, predatory, cinematic
+    keywords: ["dark_ambient", "tension", "cinematic"]
+    bpm_range: [80, 110]
+  music_volume: 0.25

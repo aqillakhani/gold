@@ -1,0 +1,40 @@
+niche:
+  id: reaction_videos
+  name: "Reaction Videos"
+  engine_class: gold.niches.reaction_videos.ReactionVideosEngine
+  voice:
+    provider: elevenlabs
+    voice_id: pNInz6obpgDQGcFmaJgB  # Adam
+    style: energetic
+  tone: funny, surprised, energetic, commentary
+  target_duration: 30
+  has_voiceover: true
+  source_subreddits:
+    - videos
+    - funny
+    - PublicFreakout
+    - Unexpected
+    - nextfuckinglevel
+    - WatchPeopleDieInside
+    - CrazyFuckingVideos
+  min_source_score: 1000
+  topics:
+    - viral fails
+    - unexpected moments
+    - wholesome reactions
+    - funny compilations
+    - internet gold
+    - public freakouts
+  hashtags:
+    - "#reaction"
+    - "#viral"
+    - "#funny"
+    - "#unexpected"
+    - "#fyp"
+    - "#trending"
+    - "#comedy"
+  cta:
+    youtube: "Subscribe for daily reactions!"
+    tiktok: "Follow for more reactions!"
+    instagram: "Tag someone who needs to see this!"
+    facebook: "Share this with a friend!"

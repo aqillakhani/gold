@@ -1,0 +1,24 @@
+Write a short horror story for a narration video.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+IMPORTANT CONTEXT: This video uses AI-generated STILL IMAGES with Ken Burns zoom/pan effects. The voiceover narration tells the story — images create atmosphere. Each image is a single dark, atmospheric photograph.
+
+Requirements:
+1. hook_text: Chilling opening line (3 seconds, whispered tone, max 12 words)
+2. voiceover_script: First-person horror narration, 300-400 words. Build suspense slowly. Use sensory details (sounds, smells, temperature). End with a twist or cliffhanger. Write as natural storytelling speech, not prose. Pace it for dramatic effect with pauses noted as "..."
+3. scenes: Array of 8-10 scenes, each with:
+   - image_prompt: A detailed prompt for a SINGLE dark, atmospheric photograph. Focus on: shadows, fog, silhouettes, dim lighting, unsettling composition. Example: "Dark photograph of an empty hallway in an abandoned hospital, single flickering fluorescent light at the far end, peeling walls, long shadows, fog rolling along the floor, found footage aesthetic, horror movie still, muted desaturated colors"
+   - ken_burns: One of: zoom_in (for reveals), zoom_out (for isolation), pan_left/pan_right (for scanning scenes). Build from calm pans to intense zooms as story progresses.
+   - duration: 5-7 seconds per scene (longer to build tension)
+   - text_overlay: "" (minimal — let voice and images create mood)
+4. captions: Eerie captions with "Part 2?" hooks per platform (youtube, tiktok, instagram, facebook)
+5. hashtags: 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+6. thumbnail_prompt: Dark, shadowy scene with a single unsettling detail, dramatic lighting, horror movie poster aesthetic
+
+Make it genuinely creepy but not gory. Psychological horror and atmosphere work best.
+Return as valid JSON only. No markdown formatting, no code blocks.

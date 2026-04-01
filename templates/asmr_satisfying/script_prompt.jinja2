@@ -1,0 +1,117 @@
+Create a viral short-form AI imagination / fantasy video with interactive hooks.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+{% if idea.style_name is defined %}
+VISUAL STYLE: {{ idea.style_name }}
+Style direction: {{ idea.image_style_prefix }}
+{% if idea.style_topic is defined %}Suggested sub-topic: {{ idea.style_topic }}{% endif %}
+{% endif %}
+
+IMPORTANT: This video uses AI-generated VIDEO CLIPS (not still images). Each scene is a Flux image that gets animated into a 7-second video clip with realistic motion. The scenes should be designed for MOTION — things that look amazing when they move.
+
+NO VOICEOVER. The video relies on:
+1. Epic AI-generated video clips with real motion
+2. One continuous ambient soundscape that runs through the entire video
+3. Bold text overlays labeling each option/scene
+4. Epic background music (electronic/cinematic)
+
+The FORMAT is interactive and engaging:
+- "Which superpower would you pick?" → 4 clips each showing a different power IN ACTION
+- "What happens when you combine a wolf + eagle?" → clips showing epic morphed creatures MOVING
+- "Would you rather have THIS or THAT?" → clips showing each option with MOTION
+- "Rate this power 1-10" → clips of amazing abilities being USED
+
+{% if idea.style_name == "animated_life_tips" %}
+STYLE: 3D PIXAR-STYLE CHARACTERS (like @ANIMATEDLIFETIPS)
+- Every image must show a CUTE 3D CHARACTER made entirely of a food/material
+- Soft studio lighting, pastel colors, smooth plastic texture
+- Characters should have expressive faces and be in dynamic poses
+- Think: a tiny baby made of chocolate, a creature sculpted from candy
+- Close-up to medium shots for best animation quality
+- Ambient sound: gentle magical chimes, soft whooshes, sparkle sounds
+{% elif idea.style_name == "fantasy_worlds" %}
+STYLE: CINEMATIC FANTASY WORLDS (like @COOLACLOY, @ODYSSEYML)
+- Every image must show a BREATHTAKING LANDSCAPE or ENVIRONMENT
+- Volumetric lighting, dramatic atmosphere, 8K photorealistic detail
+- Include natural motion elements: flowing water, drifting fog, swaying plants, floating particles
+- Think: bioluminescent caves, crystal forests, floating islands at sunset
+- Wide or medium shots to capture scale and grandeur
+- Ambient sound: deep atmospheric reverb, wind, distant echoes, nature sounds
+{% elif idea.style_name == "cosmic_surreal" %}
+STYLE: COSMIC SURREALISM (like @FATE116_)
+- Every image must show a SURREAL COSMIC SCENE with impossible scale
+- Nebula colors (purple, teal, magenta), infinite depth, POV perspective
+- Include elements that pulse and glow: stars, portals, energy fields
+- Think: standing at the edge of a galactic portal, alien planet surfaces
+- First-person or dramatic angle shots
+- Ambient sound: deep space drone, ethereal tones, cosmic rumble
+{% elif idea.style_name == "satisfying_process" %}
+STYLE: SATISFYING MACRO PROCESSES
+- Every image must show an EXTREME CLOSE-UP of a satisfying process
+- Macro photography style, perfect symmetry, rich textures, studio lighting
+- Include elements with natural flow: liquids, crystals forming, surfaces cracking
+- Think: lava flowing in slow motion, metal being poured, ice fracturing
+- Tight close-up shots for maximum detail
+- Ambient sound: crackling, bubbling, flowing, crunching textures
+{% else %}
+STYLE: EPIC FANTASY / IMAGINATION
+- Use dramatic, cinematic imagery with strong lighting contrast
+- Include elements that animate well: fire, water, lightning, particles
+- Close-up or medium shots work best for animation
+- Ambient sound: atmospheric and immersive
+{% endif %}
+
+Requirements:
+1. scenes: An array of 4 scene objects. Each scene has:
+   - image_prompt: A detailed prompt for Flux image generation. The image will be animated into video, so design for MOTION potential.
+{% if idea.image_style_prefix is defined and idea.image_style_prefix %}
+     IMPORTANT: Every image_prompt MUST start with this style prefix: "{{ idea.image_style_prefix }}, "
+{% endif %}
+     Focus on:
+     * Dynamic poses mid-action (not static standing)
+     * Elements that animate well: fire, water, lightning, smoke, wings, energy, particles, flowing liquids
+     * Dramatic lighting with contrast: rim lighting, volumetric fog, neon glow, golden hour
+     * Style-appropriate framing (see style notes above)
+     * Include particle effects: sparks, embers, energy, floating dust, bioluminescent spores
+     * Make each scene visually DISTINCT with different color palettes
+   - motion_prompt: A short description of how the scene should MOVE when animated. Examples:
+     - "camera slowly pushes in, particles drift upward, light pulses gently"
+     - "wings slowly spread wide, feathers ruffle in wind, clouds drift"
+     - "lava flows and glows, embers rise, heat distortion ripples"
+   - ambient_sound: Description of atmospheric sound for the WHOLE video (same for all scenes). Examples:
+     - "deep atmospheric reverb with gentle wind and distant magical chimes"
+     - "underwater bubbling with ethereal whale song and bioluminescent pulses"
+     - "cosmic deep space drone with ethereal crystalline tones"
+     - "crackling fire ambience with deep bass rumble and floating embers sound"
+   - text_overlay: A short label (max 6 words). Examples: "OPTION 1: TELEPORTATION", "WOLF + EAGLE =", "Rate 1-10"
+   - duration: Always 7 (seconds)
+
+2. ambient_description: A single description for ONE continuous ambient sound track for the entire video (15-22 seconds). This replaces per-scene sound effects. Should be atmospheric and immersive. Example: "Deep ethereal cosmic ambient soundscape with gentle crystalline tones, subtle bass pulses, and shimmering high-frequency sparkles"
+
+3. music_style: One of "electronic", "epic", "cinematic"
+
+4. captions: Engaging captions per platform (youtube, tiktok, instagram, facebook). Create curiosity and encourage comments. Use "Which would you pick?" or "Comment your choice!" type CTAs. Use emojis.
+
+5. hashtags: Array of 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+
+6. thumbnail_prompt: The most visually striking scene — something that makes people stop scrolling.
+{% if idea.image_style_prefix is defined and idea.image_style_prefix %}
+   Must use the same style: "{{ idea.image_style_prefix }}"
+{% endif %}
+
+7. voiceover_script: Return an empty string "" (no voiceover)
+
+Guidelines for image_prompt quality (CRITICAL — these become VIDEO):
+- Design for MOTION: include elements that look amazing when animated
+- ALWAYS specify dramatic lighting with strong contrast
+- ALWAYS specify style: "photorealistic", "cinematic", "8K detailed" (or "3D Pixar render" for animated style)
+- Use appropriate shot framing for the style (close-up for satisfying, wide for landscapes)
+- Include particle effects for visual richness
+- Make each scene visually DISTINCT with different color palettes
+- Focus on POWER, SCALE, and DRAMA
+
+Return as valid JSON only. No markdown formatting, no code blocks.

@@ -1,0 +1,20 @@
+Write a short-form video script about a psychology fact.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+Requirements:
+1. hook_text: "Did you know..." or "Psychology says..." opener
+2. voiceover_script: Educational narration citing real studies
+3. scenes: 4-6 scenes with:
+   - Relatable everyday scenarios
+   - Text animation cues (key facts on screen)
+   - Brain/mind imagery
+4. captions: Shareable, question-ending captions per platform
+5. hashtags: 10 hashtags including {{ niche.hashtags[:5] | join(', ') }}
+6. thumbnail_prompt: Mysterious brain imagery with intriguing question text
+
+Return as JSON only.

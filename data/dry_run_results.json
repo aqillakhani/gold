@@ -1,0 +1,110 @@
+[
+  {
+    "niche": "personal_finance",
+    "video_style": "stock_footage",
+    "steps": {
+      "ideation": {
+        "title": "Your Salary is 30% Lower Than It Should Be (Here's Proof)",
+        "hook": "You're being underpaid and here's how to prove it..."
+      },
+      "scripting": {
+        "has_voiceover": true,
+        "voiceover_words": 172,
+        "has_slides": false,
+        "has_clips": false
+      },
+      "thumbnail": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\images\\test_personal_finance_thumb_1774162295.png"
+      },
+      "voiceover": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\audio\\test_personal_finance_vo_1774162295.mp3",
+        "size_kb": 1356.1,
+        "duration_s": 57.9
+      },
+      "scenes": {
+        "count": 3
+      },
+      "subtitles": {
+        "word_count": 174
+      },
+      "render": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\videos\\test_personal_finance_final_1774162295.mp4",
+        "size_mb": 35.75,
+        "duration_s": 57.9
+      }
+    },
+    "success": true
+  },
+  {
+    "niche": "ai_tools",
+    "video_style": "stock_footage",
+    "steps": {
+      "ideation": {
+        "title": "I Tested 12 AI Automation Tools - This One Runs My Entire Business!",
+        "hook": "This AI just automated my entire workflow in under 60 seconds..."
+      },
+      "scripting": {
+        "has_voiceover": true,
+        "voiceover_words": 244,
+        "has_slides": false,
+        "has_clips": false
+      },
+      "thumbnail": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\images\\test_ai_tools_thumb_1774163860.png"
+      },
+      "voiceover": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\audio\\test_ai_tools_vo_1774163860.mp3",
+        "size_kb": 2126.3,
+        "duration_s": 90.7
+      },
+      "scenes": {
+        "count": 7
+      },
+      "subtitles": {
+        "word_count": 251
+      },
+      "render": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\videos\\test_ai_tools_final_1774163860.mp4",
+        "size_mb": 69.52,
+        "duration_s": 90.8
+      }
+    },
+    "success": true
+  },
+  {
+    "niche": "english_learning",
+    "video_style": "stock_footage",
+    "steps": {
+      "ideation": {
+        "title": "This ONE word makes you sound fluent instantly",
+        "hook": "Native speakers use this word 50+ times daily..."
+      },
+      "scripting": {
+        "has_voiceover": true,
+        "voiceover_words": 164,
+        "has_slides": false,
+        "has_clips": false
+      },
+      "thumbnail": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\images\\test_english_learning_thumb_1774166261.png"
+      },
+      "voiceover": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\audio\\test_english_learning_vo_1774166261.mp3",
+        "size_kb": 1560.6,
+        "duration_s": 66.6
+      },
+      "scenes": {
+        "count": 7
+      },
+      "subtitles": {
+        "word_count": 164
+      },
+      "render": {
+        "path": "C:\\Users\\claws\\OneDrive\\Desktop\\gold\\data\\media\\videos\\test_english_learning_final_1774166261.mp4",
+        "size_mb": 55.97,
+        "duration_s": 66.6
+      }
+    },
+    "success": true
+  }
+]

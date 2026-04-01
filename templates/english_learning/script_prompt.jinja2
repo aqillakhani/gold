@@ -1,0 +1,100 @@
+Write a short-form English vocabulary/grammar lesson video script.
+
+Topic: {{ idea.title }}
+Hook: {{ idea.hook }}
+Angle: {{ idea.angle }}
+Tone: {{ niche.tone }}
+Target duration: {{ niche.target_duration }} seconds
+
+IMPORTANT: This video uses AI-GENERATED video clips with smooth crossfade transitions. Each scene's image_prompt drives the video generation model — QUALITY OF PROMPTS IS CRITICAL. Write prompts as if directing a cinematographer. The voiceover teaches English vocabulary/grammar at a SLOW, CLEAR pace (0.80x speed). Word-by-word subtitles are burned in. Each scene displays the vocabulary word or phrase as a LARGE text overlay. Calm ambient music plays softly underneath.
+
+CRITICAL: This video targets NON-NATIVE English speakers. Every word must be clear, simple, and well-paced. Use FEWER words than other niches — aim for 180-220 words for 60 seconds (slower speaking pace).
+
+Requirements:
+1. hook_text: Opening hook (first 3 seconds, max 15 words) — create curiosity about learning. Examples:
+   - "Stop saying VERY GOOD — say THIS instead"
+   - "3 English words that make you sound fluent"
+   - "Native speakers NEVER say this — here's why"
+   - "The #1 grammar mistake killing your English"
+
+2. voiceover_script: Full voiceover narration, 100-130 words. STRICT LIMIT: Do NOT exceed 130 words. Speak slowly and clearly — ESL learners need time to process. THIS IS THE MOST IMPORTANT PART.
+   - Speak SLOWLY and CLEARLY — pause after each new word or phrase
+   - Structure: Hook ("Stop saying X, say Y instead") → Word 1 + Definition + Example → Word 2 + Definition + Example → Word 3 + Definition + Example → Common Mistake → Practice CTA
+   - Use simple explanation language — no jargon in definitions
+   - Include 3-5 vocabulary words or grammar points per video
+   - For each word: say it, define it, use it in 2-3 example sentences
+   - Point out a common mistake learners make
+   - End with practice prompt: "Now try using ONE of these words in a comment below"
+   - Repeat key words 2-3 times for retention
+   - DO NOT cut off mid-thought. Must have a proper conclusion.
+
+3. scenes: An array of 5-7 scene objects. Each scene has:
+   - search_keywords: 2-4 word backup Pexels search query in case AI video generation fails. Keep simple and generic.
+   - image_prompt: DETAILED cinematographic prompt for AI video generation. THIS IS CRITICAL — vague prompts produce generic AI slop. Write each prompt as a specific camera direction.
+     REQUIRED ELEMENTS (include ALL in every prompt):
+     - Shot type: macro, close-up, medium, wide, over-shoulder, overhead, tracking, dolly, aerial
+     - Subject: specific objects, textures, actions the camera sees
+     - Lighting: natural, desk lamp, monitor glow, golden hour, overcast, neon, backlit
+     - Depth of field: shallow (blurred background), deep (everything sharp), rack focus
+     - Camera motion: slight drift, slow dolly forward, gentle pan right, static, handheld
+     - Mood/atmosphere: one or two words setting the feel
+
+     UNIVERSAL RULES:
+     - NEVER include human faces or full bodies — use hands-only, over-shoulder (back of head), or silhouettes
+     - NEVER include readable text, logos, or brand names
+     - NEVER use "futuristic", "holographic", or "glowing interface"
+     - Each scene MUST have a unique visual — no two scenes should look similar
+
+     CRITICAL — WHAT THE VIDEO MODEL CANNOT DO:
+     - NEVER describe screens, interfaces, dashboards, apps, or software UI — the model renders these as garbled mess
+     - NEVER describe text being displayed on screens or monitors
+     - NEVER ask for "stick figure animation" — the model cannot render this style
+     - Instead of showing the TOOL/APP, show the PHYSICAL WORLD AROUND IT:
+       WRONG: "Phone screen showing receipt scanning app with green checkmarks"
+       RIGHT: "Close-up of hand holding crumpled grocery receipt next to smartphone lying face-down on kitchen counter, warm morning light"
+       WRONG: "Laptop displaying expense categorization dashboard"
+       RIGHT: "Over-shoulder shot of person's hands resting on laptop keyboard, screen glow reflecting on their fingers, shallow depth of field so screen is blurred"
+       WRONG: "App pricing page showing free and pro tiers"
+       RIGHT: "Macro close-up of credit card being placed on a wooden desk next to a coffee mug, warm desk lamp, slight camera drift"
+     - The rule is: CAMERA SEES THE REAL WORLD, not the digital world
+     - If the scene is about using an app: show the HANDS, the DESK, the COFFEE, the ENVIRONMENT — never the screen content
+     - Screens can appear but MUST be out of focus / blurred in background
+
+     GOOD PROMPTS FOR THIS NICHE:
+     - "Macro close-up of hand writing in notebook with ballpoint pen, lined paper, warm desk lamp light, shallow depth of field, slow camera drift, cozy study atmosphere"
+     - "Close-up of open book with pages turning gently, warm library light, bookshelves blurred in background, shallow depth of field, soft natural movement"
+     - "Wide shot of cozy coffee shop interior, people blurred in far background, warm ambient lighting, steam rising from cup on table, slow gentle dolly right"
+     - "Overhead shot of study desk with textbook, highlighters, sticky notes and tea mug, soft morning light, slow zoom in, clean organized aesthetic"
+     - "Close-up of two coffee cups on a cafe table, hands reaching for them in soft natural light, shallow depth of field, warm friendly atmosphere"
+     - "Close-up of colorful sticky notes being placed on a wall, shallow depth of field, bright natural daylight, gentle handheld camera movement, organized study space"
+
+     BAD PROMPTS:
+     - "Student studying" (face generation)
+     - "Classroom" (too vague)
+
+     EXTRA RULES:
+     - Bright, friendly, warm aesthetic — educational channel
+     - For dialogue/conversation scenes: show close-up of two coffee cups on a cafe table, or hands holding an open book, or a notebook with pen — never faces
+     - Include study objects: books, notebooks, pens, coffee/tea, libraries
+
+   - ken_burns: Fallback camera effect. One of: "zoom_in", "zoom_out", "pan_left", "pan_right".
+   - duration: Duration in seconds (7-12). Total should be ~{{ niche.target_duration }}s. Slightly longer per scene than other niches for slower pacing.
+   - text_overlay: THE VOCABULARY WORD OR PHRASE in LARGE TEXT. This is critical for language learning. Examples: "FURTHERMORE", "BREAK DOWN", "ON THE OTHER HAND". Every scene MUST have a text overlay showing the word being taught.
+
+4. captions: Platform-specific captions (youtube, tiktok, instagram, facebook) — each 100-200 characters. Include "Save this lesson!" type CTAs.
+
+5. hashtags: Array of 10 relevant hashtags including {{ niche.hashtags[:5] | join(', ') }}
+
+6. thumbnail_prompt: Clean, educational thumbnail showing a key vocabulary word or "before vs after" comparison of word usage.
+
+7. music_tags: Array of 3-5 tags for VERY SUBTLE study background music. Think "lo-fi beats to study to" — gentle, minimal, barely-there. Examples: ["lofi", "chillout", "relaxing", "study"]. AVOID: anything with a strong beat, piano solos, cinematic scores, or anything that competes with the voice. This should feel like quiet study room ambiance.
+
+8. music_speed: "verylow" — the music should be barely perceptible at ~30% volume, just creating a calm study atmosphere.
+
+Guidelines for text_overlay:
+- EVERY scene must have a text_overlay showing the word/phrase being taught
+- Use ALL CAPS for vocabulary words
+- Keep overlays to 1-3 words maximum
+- The text overlay IS the lesson — it's what viewers screenshot and save
+
+Return as valid JSON only. No markdown formatting, no code blocks.

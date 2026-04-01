@@ -1,0 +1,80 @@
+# Affiliate links per niche — populate with your actual referral URLs
+# Used by PlatformVariator to append "Link in bio" CTAs
+
+personal_finance:
+  - name: SoFi
+    url: ""  # sofi.com/invite — $100-1000/referral
+    cta: "Refinance your loans — link in bio"
+  - name: Credit Karma
+    url: ""  # creditkarma.com/affiliate — $2/signup
+    cta: "Check your credit score free — link in bio"
+  - name: Acorns
+    url: ""  # acorns.com/invite — $5-10/referral
+    cta: "Start investing spare change — link in bio"
+  - name: Personal Capital
+    url: ""  # personalcapital.com/affiliate — $100/qualified lead
+    cta: "Track your net worth free — link in bio"
+  - name: Amazon Associates
+    url: "https://www.amazon.com/?tag=storyvault03-20"
+    cta: "Best finance books — link in bio"
+
+ai_tools:
+  - name: Writesonic
+    url: ""  # writesonic.com/affiliate
+    cta: "Try Writesonic free — link in bio"
+  - name: Jasper
+    url: ""  # jasper.ai/partners
+    cta: "Write 10x faster — link in bio"
+  - name: GetResponse
+    url: ""  # getresponse.com/affiliate
+    cta: "Automate your email — link in bio"
+  - name: Murf AI
+    url: ""  # murf.ai/affiliate
+    cta: "Create AI voices — link in bio"
+  - name: Notion
+    url: ""  # notion.so/affiliates
+    cta: "Get Notion free — link in bio"
+
+reddit_stories:
+  - name: NordVPN
+    url: ""  # nordvpn.com/affiliate
+    cta: "Stay safe online — link in bio"
+  - name: Audible
+    url: "https://www.amazon.com/dp/B00NB86OYE/?tag=storyvault03-20"
+    cta: "Free audiobook — link in bio"
+  - name: Amazon Associates
+    url: "https://www.amazon.com/?tag=storyvault03-20"
+    cta: "Check out the link in bio"
+
+betrayal_revenge:
+  - name: Audible
+    url: "https://www.amazon.com/dp/B00NB86OYE/?tag=storyvault03-20"
+    cta: "Listen to more stories — link in bio"
+  - name: NordVPN
+    url: ""  # nordvpn.com/affiliate — privacy angle
+    cta: "Protect your privacy — link in bio"
+  - name: Amazon Associates
+    url: "https://www.amazon.com/?tag=storyvault03-20"
+    cta: "Check out the link in bio"
+
+english_learning:
+  - name: italki
+    url: ""  # italki.com/affiliate — $18/sale
+    cta: "Practice with a real tutor — link in bio"
+  - name: Preply
+    url: ""  # preply.com/affiliate — 20% commission
+    cta: "Find your English tutor — link in bio"
+  - name: Amazon Associates
+    url: "https://www.amazon.com/?tag=storyvault03-20"
+    cta: "Best English learning books — link in bio"
+
+true_crime:
+  - name: Audible
+    url: "https://www.amazon.com/dp/B00NB86OYE/?tag=storyvault03-20"
+    cta: "Listen to the full case — link in bio"
+  - name: NordVPN
+    url: ""  # nordvpn.com/affiliate — privacy angle
+    cta: "Protect your privacy — link in bio"
+  - name: Amazon Associates
+    url: "https://www.amazon.com/?tag=storyvault03-20"
+    cta: "Read more about this case — link in bio"

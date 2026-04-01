@@ -1,0 +1,274 @@
+{
+  "reddit_stories": {
+    "channel_info": {
+      "channel_id": "UCAMQuZQXguQjWdus-EZTb-g",
+      "title": "StoryVault",
+      "description": "StoryVault brings the wildest Reddit stories to life. From AITA dilemmas to shocking revenge tales and relationship drama\u2014watch real people navigate impossible situations. We feature stories from r/AmItheAsshole, r/TIFU, r/ProRevenge, and more, with narrator analysis and community voting on every episode. New stories daily.\n\nNote: Our content features AI-assisted narration and video composition to bring these real stories to a wider audience.\nAll Links: https://linktr.ee/storyvault8.official\n",
+      "subscribers": 0,
+      "total_views": 5,
+      "video_count": 3,
+      "published_at": "2026-03-10T08:18:28.393065Z"
+    },
+    "engagement_metrics": {
+      "total_videos": 3,
+      "total_views": 5,
+      "total_likes": 1,
+      "total_comments": 1,
+      "avg_views_per_video": 1.6666666666666667,
+      "avg_likes_per_video": 0.3333333333333333,
+      "avg_comments_per_video": 0.3333333333333333,
+      "overall_engagement_rate": 0.4,
+      "like_rate": 0.2,
+      "comment_rate": 0.2,
+      "top_video": {
+        "title": "My Roommate Ate My Food... So I Made Them PAY Big Time",
+        "views": 5,
+        "likes": 1,
+        "comments": 0
+      }
+    },
+    "title_analysis": {
+      "top_10_videos": [
+        {
+          "title": "My Roommate Ate My Food... So I Made Them PAY Big Time",
+          "views": 5,
+          "engagement_rate": 0.2
+        }
+      ],
+      "distinctive_words_in_top_content": {
+        "roommate": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "food": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "made": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "them": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        }
+      },
+      "avg_views_top_10": 5.0,
+      "avg_views_bottom_10": 0.0
+    },
+    "view_velocity": {
+      "avg_views_per_day": 1.6666666666666667,
+      "analysis_based_on_videos": 3
+    },
+    "subscriber_conversion_rate": 0.0,
+    "subscriber_conversion_percentage": 0.0,
+    "videos_analyzed": 3
+  },
+  "crypto_finance": {
+    "channel_info": {
+      "channel_id": "UCdY8-HGr3KAU8BRK3IjA9jg",
+      "title": "crypto flow",
+      "description": "CryptoFlow delivers daily crypto market analysis, Bitcoin updates, and altcoin opportunities for traders and investors at every level. Real-time price action, emerging DeFi strategies, and on-chain intelligence\u2014distilled into concise, data-driven videos. Whether you're a day trader or long-term holder, get the insights you need to make informed decisions. Market opens 24/7; so do we. New analysis every 12 hours.\nNote: Our breakdowns leverage AI-assisted analysis and stock visuals to bring complex market data to life in seconds.\nAll Links: https://linktr.ee/cryptoflow8\n",
+      "subscribers": 0,
+      "total_views": 35,
+      "video_count": 3,
+      "published_at": "2026-03-10T21:42:45.513364Z"
+    },
+    "engagement_metrics": {
+      "total_videos": 3,
+      "total_views": 37,
+      "total_likes": 0,
+      "total_comments": 1,
+      "avg_views_per_video": 12.333333333333334,
+      "avg_likes_per_video": 0.0,
+      "avg_comments_per_video": 0.3333333333333333,
+      "overall_engagement_rate": 0.02702702702702703,
+      "like_rate": 0.0,
+      "comment_rate": 0.02702702702702703,
+      "top_video": {
+        "title": "This $0.03 Altcoin Could Hit $1 Before Bitcoin Reaches $100K",
+        "views": 28,
+        "likes": 0,
+        "comments": 1
+      }
+    },
+    "title_analysis": {
+      "top_10_videos": [
+        {
+          "title": "This $0.03 Altcoin Could Hit $1 Before Bitcoin Reaches $100K",
+          "views": 28,
+          "engagement_rate": 0.03571428571428571
+        }
+      ],
+      "distinctive_words_in_top_content": {
+        "this": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "altcoin": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "could": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "before": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "reaches": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        }
+      },
+      "avg_views_top_10": 28.0,
+      "avg_views_bottom_10": 2.0
+    },
+    "view_velocity": {
+      "avg_views_per_day": 2.4166666666666665,
+      "analysis_based_on_videos": 3
+    },
+    "subscriber_conversion_rate": 0.0,
+    "subscriber_conversion_percentage": 0.0,
+    "videos_analyzed": 3
+  },
+  "ai_tools": {
+    "channel_info": {
+      "channel_id": "UCQiULF-Qp7TgVQFLWyM929Q",
+      "title": "Tool Stack",
+      "description": "Cutting through the AI hype so you don't have to.\nWe review the latest AI tools, apps, and platforms \u2014 breaking down what actually works, what's overhyped, and what's worth your time and money. From productivity boosters to creative tools, we test everything hands-on so you can make smarter decisions.\nNew videos every week.\n",
+      "subscribers": 1,
+      "total_views": 365,
+      "video_count": 3,
+      "published_at": "2026-03-15T19:40:39.773549Z"
+    },
+    "engagement_metrics": {
+      "total_videos": 3,
+      "total_views": 425,
+      "total_likes": 1,
+      "total_comments": 0,
+      "avg_views_per_video": 141.66666666666666,
+      "avg_likes_per_video": 0.3333333333333333,
+      "avg_comments_per_video": 0.0,
+      "overall_engagement_rate": 0.002352941176470588,
+      "like_rate": 0.002352941176470588,
+      "comment_rate": 0.0,
+      "top_video": {
+        "title": "This AI Assistant Codes Faster Than 10 Senior Developers!",
+        "views": 313,
+        "likes": 0,
+        "comments": 0
+      }
+    },
+    "title_analysis": {
+      "top_10_videos": [
+        {
+          "title": "This AI Assistant Codes Faster Than 10 Senior Developers!",
+          "views": 313,
+          "engagement_rate": 0.0
+        }
+      ],
+      "distinctive_words_in_top_content": {
+        "assistant": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "codes": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "faster": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "than": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "senior": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "developers": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        }
+      },
+      "avg_views_top_10": 313.0,
+      "avg_views_bottom_10": 54.0
+    },
+    "view_velocity": {
+      "avg_views_per_day": 127.16666666666667,
+      "analysis_based_on_videos": 3
+    },
+    "subscriber_conversion_rate": 0.002352941176470588,
+    "subscriber_conversion_percentage": 0.2352941176470588,
+    "videos_analyzed": 3
+  },
+  "true_crime": {
+    "channel_info": {
+      "channel_id": "UCgqyZTmFSuqast1BJuQlSjg",
+      "title": "Cold Cases",
+      "description": "Real cases. Real questions. No answers \u2014 yet.\n\nWe dive into the world's most haunting unsolved murders, disappearances, and cold cases. Every video breaks down the evidence, the suspects, and the theories \u2014 so you can decide for yourself.\n\nNew cases every week.\n",
+      "subscribers": 5,
+      "total_views": 1861,
+      "video_count": 3,
+      "published_at": "2026-03-15T20:08:24.032228Z"
+    },
+    "engagement_metrics": {
+      "total_videos": 3,
+      "total_views": 2062,
+      "total_likes": 60,
+      "total_comments": 1,
+      "avg_views_per_video": 687.3333333333334,
+      "avg_likes_per_video": 20.0,
+      "avg_comments_per_video": 0.3333333333333333,
+      "overall_engagement_rate": 0.029582929194956354,
+      "like_rate": 0.029097963142580018,
+      "comment_rate": 0.00048496605237633366,
+      "top_video": {
+        "title": "The LEGO Bandit used children's toy masks to rob 14 banks and evade FBI facial recognition for 3 yea",
+        "views": 1467,
+        "likes": 33,
+        "comments": 0
+      }
+    },
+    "title_analysis": {
+      "top_10_videos": [
+        {
+          "title": "The LEGO Bandit used children's toy masks to rob 14 banks and evade FBI facial recognition for 3 yea",
+          "views": 1467,
+          "engagement_rate": 0.022494887525562373
+        }
+      ],
+      "distinctive_words_in_top_content": {
+        "lego": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "bandit": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "children": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        },
+        "masks": {
+          "top_freq": 1,
+          "bottom_freq": 0
+        }
+      },
+      "avg_views_top_10": 1467.0,
+      "avg_views_bottom_10": 0.0
+    },
+    "view_velocity": {
+      "avg_views_per_day": 320.5833333333333,
+      "analysis_based_on_videos": 3
+    },
+    "subscriber_conversion_rate": 0.0024248302618816685,
+    "subscriber_conversion_percentage": 0.24248302618816686,
+    "videos_analyzed": 3
+  }
+}
